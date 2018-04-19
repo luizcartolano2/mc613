@@ -1,0 +1,8 @@
+Os tempos para cada teste foram dados por:
+	Delay_04: 8.070
+	Delay_08: 13.289
+	Delay_16: 12.225
+	Delay_32: 19.862
+	Delay_64: 36.105
+
+Analisando-os é possível perceber um aumento gradativo do tempo gasto a medida que se aumentava o número de elementos a ser analisado. A exceção foi para o caso de quando possuiamos 16 entradas, apresentando um valor menor que o de 8, o que pode ter acontecido fruto de uma combinação favorável de entradas.
