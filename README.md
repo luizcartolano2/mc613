@@ -1,5 +1,5 @@
 ## About
-Repo to share labs and projects of the Digital Circuits subject.
+Repository to share labs and projects of the Digital Circuits subject.
 
 
 ## Contributors:
