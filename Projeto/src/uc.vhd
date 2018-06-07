@@ -9,7 +9,8 @@ entity uc is
 		resetn				: in	std_logic;
 		comando_entrada 	: in 	std_logic_vector(2 downto 0);
 		comando_mouse		: out std_logic_vector(2 downto 0);
-		comando_monitor	: out std_logic_vector(2 downto 0)
+		comando_monitor	: out std_logic_vector(2 downto 0);
+		controle_ram 		: out std_logic
 	);
 end;
 
@@ -24,6 +25,7 @@ begin
 				estado <= PreJogo;
 				comando_mouse <= "000";
 				comando_monitor <= "000";
+				controle_ram <= '0';
 			else
 				case estado is
 					when PreJogo =>

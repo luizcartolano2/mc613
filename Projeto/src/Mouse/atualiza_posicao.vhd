@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
-entity mouse is
+entity atualiza_posicao is
 	port
 	(
 		clock_50mhz	: 	in	STD_LOGIC;
@@ -14,7 +14,7 @@ entity mouse is
 	);
 end;
 
-architecture struct of mouse is
+architecture struct of atualiza_posicao is
 	component mouse_ctrl
 		generic(
 			clkfreq : integer

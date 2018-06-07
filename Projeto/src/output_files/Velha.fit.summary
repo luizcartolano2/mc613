@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun May 27 05:10:01 2018
+Fitter Status : Successful - Mon May 28 17:41:17 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Velha
 Top-level Entity Name : velha
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 804 / 32,070 ( 3 % )
-Total registers : 235
+Logic utilization (in ALMs) : 891 / 32,070 ( 3 % )
+Total registers : 346
 Total pins : 64 / 457 ( 14 % )
 Total virtual pins : 0
 Total block memory bits : 36 / 4,065,280 ( < 1 % )

@@ -1,0 +1,24 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity imprime_tela is
+	port
+	(
+		clock_50mhz					: in	STD_LOGIC;
+		mouse_position_x			: in 	std_logic_vector(7 downto 0);
+		mouse_position_y			: in 	std_logic_vector(7 downto 0);
+		rstn							: in 	std_logic;
+		vga_r, vga_g, vga_b		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+		vga_hs, vga_vs				: OUT STD_LOGIC;
+		vga_blank_n, vga_sync_n : OUT STD_LOGIC;
+		vga_clk 						: OUT STD_LOGIC;
+		entrada_monitor			: in std_logic_vector(2 downto 0);
+	);
+end;
+
+architecture struct of imprime_tela is	
+
+begin 
+
+end struct;

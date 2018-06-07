@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Velha
-Sun May 27 05:06:40 2018
+Mon May 28 17:40:09 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,34 +14,38 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |velha|mouse:mouse_position|mouse_ctrl:mousectrl|state
- 10. State Machine - |velha|uc:controle|estado
- 11. User-Specified and Inferred Latches
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Registers Packed Into Inferred Megafunctions
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0|altsyncram_k7l1:auto_generated
- 18. Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl
- 19. Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io
- 20. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component
- 21. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i
- 22. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem
- 23. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0
- 24. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0
- 25. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1
- 26. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div0
- 27. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div1
- 28. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod0
- 29. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod1
- 30. altsyncram Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "monitor:mouse_monitor|vgacon:vga_component"
- 32. Port Connectivity Checks: "mouse:mouse_position|mouse_ctrl:mousectrl"
- 33. Port Connectivity Checks: "uc:controle"
- 34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
+  9. State Machine - |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|state
+ 10. State Machine - |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|state
+ 11. State Machine - |velha|uc:controle|estado
+ 12. User-Specified and Inferred Latches
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Registers Packed Into Inferred Megafunctions
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0|altsyncram_k7l1:auto_generated
+ 20. Parameter Settings for User Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl
+ 21. Parameter Settings for User Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io
+ 22. Parameter Settings for User Entity Instance: mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl
+ 23. Parameter Settings for User Entity Instance: mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io
+ 24. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component
+ 25. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i
+ 26. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem
+ 27. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0
+ 28. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0
+ 29. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1
+ 30. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0
+ 31. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div1
+ 32. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0
+ 33. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1
+ 34. altsyncram Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl"
+ 36. Port Connectivity Checks: "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl"
+ 37. Port Connectivity Checks: "uc:controle"
+ 38. Post-Synthesis Netlist Statistics for Top Partition
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
 
 
 
@@ -67,13 +71,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 27 05:06:39 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 28 17:40:09 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Velha                                       ;
 ; Top-level Entity Name           ; velha                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 223                                         ;
+; Total registers                 ; 329                                         ;
 ; Total pins                      ; 64                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 36                                          ;
@@ -179,60 +183,63 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 3           ;
-; Maximum allowed            ; 3           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 3           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; uc.vhd                           ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/uc.vhd                                 ;         ;
-; VGA/vga_pll.vhd                  ; yes             ; User Wizard-Generated File   ; C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd                        ;         ;
-; VGA/vga_pll/vga_pll_0002.v       ; yes             ; User Verilog HDL File        ; C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v             ; vga_pll ;
-; VGA/vgacon.vhd                   ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd                         ;         ;
-; monitor.vhd                      ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd                            ;         ;
-; PS2/bin2hex.vhd                  ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/bin2hex.vhd                        ;         ;
-; velha.vhd                        ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd                              ;         ;
-; PS2/ps2_iobase.vhd               ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd                     ;         ;
-; PS2/mouse_ctrl.vhd               ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd                     ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd                              ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altera_pll.v          ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_k7l1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/altsyncram_k7l1.tdf                 ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_ibm.tdf                  ;         ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_olh.tdf             ;         ;
-; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_mve.tdf                   ;         ;
-; db/lpm_divide_gpo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_gpo.tdf                  ;         ;
-; db/abs_divider_pbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/abs_divider_pbg.tdf                 ;         ;
-; db/alt_u_div_20f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_20f.tdf                   ;         ;
-; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_nn9.tdf                     ;         ;
-; db/lpm_abs_6p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_6p9.tdf                     ;         ;
-; db/lpm_divide_b5m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_b5m.tdf                  ;         ;
-; db/sign_div_unsign_enh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_enh.tdf             ;         ;
-; db/alt_u_div_23f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_23f.tdf                   ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; uc.vhd                           ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/uc.vhd                     ;         ;
+; VGA/vga_pll.vhd                  ; yes             ; User Wizard-Generated File   ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll.vhd            ;         ;
+; VGA/vga_pll/vga_pll_0002.v       ; yes             ; User Verilog HDL File        ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll/vga_pll_0002.v ; vga_pll ;
+; VGA/vgacon.vhd                   ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd             ;         ;
+; monitor.vhd                      ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd                ;         ;
+; PS2/bin2hex.vhd                  ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/bin2hex.vhd            ;         ;
+; velha.vhd                        ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd                  ;         ;
+; PS2/ps2_iobase.vhd               ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd         ;         ;
+; PS2/mouse_ctrl.vhd               ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/mouse_ctrl.vhd         ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/mouse.vhd                  ;         ;
+; Mouse/atualiza_posicao.vhd       ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd ;         ;
+; Mouse/valida_clique.vhd          ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd    ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v                     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_k7l1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/altsyncram_k7l1.tdf     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc              ;         ;
+; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_divide_ibm.tdf      ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/sign_div_unsign_olh.tdf ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/alt_u_div_mve.tdf       ;         ;
+; db/lpm_divide_gpo.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_divide_gpo.tdf      ;         ;
+; db/abs_divider_pbg.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/abs_divider_pbg.tdf     ;         ;
+; db/alt_u_div_20f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/alt_u_div_20f.tdf       ;         ;
+; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_abs_nn9.tdf         ;         ;
+; db/lpm_abs_6p9.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_abs_6p9.tdf         ;         ;
+; db/lpm_divide_b5m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_divide_b5m.tdf      ;         ;
+; db/sign_div_unsign_enh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/sign_div_unsign_enh.tdf ;         ;
+; db/alt_u_div_23f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/alt_u_div_23f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -240,16 +247,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 808          ;
+; Estimate of Logic utilization (ALMs needed) ; 894          ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 1570         ;
-;     -- 7 input functions                    ; 3            ;
-;     -- 6 input functions                    ; 36           ;
-;     -- 5 input functions                    ; 44           ;
-;     -- 4 input functions                    ; 334          ;
-;     -- <=3 input functions                  ; 1153         ;
+; Combinational ALUT usage for logic          ; 1722         ;
+;     -- 7 input functions                    ; 7            ;
+;     -- 6 input functions                    ; 51           ;
+;     -- 5 input functions                    ; 67           ;
+;     -- 4 input functions                    ; 365          ;
+;     -- <=3 input functions                  ; 1232         ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 223          ;
+; Dedicated logic registers                   ; 329          ;
 ;                                             ;              ;
 ; I/O pins                                    ; 64           ;
 ; Total MLAB memory bits                      ; 0            ;
@@ -261,60 +268,65 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 145          ;
-; Total fan-out                               ; 5725         ;
-; Average fan-out                             ; 2.97         ;
+; Maximum fan-out                             ; 176          ;
+; Total fan-out                               ; 6611         ;
+; Average fan-out                             ; 3.03         ;
 +---------------------------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                               ; Entity Name         ; Library Name ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |velha                                          ; 1570 (1)            ; 223 (0)                   ; 36                ; 0          ; 64   ; 0            ; |velha                                                                                                                                            ; velha               ; work         ;
-;    |bin2hex:display1|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display1                                                                                                                           ; bin2hex             ; work         ;
-;    |bin2hex:display2|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display2                                                                                                                           ; bin2hex             ; work         ;
-;    |bin2hex:display3|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display3                                                                                                                           ; bin2hex             ; work         ;
-;    |bin2hex:display4|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display4                                                                                                                           ; bin2hex             ; work         ;
-;    |monitor:mouse_monitor|                      ; 156 (19)            ; 49 (9)                    ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor                                                                                                                      ; monitor             ; work         ;
-;       |vgacon:vga_component|                    ; 137 (37)            ; 40 (40)                   ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component                                                                                                 ; vgacon              ; work         ;
-;          |dual_clock_ram:vgamem|                ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem                                                                           ; dual_clock_ram      ; work         ;
-;             |altsyncram:ram_block_rtl_0|        ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0                                                ; altsyncram          ; work         ;
-;                |altsyncram_k7l1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0|altsyncram_k7l1:auto_generated                 ; altsyncram_k7l1     ; work         ;
-;          |lpm_divide:Div0|                      ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_ibm:auto_generated|     ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
-;                |sign_div_unsign_olh:divider|    ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
-;                   |alt_u_div_mve:divider|       ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
-;          |lpm_divide:Div1|                      ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_ibm:auto_generated|     ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
-;                |sign_div_unsign_olh:divider|    ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
-;                   |alt_u_div_mve:divider|       ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
-;          |vga_pll:divider|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider                                                                                 ; vga_pll             ; work         ;
-;             |vga_pll_0002:vga_pll_inst|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst                                                       ; vga_pll_0002        ; vga_pll      ;
-;                |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i                               ; altera_pll          ; work         ;
-;    |mouse:mouse_position|                       ; 1385 (114)          ; 174 (46)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position                                                                                                                       ; mouse               ; work         ;
-;       |lpm_divide:Div0|                         ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
-;          |lpm_divide_gpo:auto_generated|        ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div0|lpm_divide_gpo:auto_generated                                                                         ; lpm_divide_gpo      ; work         ;
-;             |abs_divider_pbg:divider|           ; 232 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div0|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider                                                 ; abs_divider_pbg     ; work         ;
-;                |alt_u_div_20f:divider|          ; 200 (200)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div0|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|alt_u_div_20f:divider                           ; alt_u_div_20f       ; work         ;
-;                |lpm_abs_6p9:my_abs_num|         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div0|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|lpm_abs_6p9:my_abs_num                          ; lpm_abs_6p9         ; work         ;
-;       |lpm_divide:Div1|                         ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div1                                                                                                       ; lpm_divide          ; work         ;
-;          |lpm_divide_gpo:auto_generated|        ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div1|lpm_divide_gpo:auto_generated                                                                         ; lpm_divide_gpo      ; work         ;
-;             |abs_divider_pbg:divider|           ; 232 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div1|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider                                                 ; abs_divider_pbg     ; work         ;
-;                |alt_u_div_20f:divider|          ; 200 (200)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div1|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|alt_u_div_20f:divider                           ; alt_u_div_20f       ; work         ;
-;                |lpm_abs_6p9:my_abs_num|         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Div1|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|lpm_abs_6p9:my_abs_num                          ; lpm_abs_6p9         ; work         ;
-;       |lpm_divide:Mod0|                         ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod0                                                                                                       ; lpm_divide          ; work         ;
-;          |lpm_divide_b5m:auto_generated|        ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod0|lpm_divide_b5m:auto_generated                                                                         ; lpm_divide_b5m      ; work         ;
-;             |sign_div_unsign_enh:divider|       ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod0|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider                                             ; sign_div_unsign_enh ; work         ;
-;                |alt_u_div_23f:divider|          ; 318 (318)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod0|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider                       ; alt_u_div_23f       ; work         ;
-;       |lpm_divide:Mod1|                         ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod1                                                                                                       ; lpm_divide          ; work         ;
-;          |lpm_divide_b5m:auto_generated|        ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod1|lpm_divide_b5m:auto_generated                                                                         ; lpm_divide_b5m      ; work         ;
-;             |sign_div_unsign_enh:divider|       ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod1|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider                                             ; sign_div_unsign_enh ; work         ;
-;                |alt_u_div_23f:divider|          ; 318 (318)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|lpm_divide:Mod1|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider                       ; alt_u_div_23f       ; work         ;
-;       |mouse_ctrl:mousectrl|                    ; 171 (34)            ; 128 (43)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl                                                                                                  ; mouse_ctrl          ; work         ;
-;          |ps2_iobase:ps2io|                     ; 137 (137)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io                                                                                 ; ps2_iobase          ; work         ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                         ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Entity Name         ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |velha                                          ; 1722 (1)            ; 329 (0)                   ; 36                ; 0          ; 64   ; 0            ; |velha                                                                                                                                                      ; velha               ; work         ;
+;    |bin2hex:display1|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display1                                                                                                                                     ; bin2hex             ; work         ;
+;    |bin2hex:display2|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display2                                                                                                                                     ; bin2hex             ; work         ;
+;    |bin2hex:display3|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display3                                                                                                                                     ; bin2hex             ; work         ;
+;    |bin2hex:display4|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display4                                                                                                                                     ; bin2hex             ; work         ;
+;    |monitor:mouse_monitor|                      ; 158 (21)            ; 55 (15)                   ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor                                                                                                                                ; monitor             ; work         ;
+;       |vgacon:vga_component|                    ; 137 (37)            ; 40 (40)                   ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component                                                                                                           ; vgacon              ; work         ;
+;          |dual_clock_ram:vgamem|                ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem                                                                                     ; dual_clock_ram      ; work         ;
+;             |altsyncram:ram_block_rtl_0|        ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0                                                          ; altsyncram          ; work         ;
+;                |altsyncram_k7l1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0|altsyncram_k7l1:auto_generated                           ; altsyncram_k7l1     ; work         ;
+;          |lpm_divide:Div0|                      ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0                                                                                           ; lpm_divide          ; work         ;
+;             |lpm_divide_ibm:auto_generated|     ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                             ; lpm_divide_ibm      ; work         ;
+;                |sign_div_unsign_olh:divider|    ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                                 ; sign_div_unsign_olh ; work         ;
+;                   |alt_u_div_mve:divider|       ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider           ; alt_u_div_mve       ; work         ;
+;          |lpm_divide:Div1|                      ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1                                                                                           ; lpm_divide          ; work         ;
+;             |lpm_divide_ibm:auto_generated|     ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1|lpm_divide_ibm:auto_generated                                                             ; lpm_divide_ibm      ; work         ;
+;                |sign_div_unsign_olh:divider|    ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                                 ; sign_div_unsign_olh ; work         ;
+;                   |alt_u_div_mve:divider|       ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider           ; alt_u_div_mve       ; work         ;
+;          |vga_pll:divider|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider                                                                                           ; vga_pll             ; work         ;
+;             |vga_pll_0002:vga_pll_inst|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst                                                                 ; vga_pll_0002        ; vga_pll      ;
+;                |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i                                         ; altera_pll          ; work         ;
+;    |mouse:mouse_position|                       ; 1528 (0)            ; 268 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position                                                                                                                                 ; mouse               ; work         ;
+;       |atualiza_posicao:recebe_posicao|         ; 1389 (114)          ; 174 (46)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao                                                                                                 ; atualiza_posicao    ; work         ;
+;          |lpm_divide:Div0|                      ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_gpo:auto_generated|     ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0|lpm_divide_gpo:auto_generated                                                   ; lpm_divide_gpo      ; work         ;
+;                |abs_divider_pbg:divider|        ; 232 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider                           ; abs_divider_pbg     ; work         ;
+;                   |alt_u_div_20f:divider|       ; 200 (200)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|alt_u_div_20f:divider     ; alt_u_div_20f       ; work         ;
+;                   |lpm_abs_6p9:my_abs_num|      ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|lpm_abs_6p9:my_abs_num    ; lpm_abs_6p9         ; work         ;
+;          |lpm_divide:Div1|                      ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_gpo:auto_generated|     ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div1|lpm_divide_gpo:auto_generated                                                   ; lpm_divide_gpo      ; work         ;
+;                |abs_divider_pbg:divider|        ; 232 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div1|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider                           ; abs_divider_pbg     ; work         ;
+;                   |alt_u_div_20f:divider|       ; 200 (200)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div1|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|alt_u_div_20f:divider     ; alt_u_div_20f       ; work         ;
+;                   |lpm_abs_6p9:my_abs_num|      ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div1|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider|lpm_abs_6p9:my_abs_num    ; lpm_abs_6p9         ; work         ;
+;          |lpm_divide:Mod0|                      ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_b5m:auto_generated|     ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0|lpm_divide_b5m:auto_generated                                                   ; lpm_divide_b5m      ; work         ;
+;                |sign_div_unsign_enh:divider|    ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider                       ; sign_div_unsign_enh ; work         ;
+;                   |alt_u_div_23f:divider|       ; 318 (318)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider ; alt_u_div_23f       ; work         ;
+;          |lpm_divide:Mod1|                      ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_b5m:auto_generated|     ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1|lpm_divide_b5m:auto_generated                                                   ; lpm_divide_b5m      ; work         ;
+;                |sign_div_unsign_enh:divider|    ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider                       ; sign_div_unsign_enh ; work         ;
+;                   |alt_u_div_23f:divider|       ; 318 (318)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider ; alt_u_div_23f       ; work         ;
+;          |mouse_ctrl:mousectrl|                 ; 175 (34)            ; 128 (43)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl                                                                            ; mouse_ctrl          ; work         ;
+;             |ps2_iobase:ps2io|                  ; 141 (141)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io                                                           ; ps2_iobase          ; work         ;
+;       |valida_clique:acoes_clique|              ; 139 (12)            ; 94 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique                                                                                                      ; valida_clique       ; work         ;
+;          |mouse_ctrl:mousectrl|                 ; 127 (29)            ; 91 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl                                                                                 ; mouse_ctrl          ; work         ;
+;             |ps2_iobase:ps2io|                  ; 98 (98)             ; 67 (67)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io                                                                ; ps2_iobase          ; work         ;
+;    |uc:controle|                                ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|uc:controle                                                                                                                                          ; uc                  ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -328,17 +340,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------+
-; State Machine - |velha|mouse:mouse_position|mouse_ctrl:mousectrl|state                  ;
-+---------------+-------------+---------------+---------------+------------+--------------+
-; Name          ; state.CLEAR ; state.NEXTCMD ; state.WAITACK ; state.SEND ; state.SETCMD ;
-+---------------+-------------+---------------+---------------+------------+--------------+
-; state.SETCMD  ; 0           ; 0             ; 0             ; 0          ; 0            ;
-; state.SEND    ; 0           ; 0             ; 0             ; 1          ; 1            ;
-; state.WAITACK ; 0           ; 0             ; 1             ; 0          ; 1            ;
-; state.NEXTCMD ; 0           ; 1             ; 0             ; 0          ; 1            ;
-; state.CLEAR   ; 1           ; 0             ; 0             ; 0          ; 1            ;
-+---------------+-------------+---------------+---------------+------------+--------------+
++---------------------------------------------------------------------------------------------------+
+; State Machine - |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|state ;
++---------------+-------------+---------------+---------------+------------+------------------------+
+; Name          ; state.CLEAR ; state.NEXTCMD ; state.WAITACK ; state.SEND ; state.SETCMD           ;
++---------------+-------------+---------------+---------------+------------+------------------------+
+; state.SETCMD  ; 0           ; 0             ; 0             ; 0          ; 0                      ;
+; state.SEND    ; 0           ; 0             ; 0             ; 1          ; 1                      ;
+; state.WAITACK ; 0           ; 0             ; 1             ; 0          ; 1                      ;
+; state.NEXTCMD ; 0           ; 1             ; 0             ; 0          ; 1                      ;
+; state.CLEAR   ; 1           ; 0             ; 0             ; 0          ; 1                      ;
++---------------+-------------+---------------+---------------+------------+------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------+
+; State Machine - |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|state ;
++---------------+-------------+---------------+---------------+------------+-----------------------------+
+; Name          ; state.CLEAR ; state.NEXTCMD ; state.WAITACK ; state.SEND ; state.SETCMD                ;
++---------------+-------------+---------------+---------------+------------+-----------------------------+
+; state.SETCMD  ; 0           ; 0             ; 0             ; 0          ; 0                           ;
+; state.SEND    ; 0           ; 0             ; 0             ; 1          ; 1                           ;
+; state.WAITACK ; 0           ; 0             ; 1             ; 0          ; 1                           ;
+; state.NEXTCMD ; 0           ; 1             ; 0             ; 0          ; 1                           ;
+; state.CLEAR   ; 1           ; 0             ; 0             ; 0          ; 1                           ;
++---------------+-------------+---------------+---------------+------------+-----------------------------+
 
 
 Encoding Type:  One-Hot
@@ -353,33 +379,66 @@ Encoding Type:  One-Hot
 +----------------+----------------+----------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                      ;
-+----------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal        ; Free of Timing Hazards ;
-+----------------------------------------------------+----------------------------+------------------------+
-; monitor:mouse_monitor|mouse_x_tmp[0]               ; monitor:mouse_monitor|Mux6 ; yes                    ;
-; monitor:mouse_monitor|mouse_x_tmp[1]               ; monitor:mouse_monitor|Mux6 ; yes                    ;
-; monitor:mouse_monitor|mouse_y_tmp[0]               ; monitor:mouse_monitor|Mux0 ; yes                    ;
-; monitor:mouse_monitor|mouse_y_tmp[1]               ; monitor:mouse_monitor|Mux0 ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                            ;                        ;
-+----------------------------------------------------+----------------------------+------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                            ;
++----------------------------------------------------------------+------------------------------------------------------+------------------------+
+; Latch Name                                                     ; Latch Enable Signal                                  ; Free of Timing Hazards ;
++----------------------------------------------------------------+------------------------------------------------------+------------------------+
+; monitor:mouse_monitor|mouse_x_tmp[0]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux2 ; yes                    ;
+; monitor:mouse_monitor|mouse_x_tmp[1]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux2 ; yes                    ;
+; monitor:mouse_monitor|mouse_y_tmp[0]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux7 ; yes                    ;
+; monitor:mouse_monitor|mouse_y_tmp[1]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux7 ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[0] ; mouse:mouse_position|valida_clique:acoes_clique|Mux2 ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[1] ; mouse:mouse_position|valida_clique:acoes_clique|Mux7 ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[0] ; mouse:mouse_position|valida_clique:acoes_clique|Mux7 ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[1] ; mouse:mouse_position|valida_clique:acoes_clique|Mux2 ; yes                    ;
+; Number of user-specified and inferred latches = 8              ;                                                      ;                        ;
++----------------------------------------------------------------+------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                               ;
-+-------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                           ; Reason for Removal                     ;
-+-------------------------------------------------------------------------+----------------------------------------+
-; monitor:mouse_monitor|video_word[1,2]                                   ; Stuck at GND due to stuck port data_in ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|\process_1:count[2]           ; Stuck at GND due to stuck port data_in ;
-; uc:controle|estado.PreJogo                                              ; Lost fanout                            ;
-; uc:controle|estado.Jogando                                              ; Lost fanout                            ;
-; uc:controle|estado.PosJogo                                              ; Lost fanout                            ;
-; Total Number of Removed Registers = 7                                   ;                                        ;
-+-------------------------------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                         ;
++---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                           ; Reason for Removal                                                                                               ;
++---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_clk~reg0      ; Stuck at GND due to stuck port data_in                                                                           ;
+; mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in                                                                           ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[7]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[7] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[5]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[5] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[4]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[4] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[1]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[1] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[7]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[7] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[5]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[5] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[4]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[4] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[1]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[1] ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] ;
+; monitor:mouse_monitor|tela[1,3,5,7..9,11]                                                               ; Merged with monitor:mouse_monitor|tela[10]                                                                       ;
+; monitor:mouse_monitor|tela[10]                                                                          ; Stuck at GND due to stuck port data_in                                                                           ;
+; monitor:mouse_monitor|video_word[1]                                                                     ; Stuck at GND due to stuck port data_in                                                                           ;
+; mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|\process_1:count[2]           ; Stuck at GND due to stuck port data_in                                                                           ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|\process_1:count[2]                ; Stuck at GND due to stuck port data_in                                                                           ;
+; Total Number of Removed Registers = 31                                                                  ;                                                                                                                  ;
++---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                         ;
++--------------------------------+---------------------------+----------------------------------------+
+; Register name                  ; Reason for Removal        ; Registers Removed due to This Register ;
++--------------------------------+---------------------------+----------------------------------------+
+; monitor:mouse_monitor|tela[10] ; Stuck at GND              ; monitor:mouse_monitor|video_word[1]    ;
+;                                ; due to stuck port data_in ;                                        ;
++--------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -387,24 +446,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 223   ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 329   ;
+; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 204   ;
+; Number of registers using Asynchronous Clear ; 288   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 95    ;
+; Number of registers using Clock Enable       ; 146   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                        ;
-+---------------------------------------------------------------------------+---------+
-; Inverted Register                                                         ; Fan out ;
-+---------------------------------------------------------------------------+---------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigclkreleased ; 3       ;
-; Total number of inverted registers = 1                                    ;         ;
-+---------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                        ;
++-----------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                         ; Fan out ;
++-----------------------------------------------------------------------------------------------------------+---------+
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigclkreleased      ; 3       ;
+; mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigclkreleased ; 3       ;
+; Total number of inverted registers = 2                                                                    ;         ;
++-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -416,18 +476,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[4] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[7] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|state                      ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |velha|uc:controle|estado                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[1] ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |velha|monitor:mouse_monitor|video_word[1]                                                                  ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; Yes        ; |velha|uc:controle|comando_monitor[1]                                                                       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux0                                                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux6                                                                           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|state                           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|state                      ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |velha|uc:controle|estado                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -439,23 +504,43 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------+--------------------+------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl ;
-+----------------+-------+---------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                          ;
-+----------------+-------+---------------------------------------------------------------+
-; clkfreq        ; 50000 ; Signed Integer                                                ;
-+----------------+-------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io ;
-+----------------+-------+--------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                           ;
-+----------------+-------+--------------------------------------------------------------------------------+
-; clkfreq        ; 50000 ; Signed Integer                                                                 ;
-+----------------+-------+--------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                           ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                                                                                                 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -834,95 +919,95 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div0 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 16             ; Untyped                                     ;
-; LPM_WIDTHD             ; 8              ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_gpo ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                                                                     ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                                     ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                     ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_gpo ; Untyped                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                              ;
++------------------------+----------------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div1 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 16             ; Untyped                                     ;
-; LPM_WIDTHD             ; 8              ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_gpo ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                                                                     ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                                     ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                     ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_gpo ; Untyped                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                              ;
++------------------------+----------------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod0 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 17             ; Untyped                                     ;
-; LPM_WIDTHD             ; 16             ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_b5m ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                                                     ;
+; LPM_WIDTHD             ; 16             ; Untyped                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_b5m ; Untyped                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                              ;
++------------------------+----------------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod1 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 17             ; Untyped                                     ;
-; LPM_WIDTHD             ; 16             ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_b5m ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1 ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                                                     ;
+; LPM_WIDTHD             ; 16             ; Untyped                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_b5m ; Untyped                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                              ;
++------------------------+----------------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -946,17 +1031,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "monitor:mouse_monitor|vgacon:vga_component" ;
-+--------------+-------+----------+--------------------------------------+
-; Port         ; Type  ; Severity ; Details                              ;
-+--------------+-------+----------+--------------------------------------+
-; write_enable ; Input ; Info     ; Stuck at VCC                         ;
-+--------------+-------+----------+--------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl"                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; en          ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; bt_on[2..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ox          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; oy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dx          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wheel       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mouse:mouse_position|mouse_ctrl:mousectrl"                                           ;
+; Port Connectivity Checks: "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl"           ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -968,14 +1059,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uc:controle"                                                                                   ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; comando_mouse   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; comando_monitor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uc:controle"                                                                                ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; controle_ram ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -983,30 +1073,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 223                         ;
-;     CLR               ; 99                          ;
+; arriav_ff             ; 329                         ;
+;     CLR               ; 134                         ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA CLR           ; 85                          ;
+;     ENA CLR           ; 134                         ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     plain             ; 19                          ;
+;     ENA SCLR          ; 2                           ;
+;     SCLR              ; 2                           ;
+;     plain             ; 37                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1575                        ;
-;     arith             ; 762                         ;
+; arriav_lcell_comb     ; 1727                        ;
+;     arith             ; 794                         ;
 ;         0 data inputs ; 88                          ;
-;         1 data inputs ; 131                         ;
-;         2 data inputs ; 161                         ;
+;         1 data inputs ; 162                         ;
+;         2 data inputs ; 162                         ;
 ;         3 data inputs ; 218                         ;
 ;         4 data inputs ; 164                         ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 760                         ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 876                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 389                         ;
-;         3 data inputs ; 110                         ;
-;         4 data inputs ; 170                         ;
-;         5 data inputs ; 44                          ;
-;         6 data inputs ; 36                          ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 409                         ;
+;         3 data inputs ; 133                         ;
+;         4 data inputs ; 201                         ;
+;         5 data inputs ; 67                          ;
+;         6 data inputs ; 51                          ;
 ;     shared            ; 50                          ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 42                          ;
@@ -1015,7 +1107,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 32.10                       ;
-; Average LUT depth     ; 21.62                       ;
+; Average LUT depth     ; 19.61                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1024,7 +1116,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1034,66 +1126,81 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun May 27 05:05:58 2018
+    Info: Processing started: Mon May 28 17:39:56 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Velha -c Velha
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 3 of the 3 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
-    Info (12022): Found design unit 1: uc-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/uc.vhd Line: 16
-    Info (12023): Found entity 1: uc File: C:/Users/Yagostoso/Desktop/V2/Projeto/uc.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file vga/vga_pll.vhd
-    Info (12022): Found design unit 1: vga_pll-rtl File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd Line: 19
-    Info (12023): Found entity 1: vga_pll File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd Line: 11
-Info (12021): Found 1 design units, including 1 entities, in source file vga/vga_pll/vga_pll_0002.v
-    Info (12023): Found entity 1: vga_pll_0002 File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 2
-Info (12021): Found 4 design units, including 2 entities, in source file vga/vgacon.vhd
-    Info (12022): Found design unit 1: vgacon-behav File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 96
-    Info (12022): Found design unit 2: dual_clock_ram-behav File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 269
-    Info (12023): Found entity 1: vgacon File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 75
-    Info (12023): Found entity 2: dual_clock_ram File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 256
+    Info (12022): Found design unit 1: uc-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/uc.vhd Line: 17
+    Info (12023): Found entity 1: uc File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/uc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file VGA/vga_pll.vhd
+    Info (12022): Found design unit 1: vga_pll-rtl File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll.vhd Line: 19
+    Info (12023): Found entity 1: vga_pll File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file VGA/vga_pll/vga_pll_0002.v
+    Info (12023): Found entity 1: vga_pll_0002 File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 2
+Info (12021): Found 4 design units, including 2 entities, in source file VGA/vgacon.vhd
+    Info (12022): Found design unit 1: vgacon-behav File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 96
+    Info (12022): Found design unit 2: dual_clock_ram-behav File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 269
+    Info (12023): Found entity 1: vgacon File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 75
+    Info (12023): Found entity 2: dual_clock_ram File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 256
 Info (12021): Found 2 design units, including 1 entities, in source file monitor.vhd
-    Info (12022): Found design unit 1: monitor-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 19
-    Info (12023): Found entity 1: monitor File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ps2/bin2hex.vhd
-    Info (12022): Found design unit 1: bin2hex-LogicFunction File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/bin2hex.vhd Line: 11
-    Info (12023): Found entity 1: bin2hex File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/bin2hex.vhd Line: 4
+    Info (12022): Found design unit 1: monitor-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 20
+    Info (12023): Found entity 1: monitor File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file PS2/bin2hex.vhd
+    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/bin2hex.vhd Line: 11
+    Info (12023): Found entity 1: bin2hex File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/bin2hex.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file velha.vhd
-    Info (12022): Found design unit 1: velha-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 33
-    Info (12023): Found entity 1: velha File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ps2/ps2_iobase.vhd
-    Info (12022): Found design unit 1: ps2_iobase-rtl File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 41
-    Info (12023): Found entity 1: ps2_iobase File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 20
-Info (12021): Found 2 design units, including 1 entities, in source file ps2/mouse_ctrl.vhd
-    Info (12022): Found design unit 1: mouse_ctrl-rtl File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd Line: 56
-    Info (12023): Found entity 1: mouse_ctrl File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd Line: 20
+    Info (12022): Found design unit 1: velha-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 33
+    Info (12023): Found entity 1: velha File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file PS2/ps2_iobase.vhd
+    Info (12022): Found design unit 1: ps2_iobase-rtl File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 41
+    Info (12023): Found entity 1: ps2_iobase File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file PS2/mouse_ctrl.vhd
+    Info (12022): Found design unit 1: mouse_ctrl-rtl File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/mouse_ctrl.vhd Line: 56
+    Info (12023): Found entity 1: mouse_ctrl File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/mouse_ctrl.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: mouse-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 17
-    Info (12023): Found entity 1: mouse File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 5
+    Info (12022): Found design unit 1: mouse-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/mouse.vhd Line: 19
+    Info (12023): Found entity 1: mouse File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/mouse.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Mouse/atualiza_posicao.vhd
+    Info (12022): Found design unit 1: atualiza_posicao-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 17
+    Info (12023): Found entity 1: atualiza_posicao File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Mouse/valida_clique.vhd
+    Info (12022): Found design unit 1: valida_clique-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 18
+    Info (12023): Found entity 1: valida_clique File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 5
 Info (12127): Elaborating entity "velha" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at velha.vhd(76): used implicit default value for signal "entrada" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 76
-Warning (10036): Verilog HDL or VHDL warning at velha.vhd(77): object "saida_mouse" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at velha.vhd(78): object "saida_monitor" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 78
-Info (12128): Elaborating entity "uc" for hierarchy "uc:controle" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 80
-Info (12128): Elaborating entity "mouse" for hierarchy "mouse:mouse_position" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 81
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(37): object "ox" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(37): object "oy" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(38): object "bt_on" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(39): object "wheel" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 39
-Info (12128): Elaborating entity "mouse_ctrl" for hierarchy "mouse:mouse_position|mouse_ctrl:mousectrl" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 45
-Info (12128): Elaborating entity "ps2_iobase" for hierarchy "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io" File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd Line: 79
-Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 161
-Info (12128): Elaborating entity "monitor" for hierarchy "monitor:mouse_monitor" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 82
-Info (10041): Inferred latch for "mouse_y_tmp[0]" at monitor.vhd(92) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
-Info (10041): Inferred latch for "mouse_y_tmp[1]" at monitor.vhd(92) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
-Info (10041): Inferred latch for "mouse_x_tmp[0]" at monitor.vhd(85) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
-Info (10041): Inferred latch for "mouse_x_tmp[1]" at monitor.vhd(85) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
-Info (12128): Elaborating entity "vgacon" for hierarchy "monitor:mouse_monitor|vgacon:vga_component" File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 61
-Info (12128): Elaborating entity "vga_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 118
-Info (12128): Elaborating entity "vga_pll_0002" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd Line: 31
-Info (12128): Elaborating entity "altera_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
+Warning (10036): Verilog HDL or VHDL warning at velha.vhd(94): object "gravar" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 94
+Info (12128): Elaborating entity "uc" for hierarchy "uc:controle" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 99
+Info (12128): Elaborating entity "mouse" for hierarchy "mouse:mouse_position" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 100
+Info (12128): Elaborating entity "atualiza_posicao" for hierarchy "mouse:mouse_position|atualiza_posicao:recebe_posicao" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/mouse.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(37): object "ox" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(37): object "oy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(38): object "bt_on" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(39): object "wheel" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 39
+Info (12128): Elaborating entity "mouse_ctrl" for hierarchy "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 45
+Info (12128): Elaborating entity "ps2_iobase" for hierarchy "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/mouse_ctrl.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 161
+Info (12128): Elaborating entity "valida_clique" for hierarchy "mouse:mouse_position|valida_clique:acoes_clique" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/mouse.vhd Line: 44
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(38): object "ox" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(38): object "oy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(40): object "wheel" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 40
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(42): object "dx" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(42): object "dy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 42
+Info (10041): Inferred latch for "mouse_y_tmp[0]" at valida_clique.vhd(62) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 62
+Info (10041): Inferred latch for "mouse_y_tmp[1]" at valida_clique.vhd(62) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 62
+Info (10041): Inferred latch for "mouse_x_tmp[0]" at valida_clique.vhd(55) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 55
+Info (10041): Inferred latch for "mouse_x_tmp[1]" at valida_clique.vhd(55) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 55
+Info (12128): Elaborating entity "monitor" for hierarchy "monitor:mouse_monitor" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 101
+Info (10041): Inferred latch for "mouse_y_tmp[0]" at monitor.vhd(94) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 94
+Info (10041): Inferred latch for "mouse_y_tmp[1]" at monitor.vhd(94) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 94
+Info (10041): Inferred latch for "mouse_x_tmp[0]" at monitor.vhd(87) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 87
+Info (10041): Inferred latch for "mouse_x_tmp[1]" at monitor.vhd(87) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 87
+Info (12128): Elaborating entity "vgacon" for hierarchy "monitor:mouse_monitor|vgacon:vga_component" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 62
+Info (12128): Elaborating entity "vga_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 118
+Info (12128): Elaborating entity "vga_pll_0002" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll.vhd Line: 31
+Info (12128): Elaborating entity "altera_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
-Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
+Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1154,8 +1261,8 @@ Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_compon
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "dual_clock_ram" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 124
-Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:display1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 85
+Info (12128): Elaborating entity "dual_clock_ram" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 124
+Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:display1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 105
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|ram_block_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1174,12 +1281,12 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to vga_mem.mif
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 229
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 230
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 55
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Div1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 56
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Mod0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 57
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Mod1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div0" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 229
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 230
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|atualiza_posicao:recebe_posicao|Div0" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 55
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|atualiza_posicao:recebe_posicao|Div1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 56
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|atualiza_posicao:recebe_posicao|Mod0" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 57
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|atualiza_posicao:recebe_posicao|Mod1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 58
 Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0"
 Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1198,113 +1305,118 @@ Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_compon
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "vga_mem.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k7l1.tdf
-    Info (12023): Found entity 1: altsyncram_k7l1 File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/altsyncram_k7l1.tdf Line: 27
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File C:/Users/Yagostoso/Desktop/V2/Projeto/vga_mem.mif -- setting all initial values to 0 File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 229
-Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 229
+    Info (12023): Found entity 1: altsyncram_k7l1 File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/altsyncram_k7l1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 229
+Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 229
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
-    Info (12023): Found entity 1: lpm_divide_ibm File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_ibm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_ibm File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_divide_ibm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_olh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_olh File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
-    Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_mve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 230
-Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 230
+    Info (12023): Found entity 1: alt_u_div_mve File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 230
+Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/VGA/vgacon.vhd Line: 230
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|lpm_divide:Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 55
-Info (12133): Instantiated megafunction "mouse:mouse_position|lpm_divide:Div0" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 55
+Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 55
+Info (12133): Instantiated megafunction "mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 55
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gpo.tdf
-    Info (12023): Found entity 1: lpm_divide_gpo File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_gpo.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_gpo File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_divide_gpo.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_pbg.tdf
-    Info (12023): Found entity 1: abs_divider_pbg File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/abs_divider_pbg.tdf Line: 28
+    Info (12023): Found entity 1: abs_divider_pbg File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/abs_divider_pbg.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_20f.tdf
-    Info (12023): Found entity 1: alt_u_div_20f File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_20f.tdf Line: 22
+    Info (12023): Found entity 1: alt_u_div_20f File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/alt_u_div_20f.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
-    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_nn9.tdf Line: 22
+    Info (12023): Found entity 1: lpm_abs_nn9 File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_abs_nn9.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_6p9.tdf
-    Info (12023): Found entity 1: lpm_abs_6p9 File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_6p9.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|lpm_divide:Mod0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 57
-Info (12133): Instantiated megafunction "mouse:mouse_position|lpm_divide:Mod0" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 57
+    Info (12023): Found entity 1: lpm_abs_6p9 File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_abs_6p9.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 57
+Info (12133): Instantiated megafunction "mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod0" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 57
     Info (12134): Parameter "LPM_WIDTHN" = "17"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_b5m.tdf
-    Info (12023): Found entity 1: lpm_divide_b5m File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_b5m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_b5m File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/lpm_divide_b5m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_enh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_enh File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_enh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_enh File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/sign_div_unsign_enh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_23f.tdf
-    Info (12023): Found entity 1: alt_u_div_23f File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_23f.tdf Line: 22
-Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[0] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|x[4] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[1] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|x[4] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[0] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|y[0] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[1] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|y[0] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Info (12023): Found entity 1: alt_u_div_23f File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/db/alt_u_div_23f.tdf Line: 22
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[0]" merged with LATCH primitive "monitor:mouse_monitor|mouse_x_tmp[0]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 55
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[1]" merged with LATCH primitive "monitor:mouse_monitor|mouse_x_tmp[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 55
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[0]" merged with LATCH primitive "monitor:mouse_monitor|mouse_y_tmp[0]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 62
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[1]" merged with LATCH primitive "monitor:mouse_monitor|mouse_y_tmp[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/valida_clique.vhd Line: 62
+Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 87
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|x[4] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 87
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|x[4] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 94
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/monitor.vhd Line: 94
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en" is converted into an equivalent circuit using register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en_emulated" and latch "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 25
-    Warning (13310): Register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy" is converted into an equivalent circuit using register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~_emulated" and latch "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 34
+    Warning (13310): Register "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en" is converted into an equivalent circuit using register "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en_emulated" and latch "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 25
+    Warning (13310): Register "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en" is converted into an equivalent circuit using register "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en_emulated" and latch "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 25
+    Warning (13310): Register "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy" is converted into an equivalent circuit using register "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~_emulated" and latch "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 34
+    Warning (13310): Register "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy" is converted into an equivalent circuit using register "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~_emulated" and latch "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 34
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 18
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 18
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 18
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register mouse:mouse_position|xacc[14] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[14] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|xacc[12] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[11] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[12] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[11] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[7] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[7] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[5] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[5] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[4] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[4] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[14] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[14] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[12] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[11] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[12] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[11] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[7] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[7] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[5] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[5] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[4] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[4] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/Mouse/atualiza_posicao.vhd Line: 54
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 22
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 22
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 22
-Info (21057): Implemented 1693 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 22
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 22
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V3/Projeto/velha.vhd Line: 22
+Info (21057): Implemented 1860 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 57 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1625 logic cells
+    Info (21061): Implemented 1792 logic cells
     Info (21064): Implemented 3 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
-    Info: Peak virtual memory: 4913 megabytes
-    Info: Processing ended: Sun May 27 05:06:40 2018
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:53
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 1251 megabytes
+    Info: Processing ended: Mon May 28 17:40:09 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:24
 
 

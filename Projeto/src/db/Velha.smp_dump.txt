@@ -1,5 +1,13 @@
 
-State Machine - |velha|mouse:mouse_position|mouse_ctrl:mousectrl|state
+State Machine - |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|state
+Name state.CLEAR state.NEXTCMD state.WAITACK state.SEND state.SETCMD 
+state.SETCMD 0 0 0 0 0 
+state.SEND 0 0 0 1 1 
+state.WAITACK 0 0 1 0 1 
+state.NEXTCMD 0 1 0 0 1 
+state.CLEAR 1 0 0 0 1 
+
+State Machine - |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|state
 Name state.CLEAR state.NEXTCMD state.WAITACK state.SEND state.SETCMD 
 state.SETCMD 0 0 0 0 0 
 state.SEND 0 0 0 1 1 
