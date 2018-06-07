@@ -101,8 +101,9 @@ begin
 	process(clock_50mhz)
 		variable video_address_tmp : integer RANGE 0 TO HORZ_SIZE * VERT_SIZE - 1;
 		variable mouse_position : integer range 0 to HORZ_SIZE * VERT_SIZE - 1;
-		variable tela : std_logic_vector(0 to HORZ_SIZE * VERT_SIZE - 1);
+		variable tela : std_logic_vector(0 to ((HORZ_SIZE * VERT_SIZE * 2) - 1));
 		variable bit_tela : std_logic;
+		variable cont : integer range 0 to 3;
 	begin
 		if clock_50mhz'event and clock_50mhz = '1' then		
 			gravar_monitor <= '0';
@@ -111,43 +112,216 @@ begin
 					endereco_ram <= "11";
 					bit_tela := '0';
 					tela := (others => bit_tela);
+					tela(11*2) := '1';
+					tela((11*2)+1) := '0';
 					if saida_ram(5 downto 4) = "00" then
-						tela(0) := '0';
-						tela(4) := '0';
+						tela(0*2) := '0';
+						tela(4*2) := '0';
+						tela((0*2)+1) := '0';
+						tela((4*2)+1) := '0';
 					else
 						if saida_ram(5 downto 4) = "01" then
-							tela(0) := '1';
-							tela(4) := '0';
+							tela(0*2) := '0';
+							tela(4*2) := '0';
+							tela((0*2)+1) := '1';
+							tela((4*2)+1) := '0';
 						else
 							if saida_ram(5 downto 4) = "10" then
-								tela(4) := '1';
-								tela(0) := '0';
+								tela(4*2) := '0';
+								tela(0*2) := '0';
+								tela((0*2)+1) := '0';
+								tela((4*2)+1) := '1';
 							end if;
 						end if;
 					end if;
 					if saida_ram(3 downto 2) = "00" then
-						tela(2) := '0';
-						tela(6) := '0';
+						tela(2*2) := '0';
+						tela(6*2) := '0';
+						tela((2*2)+1) := '0';
+						tela((6*2)+1) := '0';
 					else
 						if saida_ram(3 downto 2) = "01" then
-							tela(2) := '1';
-							tela(6) := '0';
+							tela(2*2) := '0';
+							tela(6*2) := '0';
+							tela((2*2)+1) := '1';
+							tela((6*2)+1) := '0';
 						else
 							if saida_ram(3 downto 2) = "10" then
-								tela(6) := '1';
-								tela(2) := '0';
+								tela(6*2) := '0';
+								tela(2*2) := '0';
+								tela((2*2)+1) := '0';
+								tela((6*2)+1) := '1';
 							end if;
 						end if;
 					end if;
-					video_word <= "100";
 					gravar_monitor <= '1';
 				when "01" =>
+					if cont = 0 then
+						bit_tela := '0';
+						tela := (others => bit_tela);
+					end if;
+					if cont = 3 then
+						cont := 0;
+					end if;
+					if cont = 0 then
+						endereco_ram <= "01";
+						if saida_ram(5 downto 4) = "01" then
+							tela(9*2) := '0';
+							tela((9*2)+1) := '1';
+						else 
+							if saida_ram(5 downto 4) = "10" then
+								tela(9*2) := '1';
+								tela((9*2)+1) := '0';
+							else
+								if saida_ram(5 downto 4) = "00" then
+									tela(9*2) := '0';
+									tela((9*2)+1) := '0';
+								end if;
+							end if;
+						end if;
+						if saida_ram(3 downto 2) = "01" then
+							tela(10*2) := '0';
+							tela((10*2)+1) := '1';
+						else 
+							if saida_ram(3 downto 2) = "10" then
+								tela(10*2) := '1';
+								tela((10*2)+1) := '0';
+							else
+								if saida_ram(3 downto 2) = "00" then
+									tela(10*2) := '0';
+									tela((10*2)+1) := '0';
+								end if;
+							end if;
+						end if;
+						if saida_ram(1 downto 0) = "01" then
+							tela(11*2) := '0';
+							tela((11*2)+1) := '1';
+						else 
+							if saida_ram(1 downto 0) = "10" then
+								tela(11*2) := '1';
+								tela((11*2)+1) := '0';
+							else
+								if saida_ram(1 downto 0) = "00" then
+									tela(11*2) := '0';
+									tela((11*2)+1) := '0';
+								end if;
+							end if;
+						end if;
+					else
+						if cont = 1 then
+							endereco_ram <= "10";
+							if saida_ram(5 downto 4) = "01" then
+								tela(1*2) := '0';
+								tela((1*2)+1) := '1';
+							else 
+								if saida_ram(5 downto 4) = "10" then
+									tela(1*2) := '1';
+									tela((1*2)+1) := '0';
+								else
+									if saida_ram(5 downto 4) = "00" then
+										tela(1*2) := '0';
+										tela((1*2)+1) := '0';
+									end if;
+								end if;
+							end if;
+							if saida_ram(3 downto 2) = "01" then
+								tela(2*2) := '0';
+								tela((2*2)+1) := '1';
+							else 
+								if saida_ram(3 downto 2) = "10" then
+									tela(2*2) := '1';
+									tela((2*2)+1) := '0';
+								else
+									if saida_ram(3 downto 2) = "00" then
+										tela(2*2) := '0';
+										tela((2*2)+1) := '0';
+									end if;
+								end if;
+							end if;
+							if saida_ram(1 downto 0) = "01" then
+								tela(3*2) := '0';
+								tela((3*2)+1) := '1';
+							else 
+								if saida_ram(1 downto 0) = "10" then
+									tela(3*2) := '1';
+									tela((3*2)+1) := '0';
+								else
+									if saida_ram(1 downto 0) = "00" then
+										tela(3*2) := '0';
+										tela((3*2)+1) := '0';
+									end if;
+								end if;
+							end if;
+						else
+							if cont = 2 then
+								endereco_ram <= "00";
+								if saida_ram(5 downto 4) = "01" then
+									tela(5*2) := '0';
+									tela((5*2)+1) := '1';
+								else 
+									if saida_ram(5 downto 4) = "10" then
+										tela(5*2) := '1';
+										tela((5*2)+1) := '0';
+									else
+										if saida_ram(5 downto 4) = "00" then
+											tela(5*2) := '0';
+											tela((5*2)+1) := '0';
+										end if;
+									end if;
+								end if;
+								if saida_ram(3 downto 2) = "01" then
+									tela(6*2) := '0';
+									tela((6*2)+1) := '1';
+								else 
+									if saida_ram(3 downto 2) = "10" then
+										tela(6*2) := '1';
+										tela((6*2)+1) := '0';
+									else
+										if saida_ram(3 downto 2) = "00" then
+											tela(6*2) := '0';
+											tela((6*2)+1) := '0';
+										end if;
+									end if;
+								end if;
+								if saida_ram(1 downto 0) = "01" then
+									tela(7*2) := '0';
+									tela((7*2)+1) := '1';
+								else 
+									if saida_ram(1 downto 0) = "10" then
+										tela(7*2) := '1';
+										tela((7*2)+1) := '0';
+									else
+										if saida_ram(1 downto 0) = "00" then
+											tela(7*2) := '0';
+											tela((7*2)+1) := '0';
+										end if;
+									end if;
+								end if;
+							end if;
+						end if;
+					end if;
+					cont := cont + 1;
 				when "10" =>
 				when others =>
 			end case;
-			if tela(video_address_tmp) = '0' then
+			if tela(video_address_tmp*2) = '0' and tela((video_address_tmp*2)+1) = '0' then
 				video_word <= "000";
 				gravar_monitor <= '1';
+			else
+				if tela(video_address_tmp*2) = '0' and tela((video_address_tmp*2)+1) = '1' then
+					video_word <= "100";
+					gravar_monitor <= '1';
+				else
+					if tela(video_address_tmp*2) = '1' and tela((video_address_tmp*2)+1) = '0' then
+						video_word <= "010";
+						gravar_monitor <= '1';
+					else
+						if tela(video_address_tmp*2) = '1' and tela((video_address_tmp*2)+1) = '1' then
+							video_word <= "001";
+							gravar_monitor <= '1';
+						end if;
+					end if;
+				end if;
 			end if;
 			video_address <= video_address_tmp;
 			mouse_position := (4 * mouse_y_tmp) + mouse_x_tmp;

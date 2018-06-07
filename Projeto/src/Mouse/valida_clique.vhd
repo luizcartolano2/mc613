@@ -12,7 +12,8 @@ entity valida_clique is
 		position_x : in std_logic_vector(7 downto 0);
 		position_y : in std_logic_vector(7 downto 0);
 		comando : out std_logic_vector(2 downto 0);
-		endereco_ram : out std_logic_vector(1 downto 0)
+		endereco_ram : out std_logic_vector(1 downto 0);
+		estado_mouse : in std_logic_vector(1 downto 0)
 	);
 end;
 
@@ -72,20 +73,47 @@ begin
 		if(rising_edge(signewdata)) then			
 			if bt_on(0) = '1' then
 				mouse_position := (4 * mouse_y_tmp) + mouse_x_tmp;
-				case mouse_position is
-					when 0 =>
-						comando <= "001";
-						endereco_ram <= "11";
-					when 2 =>
-						comando <= "011";
-						endereco_ram <= "11";
-					when 4 =>
-						comando <= "010";
-					when 6 =>
-						comando <= "100";
-					when others =>
-						comando <= "000";
-				end case;
+				if estado_mouse = "00" then
+					case mouse_position is
+						when 0 =>
+							comando <= "001";
+							endereco_ram <= "11";
+						when 2 =>
+							comando <= "011";
+							endereco_ram <= "11";
+						when 4 =>
+							comando <= "010";
+						when 6 =>
+							comando <= "100";
+						when 11 =>
+							comando <= "101";
+						when others =>
+							comando <= "000";
+					end case;
+				else
+					if estado_mouse = "01" then
+						case mouse_position is
+							when 1 =>
+							when 2 =>
+							when 3 =>
+							when 5 =>
+							when 6 =>
+							when 7 =>
+							when 9 =>
+							when 10 =>
+							when 11 =>
+							when others =>
+								comando <= "000";
+						end case;
+					else
+						if estado_mouse = "10" then
+							case mouse_position is
+								when others =>
+									comando <= "000";
+							end case;
+						end if;
+					end if;
+				end if;
 			else 
 				comando <= "000";
 			end if;

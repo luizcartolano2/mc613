@@ -10,7 +10,8 @@ entity uc is
 		comando_entrada 	: in 	std_logic_vector(2 downto 0);
 		comando_mouse		: out std_logic_vector(2 downto 0);
 		comando_monitor	: out std_logic_vector(1 downto 0);
-		controle_ram 		: out std_logic
+		controle_ram 		: out std_logic;
+		mouse_validos 		: out std_logic_vector(1 downto 0)
 	);
 end;
 
@@ -39,6 +40,7 @@ begin
 							controle_ram_tmp := '0';
 						end if;
 						comando_monitor <= "00";
+						mouse_validos <= "00";
 						if comando_entrada = "101" then
 							estado <= Jogando;
 							comando_mouse <= "000";
@@ -49,6 +51,7 @@ begin
 							else
 								if comando_entrada = "010" then
 									comando_mouse <= "010";
+									controle_ram_tmp := '1';
 								else
 									if comando_entrada = "011" then
 										comando_mouse <= "011";
@@ -56,6 +59,7 @@ begin
 									else
 										if comando_entrada = "100" then
 											comando_mouse <= "100";
+											controle_ram_tmp := '1';
 										end if;
 									end if;
 								end if;
@@ -63,6 +67,7 @@ begin
 						end if;
 					when Jogando =>
 						comando_monitor <= "01";
+						mouse_validos <= "01";
 						if comando_entrada = "010" then
 							estado <= PosJogo;
 							comando_mouse <= "110";
@@ -73,6 +78,7 @@ begin
 						end if;
 					when PosJogo =>
 						comando_monitor <= "10";
+						mouse_validos <= "10";
 						if comando_entrada = "001" then
 							estado <= PreJogo;
 							comando_mouse <= "000";

@@ -3,227 +3,227 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -27.717
-TNS   : -1224.329
+Slack : -27.708
+TNS   : -1225.903
 
 Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : -5.970
-TNS   : -10.094
+Slack : -7.078
+TNS   : -11.721
 
 Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : -5.883
-TNS   : -9.326
-
-Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.131
-TNS   : -93.537
+Slack : -5.752
+TNS   : -9.491
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.800
-TNS   : -273.760
-
-Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -3.773
-TNS   : -14.487
-
-Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.759
-TNS   : -53.498
-
-Type  : Slow 1100mV 85C Model Setup 'KEY[0]'
-Slack : -3.683
-TNS   : -13.672
-
-Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.459
-TNS   : -23.987
-
-Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.415
-TNS   : -52.704
-
-Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.282
-TNS   : -24.467
+Slack : -5.490
+TNS   : -358.374
 
 Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -2.692
-TNS   : -8.014
+Slack : -4.501
+TNS   : -13.501
+
+Type  : Slow 1100mV 85C Model Setup 'KEY[0]'
+Slack : -4.474
+TNS   : -24.839
+
+Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -4.304
+TNS   : -56.459
+
+Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.204
+TNS   : -90.130
+
+Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.201
+TNS   : -15.748
+
+Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -3.536
+TNS   : -52.443
+
+Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -3.428
+TNS   : -26.205
+
+Type  : Slow 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : -3.338
+TNS   : -25.126
 
 Type  : Slow 1100mV 85C Model Setup 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 26.792
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.166
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.215
+Slack : 25.475
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.227
-TNS   : 0.000
+Slack : -0.913
+TNS   : -2.075
+
+Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -0.081
+TNS   : -0.081
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 0.276
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.195
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.365
+Slack : 0.398
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.381
+Slack : 0.552
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 0.581
+Slack : 0.588
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.748
+Slack : 0.663
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.779
+Slack : 0.885
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'KEY[0]'
-Slack : 0.903
+Slack : 1.453
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 1.128
+Slack : 1.499
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.074
+Slack : 2.129
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.254
+Slack : 2.277
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -7.276
-TNS   : -150.917
-
-Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -7.068
-TNS   : -314.251
-
-Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -6.892
-TNS   : -23.039
 
 Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -6.853
-TNS   : -20.553
+Slack : -7.153
+TNS   : -21.455
 
-Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -5.190
-TNS   : -45.541
+Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -7.007
+TNS   : -23.887
+
+Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -6.780
+TNS   : -149.179
+
+Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
+Slack : -6.776
+TNS   : -295.972
 
 Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -5.042
-TNS   : -32.360
+Slack : -4.975
+TNS   : -44.760
 
-Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -4.959
-TNS   : -78.335
+Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -4.773
+TNS   : -28.705
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -4.587
-TNS   : -425.502
+Slack : -4.572
+TNS   : -484.656
+
+Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -3.656
+TNS   : -64.809
 
 Type  : Slow 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.691
-TNS   : -67.946
+Slack : -3.412
+TNS   : -73.639
 
 Type  : Slow 1100mV 85C Model Recovery 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.954
-TNS   : -95.384
+Slack : -1.940
+TNS   : -86.754
 
 Type  : Slow 1100mV 85C Model Removal 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -2.523
-TNS   : -122.710
+Slack : -2.526
+TNS   : -113.187
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.573
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 1.112
+Slack : 0.561
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 1.201
+Slack : 1.330
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 1.295
+Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 1.523
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 1.706
+Slack : 1.647
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.107
+Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 1.794
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 3.135
+Slack : 1.810
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 3.638
+Slack : 3.181
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : 3.516
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 3.837
+Slack : 4.192
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
 Slack : -0.394
-TNS   : -28.327
+TNS   : -32.589
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
 Slack : -0.394
-TNS   : -15.610
+TNS   : -14.403
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
 Slack : -0.394
-TNS   : -12.448
+TNS   : -12.345
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
 Slack : -0.394
-TNS   : -11.611
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -0.394
-TNS   : -4.794
+TNS   : -11.882
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
 Slack : -0.394
-TNS   : -4.666
+TNS   : -5.022
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -0.394
+TNS   : -5.018
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
 Slack : -0.394
-TNS   : -2.503
+TNS   : -2.233
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
 Slack : -0.394
-TNS   : -1.872
+TNS   : -1.546
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.060
-TNS   : -0.198
+Slack : -0.033
+TNS   : -0.033
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.260
+Slack : 0.239
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -231,239 +231,239 @@ Slack : 0.325
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 0.395
+Slack : 0.421
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.882
+Slack : 8.884
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.648
+Slack : 18.645
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -28.605
-TNS   : -1261.044
+Slack : -28.591
+TNS   : -1263.998
 
 Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : -5.783
-TNS   : -9.736
+Slack : -6.813
+TNS   : -11.283
 
 Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : -5.666
-TNS   : -9.008
-
-Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.200
-TNS   : -94.433
-
-Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -3.944
-TNS   : -15.196
-
-Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.776
-TNS   : -53.564
-
-Type  : Slow 1100mV 0C Model Setup 'KEY[0]'
-Slack : -3.708
-TNS   : -13.728
-
-Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.582
-TNS   : -24.933
+Slack : -5.531
+TNS   : -9.138
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.496
-TNS   : -233.907
-
-Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.450
-TNS   : -52.817
-
-Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.399
-TNS   : -25.483
+Slack : -5.313
+TNS   : -313.768
 
 Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -2.736
-TNS   : -8.124
+Slack : -4.540
+TNS   : -13.618
+
+Type  : Slow 1100mV 0C Model Setup 'KEY[0]'
+Slack : -4.520
+TNS   : -25.222
+
+Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.360
+TNS   : -90.909
+
+Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.328
+TNS   : -16.129
+
+Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -4.140
+TNS   : -56.388
+
+Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -3.676
+TNS   : -52.939
+
+Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -3.553
+TNS   : -27.222
+
+Type  : Slow 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : -3.460
+TNS   : -26.179
 
 Type  : Slow 1100mV 0C Model Setup 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 26.759
+Slack : 25.563
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.075
-TNS   : -0.096
+Slack : -1.168
+TNS   : -3.748
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.136
-TNS   : 0.000
+Slack : -0.085
+TNS   : -0.085
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.167
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.333
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.347
+Slack : 0.156
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 0.364
+Slack : 0.253
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 0.535
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.591
+Slack : 0.558
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.680
+Slack : 0.602
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
+Slack : 0.662
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'KEY[0]'
-Slack : 0.898
+Slack : 1.421
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 0.986
+Slack : 1.421
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.211
+Slack : 2.297
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.375
+Slack : 2.408
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -7.193
-TNS   : -149.771
-
-Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -7.008
-TNS   : -312.221
+Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
+Slack : -7.096
+TNS   : -21.283
 
 Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -6.832
-TNS   : -22.842
+Slack : -6.939
+TNS   : -23.653
 
-Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -6.813
-TNS   : -20.431
+Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
+Slack : -6.740
+TNS   : -295.263
 
-Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -5.026
-TNS   : -44.065
+Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -6.727
+TNS   : -148.393
 
 Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -4.883
-TNS   : -31.848
+Slack : -4.782
+TNS   : -43.023
 
-Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -4.796
-TNS   : -77.234
+Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -4.600
+TNS   : -28.212
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -4.378
-TNS   : -393.617
+Slack : -4.374
+TNS   : -448.065
+
+Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -3.718
+TNS   : -64.754
 
 Type  : Slow 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.743
-TNS   : -68.090
+Slack : -3.477
+TNS   : -72.813
 
 Type  : Slow 1100mV 0C Model Recovery 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.767
-TNS   : -86.255
+Slack : -1.747
+TNS   : -78.022
 
 Type  : Slow 1100mV 0C Model Removal 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
 Slack : -2.515
-TNS   : -122.120
+TNS   : -112.665
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.268
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 1.021
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 1.257
+Slack : 1.375
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 1.324
+Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 1.439
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 1.572
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.994
+Slack : 1.658
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 2.979
+Slack : 1.705
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 1.812
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 3.744
+Slack : 3.300
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : 3.307
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 3.933
+Slack : 4.266
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
 Slack : -0.394
-TNS   : -27.709
+TNS   : -32.481
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
 Slack : -0.394
-TNS   : -15.195
+TNS   : -14.253
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
 Slack : -0.394
-TNS   : -12.344
+TNS   : -12.120
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
 Slack : -0.394
-TNS   : -11.485
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -0.394
-TNS   : -4.730
+TNS   : -11.602
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
 Slack : -0.394
-TNS   : -4.661
+TNS   : -5.097
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -0.394
+TNS   : -5.023
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
 Slack : -0.394
-TNS   : -2.383
+TNS   : -2.192
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
 Slack : -0.394
-TNS   : -1.869
+TNS   : -1.536
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.070
-TNS   : -0.154
+Slack : -0.048
+TNS   : -0.048
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.262
+Slack : 0.227
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -471,239 +471,239 @@ Slack : 0.325
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 0.437
+Slack : 0.371
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.832
+Slack : 8.837
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.624
+Slack : 18.630
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -14.882
-TNS   : -657.052
-
-Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : -3.713
-TNS   : -5.664
+Slack : -15.018
+TNS   : -658.703
 
 Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : -3.682
-TNS   : -6.149
+Slack : -4.423
+TNS   : -7.223
+
+Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
+Slack : -3.685
+TNS   : -5.786
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.820
-TNS   : -184.824
-
-Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -2.067
-TNS   : -46.686
-
-Type  : Fast 1100mV 85C Model Setup 'KEY[0]'
-Slack : -1.872
-TNS   : -6.857
-
-Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.838
-TNS   : -24.792
-
-Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -1.798
-TNS   : -6.711
-
-Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.708
-TNS   : -11.402
-
-Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.646
-TNS   : -24.761
-
-Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.589
-TNS   : -11.551
+Slack : -3.372
+TNS   : -238.924
 
 Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -1.514
-TNS   : -4.523
+Slack : -2.579
+TNS   : -7.737
+
+Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -2.473
+TNS   : -27.620
+
+Type  : Fast 1100mV 85C Model Setup 'KEY[0]'
+Slack : -2.462
+TNS   : -12.959
+
+Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -2.104
+TNS   : -43.940
+
+Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -2.096
+TNS   : -7.909
+
+Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -1.702
+TNS   : -12.838
+
+Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -1.699
+TNS   : -23.817
+
+Type  : Fast 1100mV 85C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : -1.603
+TNS   : -12.047
 
 Type  : Fast 1100mV 85C Model Setup 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 31.875
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.203
-TNS   : -0.715
-
-Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.086
-TNS   : -0.125
-
-Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.002
-TNS   : -0.002
-
-Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 0.013
+Slack : 30.788
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.144
+Slack : -0.561
+TNS   : -1.389
+
+Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -0.236
+TNS   : -0.565
+
+Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -0.152
+TNS   : -0.152
+
+Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
+Slack : -0.085
+TNS   : -0.163
+
+Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.082
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 0.159
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.217
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.321
+Slack : 0.146
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.341
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.254
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'KEY[0]'
-Slack : 0.441
+Slack : 0.563
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 0.744
+Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
+Slack : 0.675
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.989
+Slack : 1.014
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
+Slack : 1.081
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.089
+Slack : 1.105
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.347
-TNS   : -89.460
-
-Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -4.216
-TNS   : -186.429
-
-Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.077
-TNS   : -13.820
 
 Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -4.033
-TNS   : -12.097
+Slack : -4.271
+TNS   : -12.812
 
-Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.264
-TNS   : -28.879
+Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.186
+TNS   : -14.442
+
+Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.061
+TNS   : -88.568
+
+Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
+Slack : -4.011
+TNS   : -174.530
 
 Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.176
-TNS   : -20.537
+Slack : -3.120
+TNS   : -28.074
 
-Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -3.123
-TNS   : -48.912
+Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -2.978
+TNS   : -18.202
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.789
-TNS   : -273.932
+Slack : -2.788
+TNS   : -309.256
+
+Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -2.302
+TNS   : -39.926
 
 Type  : Fast 1100mV 85C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -2.339
-TNS   : -40.778
+Slack : -2.091
+TNS   : -45.272
 
 Type  : Fast 1100mV 85C Model Recovery 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.462
-TNS   : -71.539
+Slack : -1.461
+TNS   : -65.415
 
 Type  : Fast 1100mV 85C Model Removal 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.463
-TNS   : -71.299
+Slack : -1.469
+TNS   : -65.806
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.240
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.417
+Slack : 0.273
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.423
+Slack : 0.569
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.539
+Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.607
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.735
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.924
+Slack : 0.664
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.641
+Slack : 0.831
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 0.841
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 1.882
+Slack : 1.606
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : 1.937
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 1.984
+Slack : 2.256
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.194
-TNS   : -1.411
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.115
-TNS   : -1.515
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.077
-TNS   : -0.077
+Slack : -0.260
+TNS   : -2.136
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -0.062
-TNS   : -1.258
+Slack : -0.145
+TNS   : -4.342
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -0.039
+TNS   : -0.339
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.010
-TNS   : -0.167
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -0.007
-TNS   : -0.019
+Slack : -0.006
+TNS   : -0.011
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.052
+Slack : -0.001
+TNS   : -0.002
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -0.001
+TNS   : -0.001
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 0.055
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.072
+Slack : 0.058
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.089
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
+Slack : 0.121
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.283
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -711,255 +711,255 @@ Slack : 0.325
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 0.425
+Slack : 0.447
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.834
+Slack : 8.835
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.758
+Slack : 18.756
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -13.964
-TNS   : -620.871
-
-Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : -3.250
-TNS   : -4.991
+Slack : -14.030
+TNS   : -621.060
 
 Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : -3.240
-TNS   : -5.402
+Slack : -3.890
+TNS   : -6.376
+
+Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
+Slack : -3.245
+TNS   : -5.123
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.276
-TNS   : -141.036
-
-Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -1.978
-TNS   : -44.367
-
-Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -1.767
-TNS   : -6.643
-
-Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.763
-TNS   : -22.687
-
-Type  : Fast 1100mV 0C Model Setup 'KEY[0]'
-Slack : -1.668
-TNS   : -6.009
-
-Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.667
-TNS   : -11.277
-
-Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -1.614
-TNS   : -22.727
-
-Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -1.562
-TNS   : -11.454
+Slack : -3.059
+TNS   : -189.134
 
 Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -1.389
-TNS   : -4.142
+Slack : -2.270
+TNS   : -6.810
+
+Type  : Fast 1100mV 0C Model Setup 'KEY[0]'
+Slack : -2.163
+TNS   : -11.460
+
+Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -2.150
+TNS   : -25.179
+
+Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -2.044
+TNS   : -42.049
+
+Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -2.031
+TNS   : -7.622
+
+Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -1.668
+TNS   : -21.904
+
+Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -1.663
+TNS   : -12.597
+
+Type  : Fast 1100mV 0C Model Setup 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : -1.581
+TNS   : -11.936
 
 Type  : Fast 1100mV 0C Model Setup 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 32.612
+Slack : 31.690
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -0.747
+TNS   : -2.471
+
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.235
-TNS   : -1.108
+Slack : -0.249
+TNS   : -0.922
 
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.123
-TNS   : -0.369
-
-Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.091
-TNS   : -0.240
-
-Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -0.055
-TNS   : -0.055
+Slack : -0.187
+TNS   : -0.324
 
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 0.022
+Slack : -0.054
+TNS   : -0.091
+
+Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.021
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 0.097
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.200
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.205
+Slack : 0.087
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.279
+Slack : 0.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.231
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'KEY[0]'
-Slack : 0.360
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
+Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 0.632
+Slack : 0.938
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.005
+Slack : 1.042
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.091
+Slack : 1.111
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.267
-TNS   : -88.459
-
-Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -4.149
-TNS   : -184.246
-
-Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -4.025
-TNS   : -13.646
 
 Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : -3.990
-TNS   : -11.968
+Slack : -4.202
+TNS   : -12.604
 
-Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : -3.056
-TNS   : -27.108
+Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.118
+TNS   : -14.192
+
+Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : -4.013
+TNS   : -87.720
+
+Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
+Slack : -3.969
+TNS   : -173.671
 
 Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : -2.987
-TNS   : -19.836
+Slack : -2.903
+TNS   : -26.121
 
-Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -2.935
-TNS   : -47.266
+Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
+Slack : -2.814
+TNS   : -17.750
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -2.703
-TNS   : -253.482
+Slack : -2.700
+TNS   : -287.739
+
+Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -2.211
+TNS   : -38.866
 
 Type  : Fast 1100mV 0C Model Recovery 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : -2.250
-TNS   : -39.882
+Slack : -2.035
+TNS   : -44.179
 
 Type  : Fast 1100mV 0C Model Recovery 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.411
-TNS   : -69.021
+Slack : -1.408
+TNS   : -63.040
 
 Type  : Fast 1100mV 0C Model Removal 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.462
-TNS   : -71.175
+Slack : -1.466
+TNS   : -65.650
 
 Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : -0.017
-TNS   : -0.017
+Slack : -0.022
+TNS   : -0.022
 
 Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.317
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.461
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : 0.564
+Slack : 0.489
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.594
+Slack : 0.540
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.778
+Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 0.592
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 1.413
+Slack : 0.697
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 0.833
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : 1.883
+Slack : 1.639
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : 1.655
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 1.976
+Slack : 2.221
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.187
-TNS   : -1.359
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.048
-TNS   : -0.479
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
-Slack : -0.021
-TNS   : -0.021
+Slack : -0.244
+TNS   : -2.157
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|newdata'
-Slack : -0.019
-TNS   : -0.267
+Slack : -0.081
+TNS   : -2.169
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 0.007
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.022
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
-Slack : 0.030
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
-Slack : 0.080
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.085
+Slack : 0.031
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|sigsend'
-Slack : 0.106
+Slack : 0.035
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
-Slack : 0.312
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.040
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|sigsend'
+Slack : 0.076
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|newdata'
+Slack : 0.131
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|x[1]'
+Slack : 0.331
+TNS   : 0.000
+
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0]'
-Slack : 0.439
+Slack : 0.470
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.826
+Slack : 8.829
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.754
+Slack : 18.750
 TNS   : 0.000
 
 ------------------------------------------------------------

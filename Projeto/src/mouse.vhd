@@ -15,7 +15,8 @@ entity mouse is
 		comandos_mouse : out std_logic_vector(2 downto 0);
 		endereco_ram : out std_logic_vector(1 downto 0);
 		saida_ram : in std_logic_vector(5 downto 0);
-		dado_ram : out std_logic_vector(5 downto 0)
+		dado_ram : out std_logic_vector(5 downto 0);
+		estado_mouse : in std_logic_vector(1 downto 0)
 	);
 end;
 
@@ -39,13 +40,14 @@ architecture struct of mouse is
 			position_x : in std_logic_vector(7 downto 0);
 			position_y : in std_logic_vector(7 downto 0);
 			comando : out std_logic_vector(2 downto 0);
-			endereco_ram : out std_logic_vector(1 downto 0)
+			endereco_ram : out std_logic_vector(1 downto 0);
+			estado_mouse : in std_logic_vector(1 downto 0)
 		);
 	end component;
 	signal local_x, local_y : std_logic_vector(7 downto 0);
 begin 	
 	recebe_posicao : atualiza_posicao port map (clock, ps2_data, ps2_clock, resetn, local_x, local_y);
-	acoes_clique : valida_clique port map (clock, ps2_data, ps2_clock, resetn, local_x, local_y, comandos_mouse, endereco_ram);
+	acoes_clique : valida_clique port map (clock, ps2_data, ps2_clock, resetn, local_x, local_y, comandos_mouse, endereco_ram, estado_mouse);
 	position_x <= local_x;
 	position_y <= local_y;
 	
@@ -54,12 +56,34 @@ begin
 	begin
 		if clock'event and clock = '1' then
 			if entrada_mouse = "001" then
-				dado_tmp := saida_ram(5 downto 4) & "0000";
-				dado_tmp := dado_tmp XOR "110000";
+				if saida_ram(5 downto 4) = "01" then
+					dado_tmp := saida_ram;
+				else
+					dado_tmp := saida_ram XOR "110000";
+				end if;
 			else
 				if entrada_mouse = "011" then
-					dado_tmp := "00" & saida_ram(3 downto 2) & "00";
-					dado_tmp := dado_tmp XOR "001100";
+					if saida_ram(3 downto 2) = "01" then
+						dado_tmp := saida_ram;
+					else
+						dado_tmp := saida_ram XOR "001100";
+					end if;
+				else
+					if entrada_mouse = "010" then
+						if saida_ram(5 downto 4) = "10" then
+							dado_tmp := saida_ram;
+						else
+							dado_tmp := saida_ram XOR "110000";
+						end if;
+					else
+						if entrada_mouse = "100" then
+							if saida_ram(3 downto 2) = "10" then
+								dado_tmp := saida_ram;
+							else
+								dado_tmp := saida_ram XOR "001100";
+							end if;
+						end if;
+					end if;
 				end if;
 			end if;
 			dado_ram <= dado_tmp;

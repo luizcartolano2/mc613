@@ -45,7 +45,8 @@ architecture struct of velha is
 			comandos_mouse : out std_logic_vector(2 downto 0);
 			endereco_ram : out std_logic_vector(1 downto 0);
 			saida_ram : in std_logic_vector(5 downto 0);
-			dado_ram : out std_logic_vector(5 downto 0)
+			dado_ram : out std_logic_vector(5 downto 0);
+			estado_mouse : in std_logic_vector(1 downto 0)
 		);
 	end component;
 	component monitor
@@ -70,7 +71,8 @@ architecture struct of velha is
 			comando_entrada 	: in 	std_logic_vector(2 downto 0);
 			comando_mouse		: out std_logic_vector(2 downto 0);
 			comando_monitor	: out std_logic_vector(1 downto 0);
-			controle_ram 		: out std_logic
+			controle_ram 		: out std_logic;
+			mouse_validos 		: out std_logic_vector(1 downto 0)
 		);
 	end component;
 	component ram
@@ -110,9 +112,10 @@ architecture struct of velha is
 	signal print_g : std_logic_vector(3 downto 0);
 	signal print_e : std_logic_vector(3 downto 0);
 	signal print_w : std_logic_vector(3 downto 0);
+	signal estado_mouse : std_logic_vector(1 downto 0);
 begin 
-	controle : uc port map(CLOCK_50, KEY(0), entrada, saida_mouse, saida_monitor, gravar);
-	mouse_position : mouse port map(CLOCK_50, PS2_DAT, PS2_CLK, KEY(0), saida_mouse, mouse_x, mouse_y, entrada, endereco_mouse, saida_ram, dado_ram);
+	controle : uc port map(CLOCK_50, KEY(0), entrada, saida_mouse, saida_monitor, gravar, estado_mouse);
+	mouse_position : mouse port map(CLOCK_50, PS2_DAT, PS2_CLK, KEY(0), saida_mouse, mouse_x, mouse_y, entrada, endereco_mouse, saida_ram, dado_ram, estado_mouse);
 	mouse_monitor : monitor port map(CLOCK_50, mouse_x, mouse_y, KEY(0), VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK, saida_monitor, endereco_monitor, saida_ram);
 	memoria : ram port map(CLOCK_50, KEY(0), endereco_ram, dado_ram, saida_ram, gravar);
 	
