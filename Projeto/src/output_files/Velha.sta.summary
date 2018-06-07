@@ -1,0 +1,245 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -4.023
+TNS   : -51.182
+
+Type  : Slow 1100mV 85C Model Setup 'clock_50hz'
+Slack : -3.298
+TNS   : -189.905
+
+Type  : Slow 1100mV 85C Model Setup 'mouse_ctrl:mousectrl|sigsend'
+Slack : -3.139
+TNS   : -24.462
+
+Type  : Slow 1100mV 85C Model Hold 'clock_50hz'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.489
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'mouse_ctrl:mousectrl|sigsend'
+Slack : 2.210
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -4.128
+TNS   : -45.478
+
+Type  : Slow 1100mV 85C Model Recovery 'clock_50hz'
+Slack : -2.535
+TNS   : -122.290
+
+Type  : Slow 1100mV 85C Model Recovery 'mouse_ctrl:mousectrl|sigsend'
+Slack : -1.207
+TNS   : -10.475
+
+Type  : Slow 1100mV 85C Model Removal 'clock_50hz'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.579
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'mouse_ctrl:mousectrl|sigsend'
+Slack : 0.596
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_50hz'
+Slack : -0.394
+TNS   : -49.452
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -0.394
+TNS   : -12.452
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|sigsend'
+Slack : -0.394
+TNS   : -4.851
+
+Type  : Slow 1100mV 0C Model Setup 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -4.063
+TNS   : -51.698
+
+Type  : Slow 1100mV 0C Model Setup 'mouse_ctrl:mousectrl|sigsend'
+Slack : -3.266
+TNS   : -25.449
+
+Type  : Slow 1100mV 0C Model Setup 'clock_50hz'
+Slack : -3.136
+TNS   : -183.817
+
+Type  : Slow 1100mV 0C Model Hold 'clock_50hz'
+Slack : 0.072
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'mouse_ctrl:mousectrl|sigsend'
+Slack : 2.323
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -4.179
+TNS   : -44.612
+
+Type  : Slow 1100mV 0C Model Recovery 'clock_50hz'
+Slack : -2.160
+TNS   : -102.980
+
+Type  : Slow 1100mV 0C Model Recovery 'mouse_ctrl:mousectrl|sigsend'
+Slack : -1.127
+TNS   : -9.796
+
+Type  : Slow 1100mV 0C Model Removal 'clock_50hz'
+Slack : -0.048
+TNS   : -0.120
+
+Type  : Slow 1100mV 0C Model Removal 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.501
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'mouse_ctrl:mousectrl|sigsend'
+Slack : 0.543
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_50hz'
+Slack : -0.394
+TNS   : -53.238
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -0.394
+TNS   : -12.405
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|sigsend'
+Slack : -0.394
+TNS   : -4.819
+
+Type  : Fast 1100mV 85C Model Setup 'clock_50hz'
+Slack : -2.645
+TNS   : -80.566
+
+Type  : Fast 1100mV 85C Model Setup 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -1.903
+TNS   : -22.528
+
+Type  : Fast 1100mV 85C Model Setup 'mouse_ctrl:mousectrl|sigsend'
+Slack : -1.449
+TNS   : -11.300
+
+Type  : Fast 1100mV 85C Model Hold 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.060
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_50hz'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'mouse_ctrl:mousectrl|sigsend'
+Slack : 1.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -2.041
+TNS   : -20.988
+
+Type  : Fast 1100mV 85C Model Recovery 'clock_50hz'
+Slack : -1.803
+TNS   : -86.341
+
+Type  : Fast 1100mV 85C Model Recovery 'mouse_ctrl:mousectrl|sigsend'
+Slack : -0.500
+TNS   : -4.229
+
+Type  : Fast 1100mV 85C Model Removal 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'mouse_ctrl:mousectrl|sigsend'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'clock_50hz'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_50hz'
+Slack : -0.384
+TNS   : -8.029
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.061
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|sigsend'
+Slack : 0.069
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock_50hz'
+Slack : -2.176
+TNS   : -66.653
+
+Type  : Fast 1100mV 0C Model Setup 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -1.824
+TNS   : -20.800
+
+Type  : Fast 1100mV 0C Model Setup 'mouse_ctrl:mousectrl|sigsend'
+Slack : -1.435
+TNS   : -11.194
+
+Type  : Fast 1100mV 0C Model Hold 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock_50hz'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'mouse_ctrl:mousectrl|sigsend'
+Slack : 1.080
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : -1.953
+TNS   : -18.641
+
+Type  : Fast 1100mV 0C Model Recovery 'clock_50hz'
+Slack : -1.322
+TNS   : -62.307
+
+Type  : Fast 1100mV 0C Model Recovery 'mouse_ctrl:mousectrl|sigsend'
+Slack : -0.393
+TNS   : -3.306
+
+Type  : Fast 1100mV 0C Model Removal 'clock_50hz'
+Slack : -0.051
+TNS   : -0.752
+
+Type  : Fast 1100mV 0C Model Removal 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.017
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'mouse_ctrl:mousectrl|sigsend'
+Slack : 0.040
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_50hz'
+Slack : -0.372
+TNS   : -8.047
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'mouse_ctrl:mousectrl|sigsend'
+Slack : 0.084
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,462 @@
+Analysis & Synthesis report for Velha
+Mon May 14 17:43:00 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |mouse|mouse_ctrl:mousectrl|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: mouse_ctrl:mousectrl
+ 14. Parameter Settings for User Entity Instance: mouse_ctrl:mousectrl|ps2_iobase:ps2io
+ 15. Port Connectivity Checks: "mouse_ctrl:mousectrl"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon May 14 17:43:00 2018       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Velha                                       ;
+; Top-level Entity Name           ; mouse                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 103                                         ;
+; Total pins                      ; 19                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; mouse              ; Velha              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; PS2/ps2_iobase.vhd               ; yes             ; User VHDL File  ; /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd ;         ;
+; PS2/mouse_ctrl.vhd               ; yes             ; User VHDL File  ; /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File  ; /home/ec2016/ra188727/mc613/Projeto/mouse.vhd          ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimate of Logic utilization (ALMs needed) ; 90               ;
+;                                             ;                  ;
+; Combinational ALUT usage for logic          ; 151              ;
+;     -- 7 input functions                    ; 3                ;
+;     -- 6 input functions                    ; 23               ;
+;     -- 5 input functions                    ; 12               ;
+;     -- 4 input functions                    ; 23               ;
+;     -- <=3 input functions                  ; 90               ;
+;                                             ;                  ;
+; Dedicated logic registers                   ; 103              ;
+;                                             ;                  ;
+; I/O pins                                    ; 19               ;
+;                                             ;                  ;
+; Total DSP Blocks                            ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; clock_50hz~input ;
+; Maximum fan-out                             ; 74               ;
+; Total fan-out                               ; 871              ;
+; Average fan-out                             ; 2.96             ;
++---------------------------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
+; |mouse                     ; 151 (1)             ; 103 (0)                   ; 0                 ; 0          ; 19   ; 0            ; |mouse                                       ; mouse       ; work         ;
+;    |mouse_ctrl:mousectrl|  ; 150 (26)            ; 103 (18)                  ; 0                 ; 0          ; 0    ; 0            ; |mouse|mouse_ctrl:mousectrl                  ; mouse_ctrl  ; work         ;
+;       |ps2_iobase:ps2io|   ; 124 (124)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |mouse|mouse_ctrl:mousectrl|ps2_iobase:ps2io ; ps2_iobase  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |mouse|mouse_ctrl:mousectrl|state                                       ;
++---------------+-------------+---------------+---------------+------------+--------------+
+; Name          ; state.CLEAR ; state.NEXTCMD ; state.WAITACK ; state.SEND ; state.SETCMD ;
++---------------+-------------+---------------+---------------+------------+--------------+
+; state.SETCMD  ; 0           ; 0             ; 0             ; 0          ; 0            ;
+; state.SEND    ; 0           ; 0             ; 0             ; 1          ; 1            ;
+; state.WAITACK ; 0           ; 0             ; 1             ; 0          ; 1            ;
+; state.NEXTCMD ; 0           ; 1             ; 0             ; 0          ; 1            ;
+; state.CLEAR   ; 1           ; 0             ; 0             ; 0          ; 1            ;
++---------------+-------------+---------------+---------------+------------+--------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                          ;
++----------------------------------------------------+----------------------------------------+
+; Register name                                      ; Reason for Removal                     ;
++----------------------------------------------------+----------------------------------------+
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1              ;                                        ;
++----------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 103   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Asynchronous Clear ; 66    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 43    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; Inverted Register Statistics                                   ;
++------------------------------------------------------+---------+
+; Inverted Register                                    ; Fan out ;
++------------------------------------------------------+---------+
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigclkreleased ; 3       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8]      ; 3       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8]      ; 3       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6]      ; 3       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3]      ; 2       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2]      ; 2       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0]      ; 2       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6]      ; 3       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3]      ; 2       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2]      ; 2       ;
+; mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0]      ; 2       ;
+; Total number of inverted registers = 11              ;         ;
++------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |mouse|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |mouse|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[1] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |mouse|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |mouse|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |mouse|mouse_ctrl:mousectrl|state                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mouse_ctrl:mousectrl ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mouse_ctrl:mousectrl|ps2_iobase:ps2io ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; clkfreq        ; 50000 ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mouse_ctrl:mousectrl"                                                                  ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; en      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; resetn  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; newdata ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bt_on   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ox      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; oy      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dx      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dy      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wheel   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 103                         ;
+;     CLR               ; 23                          ;
+;     CLR SLD           ; 21                          ;
+;     ENA               ; 21                          ;
+;     ENA CLR           ; 22                          ;
+;     plain             ; 16                          ;
+; arriav_io_obuf        ; 2                           ;
+; arriav_lcell_comb     ; 152                         ;
+;     arith             ; 50                          ;
+;         1 data inputs ; 49                          ;
+;         2 data inputs ; 1                           ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 99                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 23                          ;
+; boundary_port         ; 19                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon May 14 17:42:50 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Velha -c Velha
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file PS2/ps2_iobase.vhd
+    Info (12022): Found design unit 1: ps2_iobase-rtl File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 41
+    Info (12023): Found entity 1: ps2_iobase File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file PS2/mouse_ctrl.vhd
+    Info (12022): Found design unit 1: mouse_ctrl-rtl File: /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd Line: 56
+    Info (12023): Found entity 1: mouse_ctrl File: /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
+    Info (12022): Found design unit 1: mouse-struct File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 16
+    Info (12023): Found entity 1: mouse File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 5
+Info (12127): Elaborating entity "mouse" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(36): object "ox" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(36): object "oy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(37): object "bt_on" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(38): object "wheel" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at mouse.vhd(59): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at mouse.vhd(60): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at mouse.vhd(61): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at mouse.vhd(69): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at mouse.vhd(70): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at mouse.vhd(71): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 71
+Warning (10631): VHDL Process Statement warning at mouse.vhd(50): inferring latch(es) for signal or variable "x", which holds its previous value in one or more paths through the process File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Warning (10631): VHDL Process Statement warning at mouse.vhd(50): inferring latch(es) for signal or variable "y", which holds its previous value in one or more paths through the process File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[0]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[1]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[2]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[3]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[4]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[5]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[6]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "y[7]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[0]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[1]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[2]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[3]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[4]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[5]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[6]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (10041): Inferred latch for "x[7]" at mouse.vhd(50) File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 50
+Info (12128): Elaborating entity "mouse_ctrl" for hierarchy "mouse_ctrl:mousectrl" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 44
+Info (12128): Elaborating entity "ps2_iobase" for hierarchy "mouse_ctrl:mousectrl|ps2_iobase:ps2io" File: /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 161
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en" is converted into an equivalent circuit using register "mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en_emulated" and latch "mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~1" File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "position_x[0]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_x[1]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_x[2]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_x[3]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_x[4]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_x[5]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_x[6]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_x[7]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 11
+    Warning (13410): Pin "position_y[0]" is stuck at VCC File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+    Warning (13410): Pin "position_y[1]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+    Warning (13410): Pin "position_y[2]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+    Warning (13410): Pin "position_y[3]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+    Warning (13410): Pin "position_y[4]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+    Warning (13410): Pin "position_y[5]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+    Warning (13410): Pin "position_y[6]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+    Warning (13410): Pin "position_y[7]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 182 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 163 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 1180 megabytes
+    Info: Processing ended: Mon May 14 17:43:00 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
+
+
