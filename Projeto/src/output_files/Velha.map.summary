@@ -1,17 +1,17 @@
-Analysis & Synthesis Status : Successful - Mon May 14 17:43:00 2018
+Analysis & Synthesis Status : Successful - Mon May 21 15:46:15 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Velha
-Top-level Entity Name : mouse
+Top-level Entity Name : velha
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 103
-Total pins : 19
+Total registers : 223
+Total pins : 64
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 36
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 0
+Total PLLs : 1
 Total DLLs : 0

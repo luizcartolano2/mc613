@@ -5,9 +5,10 @@ USE ieee.numeric_std.all;
 entity mouse is
 	port
 	(
-		clock_50hz	: 	in	STD_LOGIC;
+		clock_50mhz	: 	in	STD_LOGIC;
 		ps2_data 	:	inout	STD_LOGIC;
 		ps2_clock	:	inout	STD_LOGIC;
+		resetn	: in std_logic;
 		position_x 	: 	out std_logic_vector(7 downto 0);
 		position_y 	: 	out std_logic_vector(7 downto 0)
 	);
@@ -39,41 +40,28 @@ architecture struct of mouse is
 	signal x, y 		: std_logic_vector(7 downto 0);
 	signal dx, dy 		: std_logic_vector(8 downto 0);
 	
-	constant SENSIBILITY : integer := 32; -- Rise to decrease sensibility
+	constant SENSIBILITY : integer := 100; -- Rise to decrease sensibility
 begin 	
 	mousectrl : mouse_ctrl generic map (50000) port map(
-		ps2_data, ps2_clock, clock_50hz, '1', '1',
+		ps2_data, ps2_clock, clock_50mhz, '1', resetn,
 		signewdata, bt_on, ox, oy, dx, dy, wheel
 	);
 	
 	-- Atualiza posicao
-	process(signewdata)
+	process(signewdata, resetn)
 		variable xacc, yacc : integer range -10000 to 10000;
 	begin
 		if(rising_edge(signewdata)) then			
 			x <= std_logic_vector(to_signed(to_integer(signed(x)) + ((xacc + to_integer(signed(dx))) / SENSIBILITY), 8));
 			y <= std_logic_vector(to_signed(to_integer(signed(y)) + ((yacc + to_integer(signed(dy))) / SENSIBILITY), 8));
 			xacc := ((xacc + to_integer(signed(dx))) rem SENSIBILITY);
-			yacc := ((yacc + to_integer(signed(dy))) rem SENSIBILITY);					
+			yacc := ((yacc + to_integer(signed(dy))) rem SENSIBILITY);
 		end if;
-		if x < "00000010" then
-			if x > "11111101" then
-				x <= x;
-			else
-				x <= "11111110";
-			end if;
-		else
-			x <= "00000001";
-		end if;
-	
-		if y < "00000010" then
-			if y > "11111110" then
-				y <= y;
-			else
-				y <= "11111111";
-			end if;
-		else
-			y <= "00000001";
+		if resetn = '0' then
+			xacc := 0;
+			yacc := 0;
+			x <= (others => '0');
+			y <= (others => '0');
 		end if;
 	end process;
 	
