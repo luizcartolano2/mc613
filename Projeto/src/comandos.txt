@@ -1,17 +1,31 @@
-0 - estado inicial			monitor: 8 - tela pre jogo			mouse: 0 - nada
+0 - estado inicial		monitor: 0 - tela pre jogo		mouse: 0 - nada
+
+
 
 
 0 - nada
-1 - pvp					monitor: 1 - atualizar a tela			mouse: 1-grava na memoria(tipo)
-2 - pvia				monitor: 2 - atualizar a tela			mouse: 1-grava na memoria(tipo)
-3 - 1o jogador				monitor: 3 - atualizar a tela			mouse: 2-grava na memoria(quem comeca)
-4 - 2o jogador				monitor: 4 - atualizar a tela			mouse: 2-grava na memoria(quem comeca)
-5 - iniciar jogo			monitor: 5 - tela jogando			mouse: 0 - nada
+
+1 - pvp				monitor: 1 - atualizar a tela		mouse: 1-grava na memoria(tipo)
+
+2 - pvia			monitor: 2 - atualizar a tela		mouse: 2-grava na memoria(tipo)
+
+3 - 1o jogador			monitor: 3 - atualizar a tela		mouse: 3-grava na memoria(quem comeca)
+
+4 - 2o jogador			monitor: 4 - atualizar a tela		mouse: 4-grava na memoria(quem comeca)
+
+5 - iniciar jogo		monitor: 5 - tela jogando		mouse: 0 - nada
+
+
 
 0 - nada
-1 - jogo continua			monitor: 6 - atualiza jogada			mouse: 3- grava na memoria(grid)
-2 - jogo encerrado			monitor: 7 - tela pos jogo			mouse: 4 - grava na memoria(ganhador)
+
+1 - jogo continua		monitor: 6 - atualiza jogada		mouse: 5- grava na memoria(grid)
+
+2 - jogo encerrado		monitor: 7 - tela pos jogo		mouse: 6 - grava na memoria(ganhador)
+
+
 
 0- nada
-1 - reiniciar				monitor: 8 - tela pre jogo			mouse: 0 - nada
+
+1 - reiniciar			monitor: 0 - tela pre jogo		mouse: 0 - nada
 

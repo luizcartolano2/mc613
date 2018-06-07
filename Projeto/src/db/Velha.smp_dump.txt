@@ -6,3 +6,9 @@ state.SEND 0 0 0 1 1
 state.WAITACK 0 0 1 0 1 
 state.NEXTCMD 0 1 0 0 1 
 state.CLEAR 1 0 0 0 1 
+
+State Machine - |velha|uc:controle|estado
+Name estado.PosJogo estado.Jogando estado.PreJogo 
+estado.PreJogo 0 0 0 
+estado.Jogando 0 1 1 
+estado.PosJogo 1 0 1 

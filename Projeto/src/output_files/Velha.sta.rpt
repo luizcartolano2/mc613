@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Velha
-Mon May 21 15:47:23 2018
+Sun May 27 05:10:54 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -98,17 +98,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 3           ;
+; Maximum allowed            ; 3           ;
 ;                            ;             ;
-; Average used               ; 1.45        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.31        ;
+; Maximum used               ; 3           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  15.6%      ;
-;     Processor 3            ;  14.8%      ;
-;     Processor 4            ;  14.6%      ;
+;     Processor 2            ;  15.8%      ;
+;     Processor 3            ;  14.9%      ;
 +----------------------------+-------------+
 
 
@@ -134,13 +133,13 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                                              ; Note ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------------+------+
-; 34.13 MHz  ; 34.13 MHz       ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ;      ;
-; 107.54 MHz ; 107.54 MHz      ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 127.0 MHz  ; 127.0 MHz       ; mouse:mouse_position|x[1]                                                                               ;      ;
-; 137.53 MHz ; 137.53 MHz      ; CLOCK_50                                                                                                ;      ;
-; 138.5 MHz  ; 138.5 MHz       ; mouse:mouse_position|y[0]                                                                               ;      ;
-; 272.7 MHz  ; 272.7 MHz       ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ;      ;
-; 302.85 MHz ; 302.85 MHz      ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ;      ;
+; 35.74 MHz  ; 35.74 MHz       ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ;      ;
+; 101.42 MHz ; 101.42 MHz      ; mouse:mouse_position|x[1]                                                                               ;      ;
+; 104.35 MHz ; 104.35 MHz      ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 115.75 MHz ; 115.75 MHz      ; CLOCK_50                                                                                                ;      ;
+; 121.57 MHz ; 121.57 MHz      ; mouse:mouse_position|y[0]                                                                               ;      ;
+; 228.21 MHz ; 228.21 MHz      ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ;      ;
+; 306.65 MHz ; 306.65 MHz      ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ;      ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -156,14 +155,14 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                   ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -28.299 ; -1215.963     ;
-; mouse:mouse_position|x[1]                                                                               ; -5.756  ; -9.966        ;
-; mouse:mouse_position|y[0]                                                                               ; -5.620  ; -9.268        ;
-; CLOCK_50                                                                                                ; -4.218  ; -104.915      ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -4.187  ; -91.292       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -3.833  ; -52.148       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -3.196  ; -23.841       ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 30.421  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -26.976 ; -1207.452     ;
+; mouse:mouse_position|x[1]                                                                               ; -5.943  ; -11.867       ;
+; mouse:mouse_position|y[0]                                                                               ; -5.541  ; -9.747        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -4.399  ; -96.066       ;
+; CLOCK_50                                                                                                ; -4.227  ; -116.046      ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -3.619  ; -58.886       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -3.026  ; -21.642       ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 30.137  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -172,14 +171,14 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                                   ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                                ; 0.228 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; 0.307 ; 0.000         ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.330 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 0.426 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.464 ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.830 ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 1.380 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 2.180 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; 0.205 ; 0.000         ;
+; CLOCK_50                                                                                                ; 0.222 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 0.303 ; 0.000         ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.341 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.487 ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 1.018 ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 1.139 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 1.635 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -188,9 +187,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -4.767 ; -26.809       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.689 ; -56.642       ;
-; CLOCK_50                                                              ; -2.365 ; -79.414       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.721 ; -67.151       ;
+; CLOCK_50                                                              ; -2.633 ; -92.633       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -2.268 ; -20.022       ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -199,9 +198,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                              ; 0.464 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 1.474 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 1.974 ; 0.000         ;
+; CLOCK_50                                                              ; 0.795 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 1.307 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 1.609 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -210,15 +209,15 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                   ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.394 ; -31.606       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.394 ; -15.193       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -0.394 ; -11.111       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -0.394 ; -4.640        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.394 ; -27.031       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -0.394 ; -12.460       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.394 ; -12.036       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -0.394 ; -5.012        ;
 ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.379  ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 0.408  ; 0.000         ;
-; CLOCK_50                                                                                                ; 8.863  ; 0.000         ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.625 ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 0.389  ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 0.415  ; 0.000         ;
+; CLOCK_50                                                                                                ; 8.862  ; 0.000         ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.629 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -229,7 +228,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 1
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 15.623 ns
+Worst Case Available Settling Time: 16.001 ns
 
 
 
@@ -239,13 +238,13 @@ Worst Case Available Settling Time: 15.623 ns
 +------------+-----------------+---------------------------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                                              ; Note ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------------+------+
-; 33.3 MHz   ; 33.3 MHz        ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ;      ;
-; 106.35 MHz ; 106.35 MHz      ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 130.45 MHz ; 130.45 MHz      ; mouse:mouse_position|x[1]                                                                               ;      ;
-; 134.99 MHz ; 134.99 MHz      ; CLOCK_50                                                                                                ;      ;
-; 146.37 MHz ; 146.37 MHz      ; mouse:mouse_position|y[0]                                                                               ;      ;
-; 273.37 MHz ; 273.37 MHz      ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ;      ;
-; 317.06 MHz ; 317.06 MHz      ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ;      ;
+; 34.65 MHz  ; 34.65 MHz       ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ;      ;
+; 102.59 MHz ; 102.59 MHz      ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 103.91 MHz ; 103.91 MHz      ; mouse:mouse_position|x[1]                                                                               ;      ;
+; 115.34 MHz ; 115.34 MHz      ; CLOCK_50                                                                                                ;      ;
+; 127.94 MHz ; 127.94 MHz      ; mouse:mouse_position|y[0]                                                                               ;      ;
+; 230.15 MHz ; 230.15 MHz      ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ;      ;
+; 320.31 MHz ; 320.31 MHz      ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ;      ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -255,14 +254,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                   ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -29.031 ; -1254.362     ;
-; mouse:mouse_position|x[1]                                                                               ; -5.549  ; -9.558        ;
-; mouse:mouse_position|y[0]                                                                               ; -5.377  ; -8.907        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -4.202  ; -92.644       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -3.984  ; -52.256       ;
-; CLOCK_50                                                                                                ; -3.892  ; -87.186       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -3.307  ; -24.900       ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 30.317  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -27.860 ; -1248.742     ;
+; mouse:mouse_position|x[1]                                                                               ; -5.699  ; -11.377       ;
+; mouse:mouse_position|y[0]                                                                               ; -5.254  ; -9.253        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -4.530  ; -97.258       ;
+; CLOCK_50                                                                                                ; -4.079  ; -98.968       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -3.627  ; -58.634       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -3.172  ; -22.857       ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 29.972  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -271,14 +270,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                                   ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                                ; 0.100 ; 0.000         ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.313 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 0.365 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; 0.394 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.431 ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.609 ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 1.198 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 2.315 ; 0.000         ;
+; CLOCK_50                                                                                                ; 0.211 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 0.285 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; 0.306 ; 0.000         ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.321 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.444 ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 0.805 ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 0.922 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 1.809 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -287,9 +286,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -4.537 ; -25.456       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.739 ; -54.961       ;
-; CLOCK_50                                                              ; -1.973 ; -65.082       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -3.751 ; -65.184       ;
+; CLOCK_50                                                              ; -2.253 ; -78.798       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -2.170 ; -19.120       ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -298,9 +297,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                              ; 0.085 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 1.362 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 1.799 ; 0.000         ;
+; CLOCK_50                                                              ; 0.385 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 1.214 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 1.525 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -309,15 +308,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                   ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.394 ; -31.561       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.394 ; -14.980       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -0.394 ; -10.995       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -0.394 ; -4.633        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.394 ; -27.010       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -0.394 ; -12.098       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.394 ; -11.930       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -0.394 ; -4.860        ;
 ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 0.342  ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.391  ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 0.363  ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 0.427  ; 0.000         ;
 ; CLOCK_50                                                                                                ; 8.814  ; 0.000         ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.605 ; 0.000         ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.604 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -328,7 +327,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 1
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 15.942 ns
+Worst Case Available Settling Time: 16.265 ns
 
 
 
@@ -338,31 +337,31 @@ Worst Case Available Settling Time: 15.942 ns
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                   ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -15.164 ; -651.429      ;
-; mouse:mouse_position|y[0]                                                                               ; -3.520  ; -5.633        ;
-; mouse:mouse_position|x[1]                                                                               ; -3.456  ; -5.909        ;
-; CLOCK_50                                                                                                ; -3.231  ; -68.041       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -2.156  ; -44.558       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -1.859  ; -23.837       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -1.520  ; -11.214       ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.476  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -14.600 ; -638.053      ;
+; mouse:mouse_position|x[1]                                                                               ; -3.629  ; -7.252        ;
+; mouse:mouse_position|y[0]                                                                               ; -3.549  ; -6.116        ;
+; CLOCK_50                                                                                                ; -3.373  ; -72.158       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -2.233  ; -47.011       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -1.738  ; -28.257       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -1.462  ; -9.903        ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.349  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                                                                              ;
-+---------------------------------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                                                   ; Slack ; End Point TNS ;
-+---------------------------------------------------------------------------------------------------------+-------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 0.033 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; 0.039 ; 0.000         ;
-; CLOCK_50                                                                                                ; 0.088 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.099 ; 0.000         ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.198 ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.601 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 1.052 ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 1.072 ; 0.000         ;
-+---------------------------------------------------------------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                                                               ;
++---------------------------------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                                                   ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------------------------------+--------+---------------+
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.028 ; -0.028        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.007 ; -0.007        ;
+; CLOCK_50                                                                                                ; 0.130  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.144  ; 0.000         ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.201  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 0.705  ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 0.806  ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 0.809  ; 0.000         ;
++---------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -370,9 +369,9 @@ Worst Case Available Settling Time: 15.942 ns
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -2.921 ; -15.301       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.793 ; -29.105       ;
-; CLOCK_50                                                              ; -1.599 ; -53.973       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.848 ; -34.998       ;
+; CLOCK_50                                                              ; -1.720 ; -61.034       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -1.217 ; -10.635       ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -381,9 +380,9 @@ Worst Case Available Settling Time: 15.942 ns
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                              ; 0.178 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.600 ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 0.922 ; 0.000         ;
+; CLOCK_50                                                              ; 0.368 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 0.524 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.624 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -392,13 +391,13 @@ Worst Case Available Settling Time: 15.942 ns
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                   ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.091 ; -2.689        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.058 ; -0.943        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.062  ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 0.128  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.016 ; -0.237        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.026  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 0.053  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 0.065  ; 0.000         ;
 ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.376  ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 0.456  ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 0.378  ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 0.457  ; 0.000         ;
 ; CLOCK_50                                                                                                ; 8.844  ; 0.000         ;
 ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.745 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
@@ -411,7 +410,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 1
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 17.221 ns
+Worst Case Available Settling Time: 17.422 ns
 
 
 
@@ -421,14 +420,14 @@ Worst Case Available Settling Time: 17.221 ns
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                                   ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -14.206 ; -615.202      ;
-; mouse:mouse_position|y[0]                                                                               ; -3.104  ; -4.987        ;
-; mouse:mouse_position|x[1]                                                                               ; -3.048  ; -5.204        ;
-; CLOCK_50                                                                                                ; -2.709  ; -48.968       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -2.029  ; -42.576       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -1.829  ; -21.955       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -1.505  ; -11.140       ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.849  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -13.852 ; -606.910      ;
+; mouse:mouse_position|x[1]                                                                               ; -3.191  ; -6.381        ;
+; mouse:mouse_position|y[0]                                                                               ; -3.097  ; -5.347        ;
+; CLOCK_50                                                                                                ; -2.834  ; -52.945       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -2.150  ; -44.996       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -1.663  ; -25.652       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -1.451  ; -9.973        ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.716  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -437,14 +436,14 @@ Worst Case Available Settling Time: 17.221 ns
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                   ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                                ; -0.127 ; -0.752        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.021 ; -0.021        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.039  ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; 0.055  ; 0.000         ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.177  ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.464  ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 0.904  ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 1.059  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.043 ; -0.107        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.002 ; -0.002        ;
+; CLOCK_50                                                                                                ; 0.007  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.090  ; 0.000         ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.179  ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 0.637  ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 0.668  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 0.758  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -453,21 +452,21 @@ Worst Case Available Settling Time: 17.221 ns
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -2.508 ; -13.011       ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.727 ; -25.872       ;
-; CLOCK_50                                                              ; -1.140 ; -37.660       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; -1.763 ; -30.938       ;
+; CLOCK_50                                                              ; -1.260 ; -44.359       ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; -1.034 ; -9.058        ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Removal Summary                                                           ;
-+-----------------------------------------------------------------------+--------+---------------+
-; Clock                                                                 ; Slack  ; End Point TNS ;
-+-----------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                              ; -0.107 ; -0.107        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.483  ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 0.748  ; 0.000         ;
-+-----------------------------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary                                                          ;
++-----------------------------------------------------------------------+-------+---------------+
+; Clock                                                                 ; Slack ; End Point TNS ;
++-----------------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                              ; 0.055 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 0.423 ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 0.520 ; 0.000         ;
++-----------------------------------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------+
@@ -475,15 +474,15 @@ Worst Case Available Settling Time: 17.221 ns
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                                   ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
-; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -0.042 ; -0.926        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -0.011 ; -0.112        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.090  ; 0.000         ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 0.134  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; 0.014  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 0.065  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 0.085  ; 0.000         ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 0.088  ; 0.000         ;
 ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; mouse:mouse_position|x[1]                                                                               ; 0.394  ; 0.000         ;
-; mouse:mouse_position|y[0]                                                                               ; 0.477  ; 0.000         ;
+; mouse:mouse_position|y[0]                                                                               ; 0.404  ; 0.000         ;
+; mouse:mouse_position|x[1]                                                                               ; 0.469  ; 0.000         ;
 ; CLOCK_50                                                                                                ; 8.833  ; 0.000         ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.747 ; 0.000         ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.746 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -494,7 +493,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 1
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 17.590 ns
+Worst Case Available Settling Time: 17.751 ns
 
 
 
@@ -504,24 +503,24 @@ Worst Case Available Settling Time: 17.590 ns
 +----------------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                                                                                                    ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                                         ; -29.031   ; -0.127 ; -4.767   ; -0.107  ; -0.394              ;
-;  CLOCK_50                                                                                                ; -4.218    ; -0.127 ; -2.365   ; -0.107  ; 8.814               ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -29.031   ; 0.039  ; N/A      ; N/A     ; -0.394              ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -4.202    ; -0.021 ; N/A      ; N/A     ; -0.394              ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -3.984    ; 0.039  ; -3.739   ; 0.483   ; -0.394              ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -3.307    ; 1.052  ; -4.767   ; 0.748   ; -0.394              ;
-;  mouse:mouse_position|x[1]                                                                               ; -5.756    ; 0.464  ; N/A      ; N/A     ; 0.376               ;
-;  mouse:mouse_position|y[0]                                                                               ; -5.620    ; 0.904  ; N/A      ; N/A     ; 0.342               ;
+; Worst-case Slack                                                                                         ; -27.860   ; -0.043 ; -3.751   ; 0.055   ; -0.394              ;
+;  CLOCK_50                                                                                                ; -4.227    ; 0.007  ; -2.633   ; 0.055   ; 8.814               ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -27.860   ; -0.028 ; N/A      ; N/A     ; -0.394              ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -4.530    ; -0.043 ; N/A      ; N/A     ; -0.394              ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -3.627    ; 0.090  ; -3.751   ; 0.520   ; -0.394              ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -3.172    ; 0.705  ; -2.268   ; 0.423   ; -0.394              ;
+;  mouse:mouse_position|x[1]                                                                               ; -5.943    ; 0.637  ; N/A      ; N/A     ; 0.363               ;
+;  mouse:mouse_position|y[0]                                                                               ; -5.541    ; 0.668  ; N/A      ; N/A     ; 0.378               ;
 ;  mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.325               ;
-;  mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 30.317    ; 0.177  ; N/A      ; N/A     ; 18.605              ;
-; Design-wide TNS                                                                                          ; -1529.813 ; -0.773 ; -162.865 ; -0.107  ; -62.55              ;
-;  CLOCK_50                                                                                                ; -104.915  ; -0.752 ; -79.414  ; -0.107  ; 0.000               ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -1254.362 ; 0.000  ; N/A      ; N/A     ; -31.606             ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -92.644   ; -0.021 ; N/A      ; N/A     ; -15.193             ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -52.256   ; 0.000  ; -56.642  ; 0.000   ; -11.111             ;
-;  mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -24.900   ; 0.000  ; -26.809  ; 0.000   ; -4.640              ;
-;  mouse:mouse_position|x[1]                                                                               ; -9.966    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  mouse:mouse_position|y[0]                                                                               ; -9.268    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 29.972    ; 0.179  ; N/A      ; N/A     ; 18.604              ;
+; Design-wide TNS                                                                                          ; -1547.089 ; -0.109 ; -179.806 ; 0.0     ; -56.539             ;
+;  CLOCK_50                                                                                                ; -116.046  ; 0.000  ; -92.633  ; 0.000   ; 0.000               ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; -1248.742 ; -0.028 ; N/A      ; N/A     ; -27.031             ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; -97.258   ; -0.107 ; N/A      ; N/A     ; -12.036             ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; -58.886   ; 0.000  ; -67.151  ; 0.000   ; -12.460             ;
+;  mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; -22.857   ; 0.000  ; -20.022  ; 0.000   ; -5.012              ;
+;  mouse:mouse_position|x[1]                                                                               ; -11.867   ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  mouse:mouse_position|y[0]                                                                               ; -9.747    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
 ;  mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
 ;  mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.000     ; 0.000  ; N/A      ; N/A     ; 0.000               ;
 +----------------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
@@ -897,14 +896,14 @@ Worst Case Available Settling Time: 17.590 ns
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 18           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 7            ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 1            ; 1        ; 0        ; 0        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 143          ; 0        ; 0        ; 0        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 147          ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 31           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 8            ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; mouse:mouse_position|x[1]                                                                               ; 14           ; 0        ; 14       ; 0        ;
 ; mouse:mouse_position|x[1]                                                                               ; mouse:mouse_position|x[1]                                                                               ; 4            ; 4        ; 4        ; 4        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; mouse:mouse_position|y[0]                                                                               ; 0            ; 0        ; 8        ; 0        ;
 ; mouse:mouse_position|y[0]                                                                               ; mouse:mouse_position|y[0]                                                                               ; 0            ; 0        ; 2        ; 2        ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 8140         ; 0        ; 0        ; 0        ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 8186         ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -929,14 +928,14 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; 18           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 7            ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 1            ; 1        ; 0        ; 0        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 143          ; 0        ; 0        ; 0        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 147          ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger                                   ; 31           ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                                ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                                                       ; 8            ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; mouse:mouse_position|x[1]                                                                               ; 14           ; 0        ; 14       ; 0        ;
 ; mouse:mouse_position|x[1]                                                                               ; mouse:mouse_position|x[1]                                                                               ; 4            ; 4        ; 4        ; 4        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|newdata                                                       ; mouse:mouse_position|y[0]                                                                               ; 0            ; 0        ; 8        ; 0        ;
 ; mouse:mouse_position|y[0]                                                                               ; mouse:mouse_position|y[0]                                                                               ; 0            ; 0        ; 2        ; 2        ;
-; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 8140         ; 0        ; 0        ; 0        ;
+; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 8186         ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -949,7 +948,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; CLOCK_50                                                              ; 16       ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; CLOCK_50                                                              ; 21       ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                              ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 7        ; 0        ; 0        ; 0        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 20       ; 0        ; 0        ; 0        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 21       ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 9        ; 0        ; 0        ; 0        ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -963,7 +962,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; CLOCK_50                                                              ; 16       ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; CLOCK_50                                                              ; 21       ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                              ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 7        ; 0        ; 0        ; 0        ;
-; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 20       ; 0        ; 0        ; 0        ;
+; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; 21       ; 0        ; 0        ; 0        ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger ; mouse:mouse_position|mouse_ctrl:mousectrl|sigsend                     ; 9        ; 0        ; 0        ; 0        ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -989,7 +988,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 243   ; 243  ;
+; Unconstrained Input Port Paths  ; 246   ; 246  ;
 ; Unconstrained Output Ports      ; 57    ; 57   ;
 ; Unconstrained Output Port Paths ; 356   ; 356  ;
 +---------------------------------+-------+------+
@@ -1170,11 +1169,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon May 21 15:47:15 2018
+    Info: Processing started: Sun May 27 05:10:32 2018
 Info: Command: quartus_sta Velha -c Velha
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 3 of the 3 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): TimeQuest Timing Analyzer is analyzing 6 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
@@ -1202,58 +1201,58 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -28.299
+Info (332146): Worst-case setup slack is -26.976
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -28.299           -1215.963 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -5.756              -9.966 mouse:mouse_position|x[1] 
-    Info (332119):    -5.620              -9.268 mouse:mouse_position|y[0] 
-    Info (332119):    -4.218            -104.915 CLOCK_50 
-    Info (332119):    -4.187             -91.292 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -3.833             -52.148 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -3.196             -23.841 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    30.421               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.228
+    Info (332119):   -26.976           -1207.452 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -5.943             -11.867 mouse:mouse_position|x[1] 
+    Info (332119):    -5.541              -9.747 mouse:mouse_position|y[0] 
+    Info (332119):    -4.399             -96.066 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -4.227            -116.046 CLOCK_50 
+    Info (332119):    -3.619             -58.886 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -3.026             -21.642 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    30.137               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.205
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.228               0.000 CLOCK_50 
-    Info (332119):     0.307               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.330               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.426               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.464               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.830               0.000 mouse:mouse_position|x[1] 
-    Info (332119):     1.380               0.000 mouse:mouse_position|y[0] 
-    Info (332119):     2.180               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case recovery slack is -4.767
+    Info (332119):     0.205               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     0.222               0.000 CLOCK_50 
+    Info (332119):     0.303               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):     0.341               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.487               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     1.018               0.000 mouse:mouse_position|x[1] 
+    Info (332119):     1.139               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     1.635               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case recovery slack is -3.721
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.767             -26.809 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -3.689             -56.642 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -2.365             -79.414 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.464
+    Info (332119):    -3.721             -67.151 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -2.633             -92.633 CLOCK_50 
+    Info (332119):    -2.268             -20.022 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case removal slack is 0.795
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.464               0.000 CLOCK_50 
-    Info (332119):     1.474               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     1.974               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.795               0.000 CLOCK_50 
+    Info (332119):     1.307               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     1.609               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -31.606 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -0.394             -15.193 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -0.394             -11.111 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -0.394              -4.640 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.394             -27.031 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -0.394             -12.460 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -0.394             -12.036 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.394              -5.012 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
     Info (332119):     0.325               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     0.379               0.000 mouse:mouse_position|x[1] 
-    Info (332119):     0.408               0.000 mouse:mouse_position|y[0] 
-    Info (332119):     8.863               0.000 CLOCK_50 
-    Info (332119):    18.625               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.389               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     0.415               0.000 mouse:mouse_position|x[1] 
+    Info (332119):     8.862               0.000 CLOCK_50 
+    Info (332119):    18.629               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 15.623 ns
+    Info (332114): Worst Case Available Settling Time: 16.001 ns
     Info (332114): 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -1265,58 +1264,58 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -29.031
+Info (332146): Worst-case setup slack is -27.860
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -29.031           -1254.362 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -5.549              -9.558 mouse:mouse_position|x[1] 
-    Info (332119):    -5.377              -8.907 mouse:mouse_position|y[0] 
-    Info (332119):    -4.202             -92.644 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -3.984             -52.256 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -3.892             -87.186 CLOCK_50 
-    Info (332119):    -3.307             -24.900 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    30.317               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.100
+    Info (332119):   -27.860           -1248.742 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -5.699             -11.377 mouse:mouse_position|x[1] 
+    Info (332119):    -5.254              -9.253 mouse:mouse_position|y[0] 
+    Info (332119):    -4.530             -97.258 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -4.079             -98.968 CLOCK_50 
+    Info (332119):    -3.627             -58.634 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -3.172             -22.857 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    29.972               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.211
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.100               0.000 CLOCK_50 
-    Info (332119):     0.313               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.365               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.394               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.431               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.609               0.000 mouse:mouse_position|x[1] 
-    Info (332119):     1.198               0.000 mouse:mouse_position|y[0] 
-    Info (332119):     2.315               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case recovery slack is -4.537
+    Info (332119):     0.211               0.000 CLOCK_50 
+    Info (332119):     0.285               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):     0.306               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     0.321               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.444               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.805               0.000 mouse:mouse_position|x[1] 
+    Info (332119):     0.922               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     1.809               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case recovery slack is -3.751
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.537             -25.456 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -3.739             -54.961 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.973             -65.082 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.085
+    Info (332119):    -3.751             -65.184 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -2.253             -78.798 CLOCK_50 
+    Info (332119):    -2.170             -19.120 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case removal slack is 0.385
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.085               0.000 CLOCK_50 
-    Info (332119):     1.362               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     1.799               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.385               0.000 CLOCK_50 
+    Info (332119):     1.214               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     1.525               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -31.561 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -0.394             -14.980 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -0.394             -10.995 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -0.394              -4.633 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.394             -27.010 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -0.394             -12.098 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -0.394             -11.930 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.394              -4.860 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
     Info (332119):     0.325               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     0.342               0.000 mouse:mouse_position|y[0] 
-    Info (332119):     0.391               0.000 mouse:mouse_position|x[1] 
+    Info (332119):     0.363               0.000 mouse:mouse_position|x[1] 
+    Info (332119):     0.427               0.000 mouse:mouse_position|y[0] 
     Info (332119):     8.814               0.000 CLOCK_50 
-    Info (332119):    18.605               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.604               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 15.942 ns
+    Info (332114): Worst Case Available Settling Time: 16.265 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -1328,50 +1327,50 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -15.164
+Info (332146): Worst-case setup slack is -14.600
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -15.164            -651.429 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -3.520              -5.633 mouse:mouse_position|y[0] 
-    Info (332119):    -3.456              -5.909 mouse:mouse_position|x[1] 
-    Info (332119):    -3.231             -68.041 CLOCK_50 
-    Info (332119):    -2.156             -44.558 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -1.859             -23.837 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.520             -11.214 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    34.476               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.033
+    Info (332119):   -14.600            -638.053 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -3.629              -7.252 mouse:mouse_position|x[1] 
+    Info (332119):    -3.549              -6.116 mouse:mouse_position|y[0] 
+    Info (332119):    -3.373             -72.158 CLOCK_50 
+    Info (332119):    -2.233             -47.011 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -1.738             -28.257 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.462              -9.903 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    34.349               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.028
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.033               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.039               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.088               0.000 CLOCK_50 
-    Info (332119):     0.099               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.198               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.601               0.000 mouse:mouse_position|x[1] 
-    Info (332119):     1.052               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):     1.072               0.000 mouse:mouse_position|y[0] 
-Info (332146): Worst-case recovery slack is -2.921
+    Info (332119):    -0.028              -0.028 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -0.007              -0.007 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):     0.130               0.000 CLOCK_50 
+    Info (332119):     0.144               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.201               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.705               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.806               0.000 mouse:mouse_position|x[1] 
+    Info (332119):     0.809               0.000 mouse:mouse_position|y[0] 
+Info (332146): Worst-case recovery slack is -1.848
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.921             -15.301 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -1.793             -29.105 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.599             -53.973 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.178
+    Info (332119):    -1.848             -34.998 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.720             -61.034 CLOCK_50 
+    Info (332119):    -1.217             -10.635 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case removal slack is 0.368
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.178               0.000 CLOCK_50 
-    Info (332119):     0.600               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.922               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case minimum pulse width slack is -0.091
+    Info (332119):     0.368               0.000 CLOCK_50 
+    Info (332119):     0.524               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.624               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+Info (332146): Worst-case minimum pulse width slack is -0.016
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.091              -2.689 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -0.058              -0.943 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.062               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.128               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    -0.016              -0.237 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     0.026               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.053               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.065               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
     Info (332119):     0.325               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     0.376               0.000 mouse:mouse_position|x[1] 
-    Info (332119):     0.456               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     0.378               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     0.457               0.000 mouse:mouse_position|x[1] 
     Info (332119):     8.844               0.000 CLOCK_50 
     Info (332119):    18.745               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
@@ -1379,7 +1378,7 @@ Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 1
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 17.221 ns
+    Info (332114): Worst Case Available Settling Time: 17.422 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
@@ -1389,65 +1388,65 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -14.206
+Info (332146): Worst-case setup slack is -13.852
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.206            -615.202 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -3.104              -4.987 mouse:mouse_position|y[0] 
-    Info (332119):    -3.048              -5.204 mouse:mouse_position|x[1] 
-    Info (332119):    -2.709             -48.968 CLOCK_50 
-    Info (332119):    -2.029             -42.576 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):    -1.829             -21.955 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.505             -11.140 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    34.849               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -0.127
+    Info (332119):   -13.852            -606.910 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):    -3.191              -6.381 mouse:mouse_position|x[1] 
+    Info (332119):    -3.097              -5.347 mouse:mouse_position|y[0] 
+    Info (332119):    -2.834             -52.945 CLOCK_50 
+    Info (332119):    -2.150             -44.996 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -1.663             -25.652 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.451              -9.973 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):    34.716               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -0.043
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.127              -0.752 CLOCK_50 
-    Info (332119):    -0.021              -0.021 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
-    Info (332119):     0.039               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.055               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):     0.177               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.464               0.000 mouse:mouse_position|x[1] 
-    Info (332119):     0.904               0.000 mouse:mouse_position|y[0] 
-    Info (332119):     1.059               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case recovery slack is -2.508
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -2.508             -13.011 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-    Info (332119):    -1.727             -25.872 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):    -1.140             -37.660 CLOCK_50 
-Info (332146): Worst-case removal slack is -0.107
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.107              -0.107 CLOCK_50 
-    Info (332119):     0.483               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.748               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
-Info (332146): Worst-case minimum pulse width slack is -0.042
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.042              -0.926 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
-    Info (332119):    -0.011              -0.112 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.043              -0.107 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
+    Info (332119):    -0.002              -0.002 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     0.007               0.000 CLOCK_50 
     Info (332119):     0.090               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
-    Info (332119):     0.134               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.179               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.637               0.000 mouse:mouse_position|x[1] 
+    Info (332119):     0.668               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     0.758               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case recovery slack is -1.763
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.763             -30.938 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):    -1.260             -44.359 CLOCK_50 
+    Info (332119):    -1.034              -9.058 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+Info (332146): Worst-case removal slack is 0.055
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.055               0.000 CLOCK_50 
+    Info (332119):     0.423               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.520               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+Info (332146): Worst-case minimum pulse width slack is 0.014
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.014               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|newdata 
+    Info (332119):     0.065               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigtrigger 
+    Info (332119):     0.085               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|sigsend 
+    Info (332119):     0.088               0.000 mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|parchecked 
     Info (332119):     0.325               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     0.394               0.000 mouse:mouse_position|x[1] 
-    Info (332119):     0.477               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     0.404               0.000 mouse:mouse_position|y[0] 
+    Info (332119):     0.469               0.000 mouse:mouse_position|x[1] 
     Info (332119):     8.833               0.000 CLOCK_50 
-    Info (332119):    18.747               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.746               0.000 mouse_monitor|vga_component|divider|vga_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 17.590 ns
+    Info (332114): Worst Case Available Settling Time: 17.751 ns
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 1407 megabytes
-    Info: Processing ended: Mon May 21 15:47:23 2018
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 5211 megabytes
+    Info: Processing ended: Sun May 27 05:10:54 2018
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:24
 
 

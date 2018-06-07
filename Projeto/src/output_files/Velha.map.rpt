@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Velha
-Mon May 21 15:46:15 2018
+Sun May 27 05:06:40 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -15,31 +15,33 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |velha|mouse:mouse_position|mouse_ctrl:mousectrl|state
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0|altsyncram_k7l1:auto_generated
- 17. Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl
- 18. Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io
- 19. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component
- 20. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i
- 21. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem
- 22. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0
- 23. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0
- 24. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1
- 25. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div0
- 26. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div1
- 27. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod0
- 28. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod1
- 29. altsyncram Parameter Settings by Entity Instance
- 30. Port Connectivity Checks: "monitor:mouse_monitor|vgacon:vga_component"
- 31. Port Connectivity Checks: "mouse:mouse_position|mouse_ctrl:mousectrl"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+ 10. State Machine - |velha|uc:controle|estado
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0|altsyncram_k7l1:auto_generated
+ 18. Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl
+ 19. Parameter Settings for User Entity Instance: mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io
+ 20. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component
+ 21. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i
+ 22. Parameter Settings for User Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem
+ 23. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0
+ 24. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0
+ 25. Parameter Settings for Inferred Entity Instance: monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1
+ 26. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div0
+ 27. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Div1
+ 28. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod0
+ 29. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|lpm_divide:Mod1
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "monitor:mouse_monitor|vgacon:vga_component"
+ 32. Port Connectivity Checks: "mouse:mouse_position|mouse_ctrl:mousectrl"
+ 33. Port Connectivity Checks: "uc:controle"
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -65,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 21 15:46:15 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 27 05:06:39 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Velha                                       ;
 ; Top-level Entity Name           ; velha                                       ;
@@ -177,60 +179,60 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 3           ;
+; Maximum allowed            ; 3           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 3           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; VGA/vga_pll.vhd                  ; yes             ; User Wizard-Generated File   ; /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll.vhd                    ;         ;
-; VGA/vga_pll/vga_pll_0002.v       ; yes             ; User Verilog HDL File        ; /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll/vga_pll_0002.v         ; vga_pll ;
-; VGA/vgacon.vhd                   ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd                     ;         ;
-; monitor.vhd                      ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto/monitor.vhd                        ;         ;
-; PS2/bin2hex.vhd                  ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto/PS2/bin2hex.vhd                    ;         ;
-; velha.vhd                        ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto/velha.vhd                          ;         ;
-; PS2/ps2_iobase.vhd               ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd                 ;         ;
-; PS2/mouse_ctrl.vhd               ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd                 ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File               ; /home/ec2016/ra188727/mc613/Projeto/mouse.vhd                          ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altera_pll.v          ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_k7l1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/altsyncram_k7l1.tdf             ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/lpm_divide_ibm.tdf              ;         ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/sign_div_unsign_olh.tdf         ;         ;
-; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/alt_u_div_mve.tdf               ;         ;
-; db/lpm_divide_gpo.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/lpm_divide_gpo.tdf              ;         ;
-; db/abs_divider_pbg.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/abs_divider_pbg.tdf             ;         ;
-; db/alt_u_div_20f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/alt_u_div_20f.tdf               ;         ;
-; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/lpm_abs_nn9.tdf                 ;         ;
-; db/lpm_abs_6p9.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/lpm_abs_6p9.tdf                 ;         ;
-; db/lpm_divide_b5m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/lpm_divide_b5m.tdf              ;         ;
-; db/sign_div_unsign_enh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/sign_div_unsign_enh.tdf         ;         ;
-; db/alt_u_div_23f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2016/ra188727/mc613/Projeto/db/alt_u_div_23f.tdf               ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; uc.vhd                           ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/uc.vhd                                 ;         ;
+; VGA/vga_pll.vhd                  ; yes             ; User Wizard-Generated File   ; C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd                        ;         ;
+; VGA/vga_pll/vga_pll_0002.v       ; yes             ; User Verilog HDL File        ; C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v             ; vga_pll ;
+; VGA/vgacon.vhd                   ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd                         ;         ;
+; monitor.vhd                      ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd                            ;         ;
+; PS2/bin2hex.vhd                  ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/bin2hex.vhd                        ;         ;
+; velha.vhd                        ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd                              ;         ;
+; PS2/ps2_iobase.vhd               ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd                     ;         ;
+; PS2/mouse_ctrl.vhd               ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd                     ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File               ; C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd                              ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altera_pll.v          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_k7l1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/altsyncram_k7l1.tdf                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_ibm.tdf                  ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_olh.tdf             ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_mve.tdf                   ;         ;
+; db/lpm_divide_gpo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_gpo.tdf                  ;         ;
+; db/abs_divider_pbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/abs_divider_pbg.tdf                 ;         ;
+; db/alt_u_div_20f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_20f.tdf                   ;         ;
+; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_nn9.tdf                     ;         ;
+; db/lpm_abs_6p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_6p9.tdf                     ;         ;
+; db/lpm_divide_b5m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_b5m.tdf                  ;         ;
+; db/sign_div_unsign_enh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_enh.tdf             ;         ;
+; db/alt_u_div_23f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_23f.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -339,6 +341,18 @@ Encoding Type:  One-Hot
 +---------------+-------------+---------------+---------------+------------+--------------+
 
 
+Encoding Type:  One-Hot
++-------------------------------------------------------------------+
+; State Machine - |velha|uc:controle|estado                         ;
++----------------+----------------+----------------+----------------+
+; Name           ; estado.PosJogo ; estado.Jogando ; estado.PreJogo ;
++----------------+----------------+----------------+----------------+
+; estado.PreJogo ; 0              ; 0              ; 0              ;
+; estado.Jogando ; 0              ; 1              ; 1              ;
+; estado.PosJogo ; 1              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+
+
+
 +----------------------------------------------------------------------------------------------------------+
 ; User-Specified and Inferred Latches                                                                      ;
 +----------------------------------------------------+----------------------------+------------------------+
@@ -361,7 +375,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; monitor:mouse_monitor|video_word[1,2]                                   ; Stuck at GND due to stuck port data_in ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in ;
 ; mouse:mouse_position|mouse_ctrl:mousectrl|\process_1:count[2]           ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4                                   ;                                        ;
+; uc:controle|estado.PreJogo                                              ; Lost fanout                            ;
+; uc:controle|estado.Jogando                                              ; Lost fanout                            ;
+; uc:controle|estado.PosJogo                                              ; Lost fanout                            ;
+; Total Number of Removed Registers = 7                                   ;                                        ;
 +-------------------------------------------------------------------------+----------------------------------------+
 
 
@@ -404,11 +421,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[7] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[1] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[4] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[7] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |velha|mouse:mouse_position|mouse_ctrl:mousectrl|state                      ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |velha|uc:controle|estado                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
@@ -950,6 +968,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uc:controle"                                                                                   ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; comando_mouse   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; comando_monitor ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -996,7 +1024,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -1006,59 +1034,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon May 21 15:46:02 2018
+    Info: Processing started: Sun May 27 05:05:58 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Velha -c Velha
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file VGA/vga_pll.vhd
-    Info (12022): Found design unit 1: vga_pll-rtl File: /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll.vhd Line: 19
-    Info (12023): Found entity 1: vga_pll File: /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll.vhd Line: 11
-Info (12021): Found 1 design units, including 1 entities, in source file VGA/vga_pll/vga_pll_0002.v
-    Info (12023): Found entity 1: vga_pll_0002 File: /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 2
-Info (12021): Found 4 design units, including 2 entities, in source file VGA/vgacon.vhd
-    Info (12022): Found design unit 1: vgacon-behav File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 96
-    Info (12022): Found design unit 2: dual_clock_ram-behav File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 269
-    Info (12023): Found entity 1: vgacon File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 75
-    Info (12023): Found entity 2: dual_clock_ram File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 256
+Info (20030): Parallel compilation is enabled and will use 3 of the 3 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
+    Info (12022): Found design unit 1: uc-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/uc.vhd Line: 16
+    Info (12023): Found entity 1: uc File: C:/Users/Yagostoso/Desktop/V2/Projeto/uc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vga/vga_pll.vhd
+    Info (12022): Found design unit 1: vga_pll-rtl File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd Line: 19
+    Info (12023): Found entity 1: vga_pll File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file vga/vga_pll/vga_pll_0002.v
+    Info (12023): Found entity 1: vga_pll_0002 File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 2
+Info (12021): Found 4 design units, including 2 entities, in source file vga/vgacon.vhd
+    Info (12022): Found design unit 1: vgacon-behav File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 96
+    Info (12022): Found design unit 2: dual_clock_ram-behav File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 269
+    Info (12023): Found entity 1: vgacon File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 75
+    Info (12023): Found entity 2: dual_clock_ram File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 256
 Info (12021): Found 2 design units, including 1 entities, in source file monitor.vhd
-    Info (12022): Found design unit 1: monitor-struct File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 19
-    Info (12023): Found entity 1: monitor File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file PS2/bin2hex.vhd
-    Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2016/ra188727/mc613/Projeto/PS2/bin2hex.vhd Line: 11
-    Info (12023): Found entity 1: bin2hex File: /home/ec2016/ra188727/mc613/Projeto/PS2/bin2hex.vhd Line: 4
+    Info (12022): Found design unit 1: monitor-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 19
+    Info (12023): Found entity 1: monitor File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ps2/bin2hex.vhd
+    Info (12022): Found design unit 1: bin2hex-LogicFunction File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/bin2hex.vhd Line: 11
+    Info (12023): Found entity 1: bin2hex File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/bin2hex.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file velha.vhd
-    Info (12022): Found design unit 1: velha-struct File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 33
-    Info (12023): Found entity 1: velha File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file PS2/ps2_iobase.vhd
-    Info (12022): Found design unit 1: ps2_iobase-rtl File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 41
-    Info (12023): Found entity 1: ps2_iobase File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 20
-Info (12021): Found 2 design units, including 1 entities, in source file PS2/mouse_ctrl.vhd
-    Info (12022): Found design unit 1: mouse_ctrl-rtl File: /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd Line: 56
-    Info (12023): Found entity 1: mouse_ctrl File: /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd Line: 20
+    Info (12022): Found design unit 1: velha-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 33
+    Info (12023): Found entity 1: velha File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ps2/ps2_iobase.vhd
+    Info (12022): Found design unit 1: ps2_iobase-rtl File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 41
+    Info (12023): Found entity 1: ps2_iobase File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file ps2/mouse_ctrl.vhd
+    Info (12022): Found design unit 1: mouse_ctrl-rtl File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd Line: 56
+    Info (12023): Found entity 1: mouse_ctrl File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: mouse-struct File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 17
-    Info (12023): Found entity 1: mouse File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 5
+    Info (12022): Found design unit 1: mouse-struct File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 17
+    Info (12023): Found entity 1: mouse File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 5
 Info (12127): Elaborating entity "velha" for the top level hierarchy
-Info (12128): Elaborating entity "mouse" for hierarchy "mouse:mouse_position" File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 68
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(37): object "ox" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(37): object "oy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 37
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(38): object "bt_on" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(39): object "wheel" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 39
-Info (12128): Elaborating entity "mouse_ctrl" for hierarchy "mouse:mouse_position|mouse_ctrl:mousectrl" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 45
-Info (12128): Elaborating entity "ps2_iobase" for hierarchy "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io" File: /home/ec2016/ra188727/mc613/Projeto/PS2/mouse_ctrl.vhd Line: 79
-Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 161
-Info (12128): Elaborating entity "monitor" for hierarchy "monitor:mouse_monitor" File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 69
-Info (10041): Inferred latch for "mouse_y_tmp[0]" at monitor.vhd(92) File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 92
-Info (10041): Inferred latch for "mouse_y_tmp[1]" at monitor.vhd(92) File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 92
-Info (10041): Inferred latch for "mouse_x_tmp[0]" at monitor.vhd(85) File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 85
-Info (10041): Inferred latch for "mouse_x_tmp[1]" at monitor.vhd(85) File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 85
-Info (12128): Elaborating entity "vgacon" for hierarchy "monitor:mouse_monitor|vgacon:vga_component" File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 61
-Info (12128): Elaborating entity "vga_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 118
-Info (12128): Elaborating entity "vga_pll_0002" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll.vhd Line: 31
-Info (12128): Elaborating entity "altera_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
+Warning (10541): VHDL Signal Declaration warning at velha.vhd(76): used implicit default value for signal "entrada" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at velha.vhd(77): object "saida_mouse" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 77
+Warning (10036): Verilog HDL or VHDL warning at velha.vhd(78): object "saida_monitor" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 78
+Info (12128): Elaborating entity "uc" for hierarchy "uc:controle" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 80
+Info (12128): Elaborating entity "mouse" for hierarchy "mouse:mouse_position" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 81
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(37): object "ox" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(37): object "oy" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(38): object "bt_on" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(39): object "wheel" assigned a value but never read File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 39
+Info (12128): Elaborating entity "mouse_ctrl" for hierarchy "mouse:mouse_position|mouse_ctrl:mousectrl" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 45
+Info (12128): Elaborating entity "ps2_iobase" for hierarchy "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io" File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/mouse_ctrl.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 161
+Info (12128): Elaborating entity "monitor" for hierarchy "monitor:mouse_monitor" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 82
+Info (10041): Inferred latch for "mouse_y_tmp[0]" at monitor.vhd(92) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
+Info (10041): Inferred latch for "mouse_y_tmp[1]" at monitor.vhd(92) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
+Info (10041): Inferred latch for "mouse_x_tmp[0]" at monitor.vhd(85) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
+Info (10041): Inferred latch for "mouse_x_tmp[1]" at monitor.vhd(85) File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
+Info (12128): Elaborating entity "vgacon" for hierarchy "monitor:mouse_monitor|vgacon:vga_component" File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 61
+Info (12128): Elaborating entity "vga_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 118
+Info (12128): Elaborating entity "vga_pll_0002" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll.vhd Line: 31
+Info (12128): Elaborating entity "altera_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
-Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
+Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1119,8 +1154,8 @@ Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_compon
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "dual_clock_ram" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 124
-Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:display1" File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 72
+Info (12128): Elaborating entity "dual_clock_ram" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 124
+Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:display1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 85
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|ram_block_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1139,12 +1174,12 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to vga_mem.mif
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div0" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 229
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div1" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 230
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Div0" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 55
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Div1" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 56
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Mod0" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 57
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Mod1" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 229
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "monitor:mouse_monitor|vgacon:vga_component|Div1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 230
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 55
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Div1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 56
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Mod0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 57
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mouse:mouse_position|Mod1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 58
 Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0"
 Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1163,100 +1198,102 @@ Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_compon
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "vga_mem.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k7l1.tdf
-    Info (12023): Found entity 1: altsyncram_k7l1 File: /home/ec2016/ra188727/mc613/Projeto/db/altsyncram_k7l1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 229
-Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 229
+    Info (12023): Found entity 1: altsyncram_k7l1 File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/altsyncram_k7l1.tdf Line: 27
+Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File C:/Users/Yagostoso/Desktop/V2/Projeto/vga_mem.mif -- setting all initial values to 0 File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 229
+Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div0" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 229
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
-    Info (12023): Found entity 1: lpm_divide_ibm File: /home/ec2016/ra188727/mc613/Projeto/db/lpm_divide_ibm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_ibm File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_ibm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: /home/ec2016/ra188727/mc613/Projeto/db/sign_div_unsign_olh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
-    Info (12023): Found entity 1: alt_u_div_mve File: /home/ec2016/ra188727/mc613/Projeto/db/alt_u_div_mve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 230
-Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto/VGA/vgacon.vhd Line: 230
+    Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 230
+Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_component|lpm_divide:Div1" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/VGA/vgacon.vhd Line: 230
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|lpm_divide:Div0" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 55
-Info (12133): Instantiated megafunction "mouse:mouse_position|lpm_divide:Div0" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 55
+Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|lpm_divide:Div0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 55
+Info (12133): Instantiated megafunction "mouse:mouse_position|lpm_divide:Div0" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 55
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gpo.tdf
-    Info (12023): Found entity 1: lpm_divide_gpo File: /home/ec2016/ra188727/mc613/Projeto/db/lpm_divide_gpo.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_gpo File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_gpo.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_pbg.tdf
-    Info (12023): Found entity 1: abs_divider_pbg File: /home/ec2016/ra188727/mc613/Projeto/db/abs_divider_pbg.tdf Line: 28
+    Info (12023): Found entity 1: abs_divider_pbg File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/abs_divider_pbg.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_20f.tdf
-    Info (12023): Found entity 1: alt_u_div_20f File: /home/ec2016/ra188727/mc613/Projeto/db/alt_u_div_20f.tdf Line: 22
+    Info (12023): Found entity 1: alt_u_div_20f File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_20f.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
-    Info (12023): Found entity 1: lpm_abs_nn9 File: /home/ec2016/ra188727/mc613/Projeto/db/lpm_abs_nn9.tdf Line: 22
+    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_nn9.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_6p9.tdf
-    Info (12023): Found entity 1: lpm_abs_6p9 File: /home/ec2016/ra188727/mc613/Projeto/db/lpm_abs_6p9.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|lpm_divide:Mod0" File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 57
-Info (12133): Instantiated megafunction "mouse:mouse_position|lpm_divide:Mod0" with the following parameter: File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 57
+    Info (12023): Found entity 1: lpm_abs_6p9 File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_abs_6p9.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "mouse:mouse_position|lpm_divide:Mod0" File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 57
+Info (12133): Instantiated megafunction "mouse:mouse_position|lpm_divide:Mod0" with the following parameter: File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 57
     Info (12134): Parameter "LPM_WIDTHN" = "17"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_b5m.tdf
-    Info (12023): Found entity 1: lpm_divide_b5m File: /home/ec2016/ra188727/mc613/Projeto/db/lpm_divide_b5m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_b5m File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/lpm_divide_b5m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_enh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_enh File: /home/ec2016/ra188727/mc613/Projeto/db/sign_div_unsign_enh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_enh File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/sign_div_unsign_enh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_23f.tdf
-    Info (12023): Found entity 1: alt_u_div_23f File: /home/ec2016/ra188727/mc613/Projeto/db/alt_u_div_23f.tdf Line: 22
-Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 85
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|x[4] File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 85
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|x[4] File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 92
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|y[0] File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto/monitor.vhd Line: 92
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|y[0] File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
+    Info (12023): Found entity 1: alt_u_div_23f File: C:/Users/Yagostoso/Desktop/V2/Projeto/db/alt_u_div_23f.tdf Line: 22
+Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[0] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|x[4] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[1] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 85
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|x[4] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[0] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|y[0] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[1] has unsafe behavior File: C:/Users/Yagostoso/Desktop/V2/Projeto/monitor.vhd Line: 92
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|y[0] File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en" is converted into an equivalent circuit using register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en_emulated" and latch "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~1" File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 25
-    Warning (13310): Register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy" is converted into an equivalent circuit using register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~_emulated" and latch "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~1" File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 34
+    Warning (13310): Register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en" is converted into an equivalent circuit using register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en_emulated" and latch "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 25
+    Warning (13310): Register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy" is converted into an equivalent circuit using register "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~_emulated" and latch "mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|send_rdy~1" File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 34
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 18
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 18
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 18
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register mouse:mouse_position|xacc[14] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[14] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/PS2/ps2_iobase.vhd Line: 52
-    Critical Warning (18010): Register mouse:mouse_position|xacc[12] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[11] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[12] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[11] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[7] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[7] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[5] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[5] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|xacc[4] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|yacc[4] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|xacc[14] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|yacc[14] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|xacc[12] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|xacc[11] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|yacc[12] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|yacc[11] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|xacc[7] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|yacc[7] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|xacc[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|yacc[6] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|xacc[5] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|yacc[5] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|xacc[4] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|yacc[4] will power up to Low File: C:/Users/Yagostoso/Desktop/V2/Projeto/mouse.vhd Line: 54
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 22
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 22
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2016/ra188727/mc613/Projeto/velha.vhd Line: 22
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 22
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 22
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Yagostoso/Desktop/V2/Projeto/velha.vhd Line: 22
 Info (21057): Implemented 1693 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 57 output pins
@@ -1264,10 +1301,10 @@ Info (21057): Implemented 1693 device resources after synthesis - the final reso
     Info (21061): Implemented 1625 logic cells
     Info (21064): Implemented 3 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 1246 megabytes
-    Info: Processing ended: Mon May 21 15:46:15 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4913 megabytes
+    Info: Processing ended: Sun May 27 05:06:40 2018
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:53
 
 

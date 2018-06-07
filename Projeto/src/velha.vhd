@@ -51,7 +51,16 @@ architecture struct of velha is
 			vga_hs, vga_vs				: OUT STD_LOGIC;
 			vga_blank_n, vga_sync_n : OUT STD_LOGIC;
 			vga_clk 						: OUT STD_LOGIC
-	);
+		);
+	end component;
+	component uc
+		port(
+			clock					: in	std_logic;
+			resetn					: in	std_logic;
+			comando_entrada 	: in 	std_logic_vector(2 downto 0);
+			comando_mouse		: out std_logic_vector(2 downto 0);
+			comando_monitor	: out std_logic_vector(2 downto 0)
+		);
 	end component;
 	-- RETIRAR
 	component bin2hex
@@ -64,7 +73,11 @@ architecture struct of velha is
 	
 	signal mouse_x : std_logic_vector(7 downto 0);
 	signal mouse_y : std_logic_vector(7 downto 0);
+	signal entrada : std_logic_vector(2 downto 0);
+	signal saida_mouse : std_logic_vector(2 downto 0);
+	signal saida_monitor : std_logic_vector(2 downto 0);
 begin 
+	controle : uc port map(CLOCK_50, KEY(0), entrada, saida_mouse, saida_monitor);
 	mouse_position : mouse port map(CLOCK_50, PS2_DAT, PS2_CLK, KEY(0), mouse_x, mouse_y);
 	mouse_monitor : monitor port map(CLOCK_50, mouse_x, mouse_y, KEY(0), VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK);
 	
