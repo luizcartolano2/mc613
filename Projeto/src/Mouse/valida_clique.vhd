@@ -11,7 +11,8 @@ entity valida_clique is
 		resetn	: in std_logic;
 		position_x : in std_logic_vector(7 downto 0);
 		position_y : in std_logic_vector(7 downto 0);
-		comando : out std_logic_vector(2 downto 0)
+		comando : out std_logic_vector(2 downto 0);
+		endereco_ram : out std_logic_vector(1 downto 0)
 	);
 end;
 
@@ -74,8 +75,10 @@ begin
 				case mouse_position is
 					when 0 =>
 						comando <= "001";
+						endereco_ram <= "11";
 					when 2 =>
 						comando <= "011";
+						endereco_ram <= "11";
 					when 4 =>
 						comando <= "010";
 					when 6 =>

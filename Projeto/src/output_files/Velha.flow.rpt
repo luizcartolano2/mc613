@@ -1,5 +1,5 @@
 Flow report for Velha
-Mon May 28 17:41:35 2018
+Mon Jun  4 18:32:08 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon May 28 17:41:35 2018       ;
+; Flow Status                     ; Successful - Mon Jun  4 18:32:08 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Velha                                       ;
 ; Top-level Entity Name           ; velha                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 891 / 32,070 ( 3 % )                        ;
-; Total registers                 ; 346                                         ;
-; Total pins                      ; 64 / 457 ( 14 % )                           ;
+; Logic utilization (in ALMs)     ; 895 / 32,070 ( 3 % )                        ;
+; Total registers                 ; 362                                         ;
+; Total pins                      ; 78 / 457 ( 17 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 36 / 4,065,280 ( < 1 % )                    ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/28/2018 17:39:57 ;
+; Start date & time ; 06/04/2018 18:30:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Velha               ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 273440552278829.152753999626815        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 273440552319881.152814782421572        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -100,26 +100,26 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 1213 MB             ; 00:00:23                           ;
-; Fitter                    ; 00:01:08     ; 1.1                     ; 2671 MB             ; 00:01:53                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 1208 MB             ; 00:00:23                           ;
+; Fitter                    ; 00:01:11     ; 1.1                     ; 2665 MB             ; 00:01:57                           ;
 ; Assembler                 ; 00:00:06     ; 1.0                     ; 1110 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.5                     ; 1409 MB             ; 00:00:10                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1397 MB             ; 00:00:02                           ;
-; Total                     ; 00:01:35     ; --                      ; --                  ; 00:02:34                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.5                     ; 1406 MB             ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 1394 MB             ; 00:00:02                           ;
+; Total                     ; 00:01:39     ; --                      ; --                  ; 00:02:39                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                     ;
-+---------------------------+----------------------------+-------------+-------------+----------------+
-; Module Name               ; Machine Hostname           ; OS Name     ; OS Version  ; Processor type ;
-+---------------------------+----------------------------+-------------+-------------+----------------+
-; Analysis & Synthesis      ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Fitter                    ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; Assembler                 ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; TimeQuest Timing Analyzer ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-; EDA Netlist Writer        ; dominica.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
-+---------------------------+----------------------------+-------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                      ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
+; Module Name               ; Machine Hostname            ; OS Name     ; OS Version  ; Processor type ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
+; Analysis & Synthesis      ; argentina.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter                    ; argentina.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler                 ; argentina.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; TimeQuest Timing Analyzer ; argentina.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer        ; argentina.lab.ic.unicamp.br ; Fedora Core ; Fedora Core ; x86_64         ;
++---------------------------+-----------------------------+-------------+-------------+----------------+
 
 
 ------------

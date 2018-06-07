@@ -25,7 +25,9 @@ entity velha is
 		HEX0 : out std_logic_vector(6 downto 0);
 		HEX1 : out std_logic_vector(6 downto 0);
 		HEX2 : out std_logic_vector(6 downto 0);
-		HEX3 : out std_logic_vector(6 downto 0)
+		HEX3 : out std_logic_vector(6 downto 0);
+		HEX4 : out std_logic_vector(6 downto 0);
+		HEX5 : out std_logic_vector(6 downto 0)
 		-- END RETIRAR
 	);
 end;
@@ -40,7 +42,10 @@ architecture struct of velha is
 			entrada_mouse : in std_logic_vector(2 downto 0);
 			position_x : out std_logic_vector(7 downto 0);
 			position_y : out std_logic_vector(7 downto 0);
-			comandos_mouse : out std_logic_vector(2 downto 0)
+			comandos_mouse : out std_logic_vector(2 downto 0);
+			endereco_ram : out std_logic_vector(1 downto 0);
+			saida_ram : in std_logic_vector(5 downto 0);
+			dado_ram : out std_logic_vector(5 downto 0)
 		);
 	end component;
 	component monitor
@@ -53,7 +58,9 @@ architecture struct of velha is
 			vga_hs, vga_vs				: OUT STD_LOGIC;
 			vga_blank_n, vga_sync_n : OUT STD_LOGIC;
 			vga_clk 						: OUT STD_LOGIC;
-			entrada_monitor			: in std_logic_vector(2 downto 0)
+			entrada_monitor			: in std_logic_vector(1 downto 0);
+			endereco_ram 				: out std_logic_vector(1 downto 0);
+			saida_ram 					: in std_logic_vector(5 downto 0)
 		);
 	end component;
 	component uc
@@ -62,16 +69,17 @@ architecture struct of velha is
 			resetn					: in	std_logic;
 			comando_entrada 	: in 	std_logic_vector(2 downto 0);
 			comando_mouse		: out std_logic_vector(2 downto 0);
-			comando_monitor	: out std_logic_vector(2 downto 0);
+			comando_monitor	: out std_logic_vector(1 downto 0);
 			controle_ram 		: out std_logic
 		);
 	end component;
 	component ram
 		port (
 			Clock : in std_logic;
+			Resetn : in std_logic;
 			Address : in std_logic_vector(1 downto 0);
-			Data : in std_logic_vector(2 downto 0);
-			Q : out std_logic_vector(2 downto 0);
+			Data : in std_logic_vector(5 downto 0);
+			Q : out std_logic_vector(5 downto 0);
 			WrEn : in std_logic
 		);
 	end component;
@@ -89,22 +97,49 @@ architecture struct of velha is
 	signal mouse_y : std_logic_vector(7 downto 0);
 	signal entrada : std_logic_vector(2 downto 0);
 	signal saida_mouse : std_logic_vector(2 downto 0);
-	signal saida_monitor : std_logic_vector(2 downto 0);
+	signal saida_monitor : std_logic_vector(1 downto 0);
 	
 	signal gravar : std_logic;
-	signal endereco : std_logic_vector(1 downto 0);
-	signal dado : std_logic_vector(2 downto 0);
-	signal saida_mem : std_logic_vector(2 downto 0);
+	signal endereco_ram : std_logic_vector(1 downto 0);
+	signal endereco_mouse : std_logic_vector(1 downto 0);
+	signal endereco_monitor : std_logic_vector(1 downto 0);
+	signal dado_ram : std_logic_vector(5 downto 0);
+	signal saida_ram : std_logic_vector(5 downto 0);
+	signal print_f : std_logic_vector(3 downto 0);
+	signal print_p : std_logic_vector(3 downto 0);
+	signal print_g : std_logic_vector(3 downto 0);
+	signal print_e : std_logic_vector(3 downto 0);
+	signal print_w : std_logic_vector(3 downto 0);
 begin 
 	controle : uc port map(CLOCK_50, KEY(0), entrada, saida_mouse, saida_monitor, gravar);
-	mouse_position : mouse port map(CLOCK_50, PS2_DAT, PS2_CLK, KEY(0), saida_mouse, mouse_x, mouse_y, entrada);
-	mouse_monitor : monitor port map(CLOCK_50, mouse_x, mouse_y, KEY(0), VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK, saida_monitor);
-	memoria : ram port map(CLOCK_50, endereco, dado, saida_ram, gravar);
+	mouse_position : mouse port map(CLOCK_50, PS2_DAT, PS2_CLK, KEY(0), saida_mouse, mouse_x, mouse_y, entrada, endereco_mouse, saida_ram, dado_ram);
+	mouse_monitor : monitor port map(CLOCK_50, mouse_x, mouse_y, KEY(0), VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N, VGA_CLK, saida_monitor, endereco_monitor, saida_ram);
+	memoria : ram port map(CLOCK_50, KEY(0), endereco_ram, dado_ram, saida_ram, gravar);
 	
 	-- RETIRAR
+	print_f <= "00" & saida_ram(3 downto 2);
+	print_p <= "00" & saida_ram(5 downto 4);
+	print_g <= "00" & saida_ram(1 downto 0);
+	print_e <= "00" & endereco_ram;
+	print_w <= "000" & gravar;
 	display1 : bin2hex port map(mouse_x(3 downto 0), HEX0);
-	display2 : bin2hex port map(mouse_x(7 downto 4), HEX1);
-	display3 : bin2hex port map(mouse_y(3 downto 0), HEX2);
-	display4 : bin2hex port map(mouse_y(7 downto 4), HEX3);
+	display2 : bin2hex port map(print_w, HEX1);
+	display3 : bin2hex port map(print_e, HEX2);
+	display4 : bin2hex port map(print_g, HEX3);
+	display5 : bin2hex port map(print_f, HEX4);
+	display6 : bin2hex port map(print_p, HEX5);
 	-- END RETIRAR
+	
+	process(CLOCK_50)
+		variable endereco_tmp : std_logic_vector(1 downto 0);
+	begin
+		if CLOCK_50'event and CLOCK_50 = '1' then
+			if gravar = '1' then
+				endereco_tmp := endereco_mouse;
+			else
+				endereco_tmp := endereco_monitor;
+			end if;
+			endereco_ram <= endereco_tmp;
+		end if;
+	end process;
 end struct;

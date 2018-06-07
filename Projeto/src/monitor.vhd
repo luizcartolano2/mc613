@@ -13,7 +13,9 @@ entity monitor is
 		vga_hs, vga_vs				: OUT STD_LOGIC;
 		vga_blank_n, vga_sync_n : OUT STD_LOGIC;
 		vga_clk 						: OUT STD_LOGIC;
-		entrada_monitor			: in std_logic_vector(2 downto 0)
+		entrada_monitor			: in std_logic_vector(1 downto 0);
+		endereco_ram 				: out std_logic_vector(1 downto 0);
+		saida_ram 					: in std_logic_vector(5 downto 0)
 	);
 end;
 
@@ -102,38 +104,46 @@ begin
 		variable tela : std_logic_vector(0 to HORZ_SIZE * VERT_SIZE - 1);
 		variable bit_tela : std_logic;
 	begin
-		if clock_50mhz'event and clock_50mhz = '1' then
+		if clock_50mhz'event and clock_50mhz = '1' then		
 			gravar_monitor <= '0';
 			case entrada_monitor is
-				when "000" =>
+				when "00" =>
+					endereco_ram <= "11";
 					bit_tela := '0';
 					tela := (others => bit_tela);
-					tela(0) := '1';
-					tela(2) := '1';
+					if saida_ram(5 downto 4) = "00" then
+						tela(0) := '0';
+						tela(4) := '0';
+					else
+						if saida_ram(5 downto 4) = "01" then
+							tela(0) := '1';
+							tela(4) := '0';
+						else
+							if saida_ram(5 downto 4) = "10" then
+								tela(4) := '1';
+								tela(0) := '0';
+							end if;
+						end if;
+					end if;
+					if saida_ram(3 downto 2) = "00" then
+						tela(2) := '0';
+						tela(6) := '0';
+					else
+						if saida_ram(3 downto 2) = "01" then
+							tela(2) := '1';
+							tela(6) := '0';
+						else
+							if saida_ram(3 downto 2) = "10" then
+								tela(6) := '1';
+								tela(2) := '0';
+							end if;
+						end if;
+					end if;
 					video_word <= "100";
 					gravar_monitor <= '1';
-				when "001" =>
-					tela(0) := '1';
-					tela(4) := '0';
-					video_word <= "100";
-					gravar_monitor <= '1';
-				when "010" =>
-					tela(4) := '1';
-					tela(0) := '0';
-					video_word <= "100";
-					gravar_monitor <= '1';
-				when "011" =>
-					tela(2) := '1';
-					tela(6) := '0';
-					video_word <= "100";
-					gravar_monitor <= '1';
-				when "100" =>
-					tela(6) := '1';
-					tela(2) := '0';
-					video_word <= "100";
-					gravar_monitor <= '1';
+				when "01" =>
+				when "10" =>
 				when others =>
-					gravar_monitor <= '0';
 			end case;
 			if tela(video_address_tmp) = '0' then
 				video_word <= "000";

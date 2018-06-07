@@ -12,7 +12,10 @@ entity mouse is
 		entrada_mouse : in std_logic_vector(2 downto 0);
 		position_x : out std_logic_vector(7 downto 0);
 		position_y : out std_logic_vector(7 downto 0);
-		comandos_mouse : out std_logic_vector(2 downto 0)
+		comandos_mouse : out std_logic_vector(2 downto 0);
+		endereco_ram : out std_logic_vector(1 downto 0);
+		saida_ram : in std_logic_vector(5 downto 0);
+		dado_ram : out std_logic_vector(5 downto 0)
 	);
 end;
 
@@ -35,13 +38,31 @@ architecture struct of mouse is
 			resetn	: in std_logic;
 			position_x : in std_logic_vector(7 downto 0);
 			position_y : in std_logic_vector(7 downto 0);
-			comando : out std_logic_vector(2 downto 0)
+			comando : out std_logic_vector(2 downto 0);
+			endereco_ram : out std_logic_vector(1 downto 0)
 		);
 	end component;
 	signal local_x, local_y : std_logic_vector(7 downto 0);
 begin 	
 	recebe_posicao : atualiza_posicao port map (clock, ps2_data, ps2_clock, resetn, local_x, local_y);
-	acoes_clique : valida_clique port map (clock, ps2_data, ps2_clock, resetn, local_x, local_y, comandos_mouse);
+	acoes_clique : valida_clique port map (clock, ps2_data, ps2_clock, resetn, local_x, local_y, comandos_mouse, endereco_ram);
 	position_x <= local_x;
 	position_y <= local_y;
+	
+	process(clock)
+		variable dado_tmp : std_logic_vector(5 downto 0);
+	begin
+		if clock'event and clock = '1' then
+			if entrada_mouse = "001" then
+				dado_tmp := saida_ram(5 downto 4) & "0000";
+				dado_tmp := dado_tmp XOR "110000";
+			else
+				if entrada_mouse = "011" then
+					dado_tmp := "00" & saida_ram(3 downto 2) & "00";
+					dado_tmp := dado_tmp XOR "001100";
+				end if;
+			end if;
+			dado_ram <= dado_tmp;
+		end if;
+	end process;
 end struct;
