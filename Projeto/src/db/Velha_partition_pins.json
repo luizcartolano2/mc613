@@ -140,6 +140,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX1[2]",
+					"strict" : false
+				},
+				{
 					"name" : "HEX1[3]",
 					"strict" : false
 				},
@@ -152,7 +156,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX1[6]",
+					"strict" : false
+				},
+				{
 					"name" : "HEX2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[1]",
 					"strict" : false
 				},
 				{
@@ -201,6 +213,10 @@
 				},
 				{
 					"name" : "HEX4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[1]",
 					"strict" : false
 				},
 				{

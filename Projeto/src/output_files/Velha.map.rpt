@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Velha
-Wed Jun  6 18:11:04 2018
+Fri Jun  8 20:49:27 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,13 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  32. Parameter Settings for Inferred Entity Instance: mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1
  33. altsyncram Parameter Settings by Entity Instance
  34. Port Connectivity Checks: "bin2hex:display6"
- 35. Port Connectivity Checks: "bin2hex:display5"
- 36. Port Connectivity Checks: "bin2hex:display4"
- 37. Port Connectivity Checks: "bin2hex:display3"
- 38. Port Connectivity Checks: "bin2hex:display2"
- 39. Port Connectivity Checks: "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl"
- 40. Port Connectivity Checks: "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl"
- 41. Post-Synthesis Netlist Statistics for Top Partition
- 42. Elapsed Time Per Partition
- 43. Analysis & Synthesis Messages
+ 35. Port Connectivity Checks: "bin2hex:display4"
+ 36. Port Connectivity Checks: "bin2hex:display2"
+ 37. Port Connectivity Checks: "mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl"
+ 38. Port Connectivity Checks: "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -74,13 +72,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun  6 18:11:04 2018       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jun  8 20:49:27 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Velha                                       ;
 ; Top-level Entity Name           ; velha                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 388                                         ;
+; Total registers                 ; 411                                         ;
 ; Total pins                      ; 78                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 36                                          ;
@@ -194,7 +192,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -251,16 +249,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 944            ;
+; Estimate of Logic utilization (ALMs needed) ; 1005           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1803           ;
-;     -- 7 input functions                    ; 7              ;
-;     -- 6 input functions                    ; 67             ;
-;     -- 5 input functions                    ; 90             ;
-;     -- 4 input functions                    ; 354            ;
-;     -- <=3 input functions                  ; 1285           ;
+; Combinational ALUT usage for logic          ; 1886           ;
+;     -- 7 input functions                    ; 8              ;
+;     -- 6 input functions                    ; 104            ;
+;     -- 5 input functions                    ; 98             ;
+;     -- 4 input functions                    ; 395            ;
+;     -- <=3 input functions                  ; 1281           ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 388            ;
+; Dedicated logic registers                   ; 411            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 78             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -272,9 +270,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 218            ;
-; Total fan-out                               ; 7099           ;
-; Average fan-out                             ; 3.02           ;
+; Maximum fan-out                             ; 240            ;
+; Total fan-out                               ; 7600           ;
+; Average fan-out                             ; 3.09           ;
 +---------------------------------------------+----------------+
 
 
@@ -283,13 +281,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Entity Name         ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |velha                                          ; 1803 (2)            ; 388 (2)                   ; 36                ; 0          ; 78   ; 0            ; |velha                                                                                                                                                      ; velha               ; work         ;
+; |velha                                          ; 1886 (2)            ; 411 (2)                   ; 36                ; 0          ; 78   ; 0            ; |velha                                                                                                                                                      ; velha               ; work         ;
 ;    |bin2hex:display1|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display1                                                                                                                                     ; bin2hex             ; work         ;
-;    |bin2hex:display3|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display3                                                                                                                                     ; bin2hex             ; work         ;
+;    |bin2hex:display2|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display2                                                                                                                                     ; bin2hex             ; work         ;
+;    |bin2hex:display3|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display3                                                                                                                                     ; bin2hex             ; work         ;
 ;    |bin2hex:display4|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display4                                                                                                                                     ; bin2hex             ; work         ;
-;    |bin2hex:display5|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display5                                                                                                                                     ; bin2hex             ; work         ;
-;    |bin2hex:display6|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display6                                                                                                                                     ; bin2hex             ; work         ;
-;    |monitor:mouse_monitor|                      ; 204 (67)            ; 75 (35)                   ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor                                                                                                                                ; monitor             ; work         ;
+;    |bin2hex:display5|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display5                                                                                                                                     ; bin2hex             ; work         ;
+;    |bin2hex:display6|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|bin2hex:display6                                                                                                                                     ; bin2hex             ; work         ;
+;    |monitor:mouse_monitor|                      ; 209 (72)            ; 94 (54)                   ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor                                                                                                                                ; monitor             ; work         ;
 ;       |vgacon:vga_component|                    ; 137 (37)            ; 40 (40)                   ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component                                                                                                           ; vgacon              ; work         ;
 ;          |dual_clock_ram:vgamem|                ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem                                                                                     ; dual_clock_ram      ; work         ;
 ;             |altsyncram:ram_block_rtl_0|        ; 0 (0)               ; 0 (0)                     ; 36                ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|altsyncram:ram_block_rtl_0                                                          ; altsyncram          ; work         ;
@@ -305,8 +304,8 @@ refer to the applicable agreement for further details.
 ;          |vga_pll:divider|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider                                                                                           ; vga_pll             ; work         ;
 ;             |vga_pll_0002:vga_pll_inst|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst                                                                 ; vga_pll_0002        ; vga_pll      ;
 ;                |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i                                         ; altera_pll          ; work         ;
-;    |mouse:mouse_position|                       ; 1544 (8)            ; 274 (6)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position                                                                                                                                 ; mouse               ; work         ;
-;       |atualiza_posicao:recebe_posicao|         ; 1389 (114)          ; 174 (46)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao                                                                                                 ; atualiza_posicao    ; work         ;
+;    |mouse:mouse_position|                       ; 1594 (48)           ; 279 (10)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position                                                                                                                                 ; mouse               ; work         ;
+;       |atualiza_posicao:recebe_posicao|         ; 1386 (114)          ; 174 (46)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao                                                                                                 ; atualiza_posicao    ; work         ;
 ;          |lpm_divide:Div0|                      ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_gpo:auto_generated|     ; 232 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0|lpm_divide_gpo:auto_generated                                                   ; lpm_divide_gpo      ; work         ;
 ;                |abs_divider_pbg:divider|        ; 232 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Div0|lpm_divide_gpo:auto_generated|abs_divider_pbg:divider                           ; abs_divider_pbg     ; work         ;
@@ -325,13 +324,13 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_b5m:auto_generated|     ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1|lpm_divide_b5m:auto_generated                                                   ; lpm_divide_b5m      ; work         ;
 ;                |sign_div_unsign_enh:divider|    ; 318 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider                       ; sign_div_unsign_enh ; work         ;
 ;                   |alt_u_div_23f:divider|       ; 318 (318)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|lpm_divide:Mod1|lpm_divide_b5m:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider ; alt_u_div_23f       ; work         ;
-;          |mouse_ctrl:mousectrl|                 ; 175 (34)            ; 128 (43)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl                                                                            ; mouse_ctrl          ; work         ;
+;          |mouse_ctrl:mousectrl|                 ; 172 (31)            ; 128 (43)                  ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl                                                                            ; mouse_ctrl          ; work         ;
 ;             |ps2_iobase:ps2io|                  ; 141 (141)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io                                                           ; ps2_iobase          ; work         ;
-;       |valida_clique:acoes_clique|              ; 147 (17)            ; 94 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique                                                                                                      ; valida_clique       ; work         ;
-;          |mouse_ctrl:mousectrl|                 ; 130 (32)            ; 91 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl                                                                                 ; mouse_ctrl          ; work         ;
+;       |valida_clique:acoes_clique|              ; 160 (33)            ; 95 (4)                    ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique                                                                                                      ; valida_clique       ; work         ;
+;          |mouse_ctrl:mousectrl|                 ; 127 (29)            ; 91 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl                                                                                 ; mouse_ctrl          ; work         ;
 ;             |ps2_iobase:ps2io|                  ; 98 (98)             ; 67 (67)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io                                                                ; ps2_iobase          ; work         ;
-;    |ram:memoria|                                ; 25 (25)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|ram:memoria                                                                                                                                          ; ram                 ; work         ;
-;    |uc:controle|                                ; 13 (13)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|uc:controle                                                                                                                                          ; uc                  ; work         ;
+;    |ram:memoria|                                ; 19 (19)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|ram:memoria                                                                                                                                          ; ram                 ; work         ;
+;    |uc:controle|                                ; 32 (32)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |velha|uc:controle                                                                                                                                          ; uc                  ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -390,20 +389,20 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------+-------------------------------------------------------+------------------------+
 ; Latch Name                                                     ; Latch Enable Signal                                   ; Free of Timing Hazards ;
 +----------------------------------------------------------------+-------------------------------------------------------+------------------------+
-; ram:memoria|Q[1]                                               ; ram:memoria|Q[5]                                      ; yes                    ;
 ; ram:memoria|Q[0]                                               ; ram:memoria|Q[5]                                      ; yes                    ;
+; ram:memoria|Q[1]                                               ; ram:memoria|Q[5]                                      ; yes                    ;
 ; ram:memoria|Q[2]                                               ; ram:memoria|Q[5]                                      ; yes                    ;
 ; ram:memoria|Q[3]                                               ; ram:memoria|Q[5]                                      ; yes                    ;
 ; ram:memoria|Q[4]                                               ; ram:memoria|Q[5]                                      ; yes                    ;
 ; ram:memoria|Q[5]                                               ; ram:memoria|Q[5]                                      ; yes                    ;
-; monitor:mouse_monitor|mouse_x_tmp[0]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux14 ; yes                    ;
-; monitor:mouse_monitor|mouse_x_tmp[1]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux14 ; yes                    ;
-; monitor:mouse_monitor|mouse_y_tmp[0]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux9  ; yes                    ;
-; monitor:mouse_monitor|mouse_y_tmp[1]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux9  ; yes                    ;
-; mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[0] ; mouse:mouse_position|valida_clique:acoes_clique|Mux14 ; yes                    ;
-; mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[1] ; mouse:mouse_position|valida_clique:acoes_clique|Mux14 ; yes                    ;
-; mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[0] ; mouse:mouse_position|valida_clique:acoes_clique|Mux9  ; yes                    ;
-; mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[1] ; mouse:mouse_position|valida_clique:acoes_clique|Mux9  ; yes                    ;
+; monitor:mouse_monitor|mouse_x_tmp[0]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux13 ; yes                    ;
+; monitor:mouse_monitor|mouse_x_tmp[1]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux13 ; yes                    ;
+; monitor:mouse_monitor|mouse_y_tmp[0]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux8  ; yes                    ;
+; monitor:mouse_monitor|mouse_y_tmp[1]                           ; mouse:mouse_position|valida_clique:acoes_clique|Mux8  ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[0] ; mouse:mouse_position|valida_clique:acoes_clique|Mux13 ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[1] ; mouse:mouse_position|valida_clique:acoes_clique|Mux13 ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[0] ; mouse:mouse_position|valida_clique:acoes_clique|Mux8  ; yes                    ;
+; mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[1] ; mouse:mouse_position|valida_clique:acoes_clique|Mux8  ; yes                    ;
 ; Number of user-specified and inferred latches = 14             ;                                                       ;                        ;
 +----------------------------------------------------------------+-------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -416,14 +415,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_clk~reg0      ; Stuck at GND due to stuck port data_in                                                                           ;
 ; mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in                                                                           ;
+; mouse:mouse_position|valida_clique:acoes_clique|endereco_ram[0,1]                                       ; Stuck at VCC due to stuck port data_in                                                                           ;
+; uc:controle|mouse_validos[1]                                                                            ; Merged with uc:controle|comando_monitor[1]                                                                       ;
+; uc:controle|mouse_validos[0]                                                                            ; Merged with uc:controle|comando_monitor[0]                                                                       ;
 ; uc:controle|controle_ram_tmp                                                                            ; Merged with uc:controle|controle_ram                                                                             ;
-; mouse:mouse_position|valida_clique:acoes_clique|endereco_ram[1]                                         ; Merged with mouse:mouse_position|valida_clique:acoes_clique|endereco_ram[0]                                      ;
-; mouse:mouse_position|dado_tmp[1]                                                                        ; Merged with mouse:mouse_position|dado_ram[1]                                                                     ;
-; mouse:mouse_position|dado_tmp[0]                                                                        ; Merged with mouse:mouse_position|dado_ram[0]                                                                     ;
-; mouse:mouse_position|dado_tmp[3]                                                                        ; Merged with mouse:mouse_position|dado_ram[3]                                                                     ;
-; mouse:mouse_position|dado_tmp[2]                                                                        ; Merged with mouse:mouse_position|dado_ram[2]                                                                     ;
-; mouse:mouse_position|dado_tmp[5]                                                                        ; Merged with mouse:mouse_position|dado_ram[5]                                                                     ;
-; mouse:mouse_position|dado_tmp[4]                                                                        ; Merged with mouse:mouse_position|dado_ram[4]                                                                     ;
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[8] ;
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[7]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[7] ;
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] ;
@@ -442,13 +437,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[2] ;
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[1]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[1] ;
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0]         ; Merged with mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] ;
-; monitor:mouse_monitor|tela[8,16,17]                                                                     ; Merged with monitor:mouse_monitor|tela[0]                                                                        ;
-; mouse:mouse_position|valida_clique:acoes_clique|endereco_ram[0]                                         ; Stuck at VCC due to stuck port data_in                                                                           ;
+; monitor:mouse_monitor|tela[8,17]                                                                        ; Merged with monitor:mouse_monitor|tela[0]                                                                        ;
+; mouse:mouse_position|dado_tmp[3]                                                                        ; Merged with mouse:mouse_position|dado_ram[3]                                                                     ;
+; mouse:mouse_position|dado_tmp[2]                                                                        ; Merged with mouse:mouse_position|dado_ram[2]                                                                     ;
+; mouse:mouse_position|dado_tmp[1]                                                                        ; Merged with mouse:mouse_position|dado_ram[1]                                                                     ;
+; mouse:mouse_position|dado_tmp[5]                                                                        ; Merged with mouse:mouse_position|dado_ram[5]                                                                     ;
+; mouse:mouse_position|dado_tmp[4]                                                                        ; Merged with mouse:mouse_position|dado_ram[4]                                                                     ;
+; mouse:mouse_position|dado_tmp[0]                                                                        ; Merged with mouse:mouse_position|dado_ram[0]                                                                     ;
 ; monitor:mouse_monitor|gravar_monitor                                                                    ; Stuck at VCC due to stuck port data_in                                                                           ;
-; mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|\process_1:count[2]           ; Stuck at GND due to stuck port data_in                                                                           ;
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|\process_1:count[2]                ; Stuck at GND due to stuck port data_in                                                                           ;
+; mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|\process_1:count[2]           ; Stuck at GND due to stuck port data_in                                                                           ;
 ; monitor:mouse_monitor|tela[0]                                                                           ; Stuck at GND due to stuck port data_in                                                                           ;
-; Total Number of Removed Registers = 36                                                                  ;                                                                                                                  ;
+; Total Number of Removed Registers = 37                                                                  ;                                                                                                                  ;
 +---------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
 
 
@@ -457,12 +457,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 388   ;
+; Total registers                              ; 411   ;
 ; Number of registers using Synchronous Clear  ; 24    ;
 ; Number of registers using Synchronous Load   ; 2     ;
-; Number of registers using Asynchronous Clear ; 312   ;
+; Number of registers using Asynchronous Clear ; 313   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 188   ;
+; Number of registers using Clock Enable       ; 203   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -472,17 +472,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                         ; Fan out ;
 +-----------------------------------------------------------------------------------------------------------+---------+
-; ram:memoria|ram[0][1]                                                                                     ; 1       ;
-; ram:memoria|ram[1][0]                                                                                     ; 1       ;
-; ram:memoria|ram[0][2]                                                                                     ; 1       ;
-; ram:memoria|ram[2][3]                                                                                     ; 1       ;
-; ram:memoria|ram[3][3]                                                                                     ; 1       ;
-; ram:memoria|ram[1][4]                                                                                     ; 1       ;
-; ram:memoria|ram[2][5]                                                                                     ; 1       ;
-; ram:memoria|ram[3][5]                                                                                     ; 1       ;
+; ram:memoria|ram[3][2]                                                                                     ; 1       ;
+; ram:memoria|ram[3][4]                                                                                     ; 1       ;
 ; mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigclkreleased      ; 3       ;
 ; mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|sigclkreleased ; 3       ;
-; Total number of inverted registers = 10                                                                   ;         ;
+; Total number of inverted registers = 4                                                                    ;         ;
 +-----------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -500,28 +494,27 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |velha|mouse:mouse_position|endereco_ram[1]                                                                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[5] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[7] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |velha|mouse:mouse_position|dado_ram[4]                                                                     ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |velha|mouse:mouse_position|dado_ram[2]                                                                     ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |velha|monitor:mouse_monitor|video_word[2]                                                                  ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|monitor:mouse_monitor|endereco_ram[1]                                                                ;
-; 20:1               ; 3 bits    ; 39 LEs        ; 12 LEs               ; 27 LEs                 ; Yes        ; |velha|mouse:mouse_position|valida_clique:acoes_clique|comando[1]                                           ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 10 LEs               ; 8 LEs                  ; Yes        ; |velha|uc:controle|comando_mouse[2]                                                                         ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |velha|ram:memoria|Mux1                                                                                     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |velha|monitor:mouse_monitor|endereco_ram[0]                                                                ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 14 LEs               ; 6 LEs                  ; Yes        ; |velha|uc:controle|comando_mouse[4]                                                                         ;
+; 29:1               ; 3 bits    ; 57 LEs        ; 27 LEs               ; 30 LEs                 ; Yes        ; |velha|mouse:mouse_position|valida_clique:acoes_clique|comando[0]                                           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[6] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |velha|ram:memoria|Mux3                                                                                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux2                                                                           ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |velha|mouse:mouse_position|valida_clique:acoes_clique|mouse_ctrl:mousectrl|state                           ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |velha|mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|state                      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux3                                                                           ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |velha|uc:controle|estado                                                                                   ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux21                                                                          ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux13                                                                          ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux20                                                                          ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux12                                                                          ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux5                                                                           ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux23                                                                          ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux24                                                                          ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux22                                                                          ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux25                                                                          ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux17                                                                          ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux9                                                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |velha|monitor:mouse_monitor|Mux8                                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
 
 
@@ -1071,25 +1064,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------+
-; Port Connectivity Checks: "bin2hex:display5" ;
-+----------+-------+----------+----------------+
-; Port     ; Type  ; Severity ; Details        ;
-+----------+-------+----------+----------------+
-; sw[3..2] ; Input ; Info     ; Stuck at GND   ;
-+----------+-------+----------+----------------+
-
-
-+----------------------------------------------+
 ; Port Connectivity Checks: "bin2hex:display4" ;
-+----------+-------+----------+----------------+
-; Port     ; Type  ; Severity ; Details        ;
-+----------+-------+----------+----------------+
-; sw[3..2] ; Input ; Info     ; Stuck at GND   ;
-+----------+-------+----------+----------------+
-
-
-+----------------------------------------------+
-; Port Connectivity Checks: "bin2hex:display3" ;
 +----------+-------+----------+----------------+
 ; Port     ; Type  ; Severity ; Details        ;
 +----------+-------+----------+----------------+
@@ -1102,7 +1077,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+----------------+
 ; Port     ; Type  ; Severity ; Details        ;
 +----------+-------+----------+----------------+
-; sw[3..1] ; Input ; Info     ; Stuck at GND   ;
+; sw[3..2] ; Input ; Info     ; Stuck at GND   ;
 +----------+-------+----------+----------------+
 
 
@@ -1139,34 +1114,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 388                         ;
-;     CLR               ; 131                         ;
+; arriav_ff             ; 411                         ;
+;     CLR               ; 132                         ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 13                          ;
+;     ENA               ; 30                          ;
 ;     ENA CLR           ; 161                         ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     ENA SCLR          ; 2                           ;
 ;     ENA SLD           ; 2                           ;
-;     SCLR              ; 2                           ;
-;     plain             ; 57                          ;
+;     SCLR              ; 4                           ;
+;     plain             ; 62                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1810                        ;
+; arriav_lcell_comb     ; 1894                        ;
 ;     arith             ; 794                         ;
 ;         0 data inputs ; 88                          ;
 ;         1 data inputs ; 162                         ;
 ;         2 data inputs ; 162                         ;
 ;         3 data inputs ; 218                         ;
 ;         4 data inputs ; 164                         ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 959                         ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 1042                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 24                          ;
-;         2 data inputs ; 434                         ;
-;         3 data inputs ; 152                         ;
-;         4 data inputs ; 190                         ;
-;         5 data inputs ; 90                          ;
-;         6 data inputs ; 67                          ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 432                         ;
+;         3 data inputs ; 156                         ;
+;         4 data inputs ; 231                         ;
+;         5 data inputs ; 98                          ;
+;         6 data inputs ; 104                         ;
 ;     shared            ; 50                          ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 42                          ;
@@ -1175,7 +1149,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 32.10                       ;
-; Average LUT depth     ; 18.79                       ;
+; Average LUT depth     ; 18.21                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1194,7 +1168,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun  6 18:10:50 2018
+    Info: Processing started: Fri Jun  8 20:49:14 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Velha -c Velha
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1202,7 +1176,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
     Info (12022): Found design unit 1: ram-direct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 16
     Info (12023): Found entity 1: ram File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
-    Info (12022): Found design unit 1: uc-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/uc.vhd Line: 18
+    Info (12022): Found design unit 1: uc-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/uc.vhd Line: 19
     Info (12023): Found entity 1: uc File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/uc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file VGA/vga_pll.vhd
     Info (12022): Found design unit 1: vga_pll-rtl File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/VGA/vga_pll.vhd Line: 19
@@ -1215,7 +1189,7 @@ Info (12021): Found 4 design units, including 2 entities, in source file VGA/vga
     Info (12023): Found entity 1: vgacon File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/VGA/vgacon.vhd Line: 75
     Info (12023): Found entity 2: dual_clock_ram File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/VGA/vgacon.vhd Line: 256
 Info (12021): Found 2 design units, including 1 entities, in source file monitor.vhd
-    Info (12022): Found design unit 1: monitor-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 22
+    Info (12022): Found design unit 1: monitor-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 25
     Info (12023): Found entity 1: monitor File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file PS2/bin2hex.vhd
     Info (12022): Found design unit 1: bin2hex-LogicFunction File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/bin2hex.vhd Line: 11
@@ -1230,18 +1204,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file PS2/mou
     Info (12022): Found design unit 1: mouse_ctrl-rtl File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/mouse_ctrl.vhd Line: 56
     Info (12023): Found entity 1: mouse_ctrl File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/mouse_ctrl.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: mouse-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 23
+    Info (12022): Found design unit 1: mouse-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 26
     Info (12023): Found entity 1: mouse File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Mouse/atualiza_posicao.vhd
     Info (12022): Found design unit 1: atualiza_posicao-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 17
     Info (12023): Found entity 1: atualiza_posicao File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Mouse/valida_clique.vhd
-    Info (12022): Found design unit 1: valida_clique-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 20
+    Info (12022): Found design unit 1: valida_clique-struct File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 23
     Info (12023): Found entity 1: valida_clique File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 5
 Info (12127): Elaborating entity "velha" for the top level hierarchy
-Info (12128): Elaborating entity "uc" for hierarchy "uc:controle" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 117
-Info (12128): Elaborating entity "mouse" for hierarchy "mouse:mouse_position" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 118
-Info (12128): Elaborating entity "atualiza_posicao" for hierarchy "mouse:mouse_position|atualiza_posicao:recebe_posicao" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 49
+Info (12128): Elaborating entity "uc" for hierarchy "uc:controle" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 128
+Warning (10036): Verilog HDL or VHDL warning at uc.vhd(22): object "controles" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/uc.vhd Line: 22
+Info (12128): Elaborating entity "mouse" for hierarchy "mouse:mouse_position" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 129
+Warning (10620): VHDL warning at mouse.vhd(95): comparison between unequal length operands always returns FALSE File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 95
+Info (12128): Elaborating entity "atualiza_posicao" for hierarchy "mouse:mouse_position|atualiza_posicao:recebe_posicao" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 56
 Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(37): object "ox" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 37
 Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(37): object "oy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 37
 Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(38): object "bt_on" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 38
@@ -1249,22 +1225,22 @@ Warning (10036): Verilog HDL or VHDL warning at atualiza_posicao.vhd(39): object
 Info (12128): Elaborating entity "mouse_ctrl" for hierarchy "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 45
 Info (12128): Elaborating entity "ps2_iobase" for hierarchy "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/mouse_ctrl.vhd Line: 79
 Warning (10492): VHDL Process Statement warning at ps2_iobase.vhd(161): signal "sigsending" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 161
-Info (12128): Elaborating entity "valida_clique" for hierarchy "mouse:mouse_position|valida_clique:acoes_clique" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 50
-Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(40): object "ox" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 40
-Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(40): object "oy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 40
-Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(42): object "wheel" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 42
-Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(44): object "dx" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 44
-Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(44): object "dy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 44
-Info (10041): Inferred latch for "mouse_y_tmp[0]" at valida_clique.vhd(64) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 64
-Info (10041): Inferred latch for "mouse_y_tmp[1]" at valida_clique.vhd(64) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 64
-Info (10041): Inferred latch for "mouse_x_tmp[0]" at valida_clique.vhd(57) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 57
-Info (10041): Inferred latch for "mouse_x_tmp[1]" at valida_clique.vhd(57) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 57
-Info (12128): Elaborating entity "monitor" for hierarchy "monitor:mouse_monitor" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 119
-Info (10041): Inferred latch for "mouse_y_tmp[0]" at monitor.vhd(96) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 96
-Info (10041): Inferred latch for "mouse_y_tmp[1]" at monitor.vhd(96) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 96
-Info (10041): Inferred latch for "mouse_x_tmp[0]" at monitor.vhd(89) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 89
-Info (10041): Inferred latch for "mouse_x_tmp[1]" at monitor.vhd(89) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 89
-Info (12128): Elaborating entity "vgacon" for hierarchy "monitor:mouse_monitor|vgacon:vga_component" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 64
+Info (12128): Elaborating entity "valida_clique" for hierarchy "mouse:mouse_position|valida_clique:acoes_clique" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/mouse.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(43): object "ox" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(43): object "oy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(45): object "wheel" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 45
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(47): object "dx" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 47
+Warning (10036): Verilog HDL or VHDL warning at valida_clique.vhd(47): object "dy" assigned a value but never read File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 47
+Info (10041): Inferred latch for "mouse_y_tmp[0]" at valida_clique.vhd(67) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 67
+Info (10041): Inferred latch for "mouse_y_tmp[1]" at valida_clique.vhd(67) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 67
+Info (10041): Inferred latch for "mouse_x_tmp[0]" at valida_clique.vhd(60) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 60
+Info (10041): Inferred latch for "mouse_x_tmp[1]" at valida_clique.vhd(60) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 60
+Info (12128): Elaborating entity "monitor" for hierarchy "monitor:mouse_monitor" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 130
+Info (10041): Inferred latch for "mouse_y_tmp[0]" at monitor.vhd(99) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 99
+Info (10041): Inferred latch for "mouse_y_tmp[1]" at monitor.vhd(99) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 99
+Info (10041): Inferred latch for "mouse_x_tmp[0]" at monitor.vhd(92) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 92
+Info (10041): Inferred latch for "mouse_x_tmp[1]" at monitor.vhd(92) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 92
+Info (12128): Elaborating entity "vgacon" for hierarchy "monitor:mouse_monitor|vgacon:vga_component" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 67
 Info (12128): Elaborating entity "vga_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/VGA/vgacon.vhd Line: 118
 Info (12128): Elaborating entity "vga_pll_0002" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/VGA/vga_pll.vhd Line: 31
 Info (12128): Elaborating entity "altera_pll" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|vga_pll:divider|vga_pll_0002:vga_pll_inst|altera_pll:altera_pll_i" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/VGA/vga_pll/vga_pll_0002.v Line: 85
@@ -1332,7 +1308,7 @@ Info (12133): Instantiated megafunction "monitor:mouse_monitor|vgacon:vga_compon
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "dual_clock_ram" for hierarchy "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/VGA/vgacon.vhd Line: 124
-Info (12128): Elaborating entity "ram" for hierarchy "ram:memoria" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 120
+Info (12128): Elaborating entity "ram" for hierarchy "ram:memoria" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 131
 Warning (10492): VHDL Process Statement warning at ram.vhd(22): signal "Resetn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 22
 Warning (10492): VHDL Process Statement warning at ram.vhd(34): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 34
 Warning (10631): VHDL Process Statement warning at ram.vhd(20): inferring latch(es) for signal or variable "Q", which holds its previous value in one or more paths through the process File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 20
@@ -1342,7 +1318,7 @@ Info (10041): Inferred latch for "Q[2]" at ram.vhd(20) File: /home/ec2016/ra1887
 Info (10041): Inferred latch for "Q[3]" at ram.vhd(20) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 20
 Info (10041): Inferred latch for "Q[4]" at ram.vhd(20) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 20
 Info (10041): Inferred latch for "Q[5]" at ram.vhd(20) File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/ram.vhd Line: 20
-Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:display1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 128
+Info (12128): Elaborating entity "bin2hex" for hierarchy "bin2hex:display1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 146
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "monitor:mouse_monitor|vgacon:vga_component|dual_clock_ram:vgamem|ram_block_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1434,17 +1410,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_23f.tdf
     Info (12023): Found entity 1: alt_u_div_23f File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/db/alt_u_div_23f.tdf Line: 22
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[0]" merged with LATCH primitive "monitor:mouse_monitor|mouse_x_tmp[0]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 57
-    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[1]" merged with LATCH primitive "monitor:mouse_monitor|mouse_x_tmp[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 57
-    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[0]" merged with LATCH primitive "monitor:mouse_monitor|mouse_y_tmp[0]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 64
-    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[1]" merged with LATCH primitive "monitor:mouse_monitor|mouse_y_tmp[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 64
-Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 89
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[0]" merged with LATCH primitive "monitor:mouse_monitor|mouse_x_tmp[0]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 60
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_x_tmp[1]" merged with LATCH primitive "monitor:mouse_monitor|mouse_x_tmp[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 60
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[0]" merged with LATCH primitive "monitor:mouse_monitor|mouse_y_tmp[0]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 67
+    Info (13026): Duplicate LATCH primitive "mouse:mouse_position|valida_clique:acoes_clique|mouse_y_tmp[1]" merged with LATCH primitive "monitor:mouse_monitor|mouse_y_tmp[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/valida_clique.vhd Line: 67
+Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 92
     Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|x[4] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 89
+Warning (13012): Latch monitor:mouse_monitor|mouse_x_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 92
     Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|x[4] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 96
+Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[0] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 99
     Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
-Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 96
+Warning (13012): Latch monitor:mouse_monitor|mouse_y_tmp[1] has unsafe behavior File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/monitor.vhd Line: 99
     Warning (13013): Ports D and ENA on the latch are fed by the same signal mouse:mouse_position|atualiza_posicao:recebe_posicao|y[0] File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en" is converted into an equivalent circuit using register "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~en_emulated" and latch "mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|ps2_data~1" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 25
@@ -1455,15 +1431,10 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 18
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 18
     Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 26
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 26
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 26
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 27
     Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 28
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 29
     Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 30
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[14] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[8] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 52
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 52
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|fcount[3] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 52
@@ -1474,18 +1445,19 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[3] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 52
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[2] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 52
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|mouse_ctrl:mousectrl|ps2_iobase:ps2io|rcount[0] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/PS2/ps2_iobase.vhd Line: 52
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[14] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[14] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[12] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[11] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[7] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[12] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[11] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[5] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[7] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[7] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
-    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[4] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[6] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[5] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[5] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
+    Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|xacc[4] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
     Critical Warning (18010): Register mouse:mouse_position|atualiza_posicao:recebe_posicao|yacc[4] will power up to Low File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/Mouse/atualiza_posicao.vhd Line: 54
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -1493,17 +1465,17 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 22
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 22
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/ec2016/ra188727/mc613/Projeto Versoes/V5/Projeto/velha.vhd Line: 22
-Info (21057): Implemented 1992 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2094 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 71 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1910 logic cells
+    Info (21061): Implemented 2012 logic cells
     Info (21064): Implemented 3 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 1252 megabytes
-    Info: Processing ended: Wed Jun  6 18:11:04 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 1257 megabytes
+    Info: Processing ended: Fri Jun  8 20:49:27 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:23
 
 

@@ -20,10 +20,10 @@ begin
 	process (Clock, WrEn, Address) 
 	begin
 	if Resetn = '0' then
-		ram(0) <= "000110";
-		ram(1) <= "010001";
-		ram(2) <= "101000";
-		ram(3) <= "101000";
+		ram(0) <= "000000";
+		ram(1) <= "000000";
+		ram(2) <= "000000";
+		ram(3) <= "010100";
 	else
 		if Clock'event and Clock = '1' then
 			if WrEn = '1' then

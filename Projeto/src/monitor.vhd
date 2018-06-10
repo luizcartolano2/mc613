@@ -15,7 +15,10 @@ entity monitor is
 		vga_clk 						: OUT STD_LOGIC;
 		entrada_monitor			: in std_logic_vector(1 downto 0);
 		endereco_ram 				: out std_logic_vector(1 downto 0);
-		saida_ram 					: in std_logic_vector(5 downto 0)
+		saida_ram 					: in std_logic_vector(5 downto 0);
+		ram_linha1					: out std_logic_vector(5 downto 0);
+		ram_linha2					: out std_logic_vector(5 downto 0);
+		ram_linha3					: out std_logic_vector(5 downto 0)
 	);
 end;
 
@@ -112,8 +115,8 @@ begin
 					endereco_ram <= "11";
 					bit_tela := '0';
 					tela := (others => bit_tela);
-					tela(11*2) := '1';
-					tela((11*2)+1) := '0';
+					tela(8*2) := '1';
+					tela((8*2)+1) := '0';
 					if saida_ram(5 downto 4) = "00" then
 						tela(0*2) := '0';
 						tela(4*2) := '0';
@@ -165,6 +168,7 @@ begin
 					end if;
 					if cont = 0 then
 						endereco_ram <= "01";
+						ram_linha3 <= saida_ram;
 						if saida_ram(5 downto 4) = "01" then
 							tela(9*2) := '0';
 							tela((9*2)+1) := '1';
@@ -210,6 +214,7 @@ begin
 					else
 						if cont = 1 then
 							endereco_ram <= "10";
+							ram_linha1 <= saida_ram;
 							if saida_ram(5 downto 4) = "01" then
 								tela(1*2) := '0';
 								tela((1*2)+1) := '1';
@@ -255,6 +260,7 @@ begin
 						else
 							if cont = 2 then
 								endereco_ram <= "00";
+								ram_linha2 <= saida_ram;
 								if saida_ram(5 downto 4) = "01" then
 									tela(5*2) := '0';
 									tela((5*2)+1) := '1';
@@ -317,7 +323,7 @@ begin
 						gravar_monitor <= '1';
 					else
 						if tela(video_address_tmp*2) = '1' and tela((video_address_tmp*2)+1) = '1' then
-							video_word <= "001";
+							video_word <= "111";
 							gravar_monitor <= '1';
 						end if;
 					end if;

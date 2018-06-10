@@ -11,9 +11,12 @@ entity valida_clique is
 		resetn	: in std_logic;
 		position_x : in std_logic_vector(7 downto 0);
 		position_y : in std_logic_vector(7 downto 0);
-		comando : out std_logic_vector(2 downto 0);
+		comando : out std_logic_vector(3 downto 0);
 		endereco_ram : out std_logic_vector(1 downto 0);
-		estado_mouse : in std_logic_vector(1 downto 0)
+		estado_mouse : in std_logic_vector(1 downto 0);
+		ram_linha1	:	in std_logic_vector(5 downto 0);
+		ram_linha2	:	in std_logic_vector(5 downto 0);
+		ram_linha3	:	in std_logic_vector(5 downto 0)
 	);
 end;
 
@@ -74,54 +77,78 @@ begin
 			if bt_on(0) = '1' then
 				mouse_position := (4 * mouse_y_tmp) + mouse_x_tmp;
 				if estado_mouse = "00" then
+					endereco_ram <= "11";
 					case mouse_position is
 						when 0 =>
-							comando <= "001";
-							endereco_ram <= "11";
+							comando <= "0001";
 						when 2 =>
-							comando <= "011";
-							endereco_ram <= "11";
+							comando <= "0011";
 						when 4 =>
-							comando <= "010";
+							comando <= "0010";
 						when 6 =>
-							comando <= "100";
-						when 11 =>
-							comando <= "101";
+							comando <= "0100";
+						when 8 =>
+							comando <= "0101";
 						when others =>
-							comando <= "000";
+							comando <= "0000";
 					end case;
 				else
 					if estado_mouse = "01" then
 						case mouse_position is
 							when 1 =>
+								if ram_linha1(5 downto 4) = "00" then
+									comando <= "0001";
+								end if;
 							when 2 =>
+								if ram_linha1(3 downto 2) = "00" then
+									comando <= "0010";
+								end if;
 							when 3 =>
+								if ram_linha1(1 downto 0) = "00" then
+									comando <= "0011";
+								end if;
 							when 5 =>
+								if ram_linha2(5 downto 4) = "00" then
+									comando <= "0100";
+								end if;
 							when 6 =>
+								if ram_linha2(3 downto 2) = "00" then
+									comando <= "0101";
+								end if;
 							when 7 =>
+								if ram_linha2(1 downto 0) = "00" then
+									comando <= "0110";
+								end if;
 							when 9 =>
+								if ram_linha3(5 downto 4) = "00" then
+									comando <= "0111";
+								end if;
 							when 10 =>
+								if ram_linha3(3 downto 2) = "00" then
+									comando <= "1000";
+								end if;
 							when 11 =>
+								if ram_linha3(1 downto 0) = "00" then
+									comando <= "1001";
+								end if;
 							when others =>
-								comando <= "000";
+								comando <= "0000";
 						end case;
 					else
 						if estado_mouse = "10" then
 							case mouse_position is
 								when others =>
-									comando <= "000";
+									comando <= "0000";
 							end case;
 						end if;
 					end if;
 				end if;
 			else 
-				comando <= "000";
+				comando <= "0000";
 			end if;
 		end if;
 		if resetn = '0' then
-			comando <= "000";
+			comando <= "0000";
 		end if;
 	end process;
-	
-
 end struct;
