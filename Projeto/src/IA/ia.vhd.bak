@@ -1,0 +1,175 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ia is 
+	port(
+		ativo			: in std_logic;
+		primeiro		: in std_logic;
+		gride_jogo	: in std_logic_vector(17 DOWNTO 0); 
+		posicao		: out integer range 0 to 9
+	);
+end ia;
+
+architecture struct of ia is
+begin
+		PROCESS(gride_jogo, primeiro)
+			VARIABLE posicao_tmp: INTEGER;
+		BEGIN
+		IF ativo = '1' THEN 
+		--vitoria na horizontal
+			-- primeira linha
+			IF(gride_jogo(17 downto 16) = gride_jogo(15 downto 14) AND gride_jogo(17 downto 16) = "10") THEN
+				posicao <= 3;
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(13 downto 12) AND gride_jogo(17 downto 16) = "10") THEN
+				posicao <= 2;
+			ELSIF(gride_jogo(15 downto 14) = gride_jogo(13 downto 12) AND gride_jogo(15 downto 14) = "10") THEN
+				posicao <= 1;
+					
+			-- SEGUNDA LINHA
+			ELSIF(gride_jogo(11 downto 10) = gride_jogo(9 downto 8) AND gride_jogo(11 downto 10) = "10") THEN
+				posicao <= 6;
+			ELSIF(gride_jogo(11 downto 10) = gride_jogo(7 downto 6) AND gride_jogo(11 downto 10) = "10") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(7 downto 6) AND gride_jogo(9 downto 8) = "10") THEN
+				posicao <= 4;
+					
+			-- TERCEIRA LINHA
+			ELSIF(gride_jogo(5 downto 4) = gride_jogo(3 downto 2) AND gride_jogo(5 downto 4) = "10") THEN
+				posicao <= 9
+			ELSIF(gride_jogo(5 downto 4) = gride_jogo(1 downto 0) AND gride_jogo(5 downto 4) = "10") THEN
+				posicao <= 8;
+			ELSIF(gride_jogo(3 downto 2) = gride_jogo(1 downto 0) AND gride_jogo(3 downto 2) = "10") THEN
+				posicao <= 7;
+				
+				
+		--SITUACOES DE VITORIA NA VERTICAL
+			-- PRIMEIRA COLUNA
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(11 downto 10) AND gride_jogo(17 downto 16) = "10") THEN
+				posicao <= 7;
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(5 downto 4) AND gride_jogo(17 downto 16) = "10") THEN
+				posicao <= 4;
+			ELSIF(gride_jogo(11 downto 10) = gride_jogo(5 downto 4) AND gride_jogo(11 downto 10) = "10") THEN
+				posicao <= 1;
+				
+			-- SEGUNDA COLUNA
+			ELSIF(gride_jogo(15 downto 14) = gride_jogo(9 downto 8) AND gride_jogo(15 downto 14) = "10") THEN
+				posicao <= 8;
+			ELSIF(gride_jogo(15 downto 14) = gride_jogo(3 downto 2) AND gride_jogo(15 downto 14) = "10") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(3 downto 2) AND gride_jogo(9 downto 8) = "10") THEN
+				posicao <= 2;
+					
+			-- TERCEIRA COLUNA
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(7 downto 6) AND gride_jogo(13 downto 12) = "10") THEN
+				posicao <= 9;
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(1 downto 0) AND gride_jogo(13 downto 12) = "10") THEN
+				posicao <= 6;
+			ELSIF(gride_jogo(7 downto 6) = gride_jogo(1 downto 0) AND gride_jogo(7 downto 6) = "10") THEN
+				posicao <= 3;
+				
+				
+		--SITUACOES DE VITORIA NA DIAGONAL
+			--CANTO SUPERIOR ESQUERDO PARA CANTO INFERIOR DIREITO
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(9 downto 8) AND gride_jogo(17 downto 16) = "10") THEN
+				posicao <= 9;
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(1 downto 0) AND gride_jogo(17 downto 16) = "10") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(1 downto 0) AND mgride_jogo(9 downto 8) = "10") THEN
+				posicao <= 1;
+				
+			--CANTO SUPERIOR DIREITO PARA CANTO INFERIOR ESQUERDO
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(9 downto 8) AND gride_jogo(13 downto 12) = "10") THEN
+				posicao <= 7;
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(5 downto 4) AND gride_jogo(13 downto 12) = "10") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(5 downto 4) AND gride_jogo(9 downto 8) = "10") THEN
+				posicao <= 3;
+				
+				
+		--SITUACOES DE IMPEDIR A DERROTA NA HORIZONTAL
+			-- PRIMEIRA LINHA
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(15 downto 14) AND gride_jogo(17 downto 16) = "01" AND gride_jogo(13 downto 12) = "00") THEN
+				posicao <= 3;
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(13 downto 12) AND gride_jogo(17 downto 16) = "01" AND gride_jogo(15 downto 14) = "00") THEN
+				posicao <= 2;
+			ELSIF(gride_jogo(15 downto 14) = gride_jogo(13 downto 12) AND gride_jogo(15 downto 14) = "01" AND gride_jogo(17 downto 16) = "00") THEN
+				posicao <= 1;
+					
+			-- SEGUNDA LINHA
+			ELSIF(gride_jogo(11 downto 10) = gride_jogo(9 downto 8) AND gride_jogo(11 downto 10) = "01" AND gride_jogo(7 downto 16) = "00") THEN
+				posicao <= 6;
+			ELSIF(gride_jogo(11 downto 10) = gride_jogo(7 downto 6) AND gride_jogo(11 downto 10) = "01" AND gride_jogo(9 downto 8) = "00") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(7 downto 6) AND gride_jogo(9 downto 8) = "01" AND gride_jogo(11 downto 10) = "00") THEN
+				posicao <= 4;
+					
+			-- TERCEIRA LINHA
+			ELSIF(gride_jogo(5 downto 4) = gride_jogo(3 downto 2) AND gride_jogo(5 downto 4) = "01" AND gride_jogo(1 downto 0) = "00") THEN
+				posicao <= 9;
+			ELSIF(gride_jogo(5 downto 4) = gride_jogo(1 downto 0) AND gride_jogo(5 downto 4) = "01" AND gride_jogo(3 downto 2) = "00") THEN
+				posicao <= 8;
+			ELSIF(gride_jogo(3 downto 2) = gride_jogo(1 downto 0) AND gride_jogo(3 downto 2) = "01" AND gride_jogo(5 downto 4) = "00") THEN
+				posicao <= 7;
+				
+				
+		--SITUACOES DE IMPEDIR A DERROTA NA VERTICAL
+			-- PRIMEIRA COLUNA
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(11 downto 10) AND gride_jogo(17 downto 16) = "01" AND gride_jogo(5 downto 4) = "00") THEN
+				posicao <= 7;
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(5 downto 4) AND gride_jogo(17 downto 16) = "01" AND gride_jogo(11 downto 10) = "00") THEN
+				posicao <= 4;
+			ELSIF(gride_jogo(11 downto 10) = gride_jogo(5 downto 4) AND gride_jogo(11 downto 10) = "01" AND gride_jogo(17 downto 16) = "00") THEN
+				posicao <= 1;
+					
+			-- SEGUNDA COLUNA
+			ELSIF(gride_jogo(15 downto 14) = gride_jogo(9 downto 8) AND gride_jogo(15 downto 14) = "01" AND gride_jogo(3 downto 2) = "00") THEN
+				posicao <= 8;
+			ELSIF(gride_jogo(15 downto 14) = gride_jogo(3 downto 2) AND gride_jogo(15 downto 14) = "01" AND gride_jogo(9 downto 8) = "00") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(3 downto 2) AND gride_jogo(9 downto 8) = "01" AND gride_jogo(15 downto 14) = "00") THEN
+				posicao <= 2;
+					
+			-- TERCEIRA COLUNA
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(7 downto 6) AND gride_jogo(13 downto 12) = "01" AND gride_jogo(1 downto 0) = "00") THEN
+				posicao <= 9;
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(1 downto 0) AND gride_jogo(13 downto 12) = "01" AND gride_jogo(7 downto 6) = "00") THEN
+				posicao <= 6;
+			ELSIF(gride_jogo(7 downto 6) = gride_jogo(1 downto 0) AND gride_jogo(7 downto 6) = "01" AND gride_jogo(13 downto 12) = "00") THEN
+				posicao <= 3;
+			
+					
+		--SITUACOES DE IMPEDIR DERROTA NA DIAGONAL
+			--CANTO SUPERIOR ESQUERDO PARA CANTO INFERIOR DIREITO
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(9 downto 8) AND gride_jogo(17 downto 16) = "01" AND gride_jogo(1 downto 0) = "00") THEN
+				posicao <= 9;
+			ELSIF(gride_jogo(17 downto 16) = gride_jogo(1 downto 0) AND gride_jogo(17 downto 16) = "01" AND gride_jogo(9 downto 8) = "00") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(1 downto 0) AND gride_jogo(9 downto 8) = "01" AND gride_jogo(17 downto 16) = "00") THEN
+				posicao <= 1;
+				
+			--CANTO SUPERIOR DIREITO PARA CANTO INFERIOR ESQUERDO
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(9 downto 8) AND gride_jogo(13 downto 12) = "01" AND gride_jogo(5 downto 4) = "00") THEN
+				posicao <= 7;
+			ELSIF(gride_jogo(13 downto 12) = gride_jogo(5 downto 4) AND gride_jogo(13 downto 12) = "01" AND gride_jogo(9 downto 8) = "00") THEN
+				posicao <= 5;
+			ELSIF(gride_jogo(9 downto 8) = gride_jogo(5 downto 4) AND gride_jogo(9 downto 8) = "01" AND gride_jogo(13 downto 12) = "00") THEN
+				posicao <= 3;
+			
+			
+		--SE NAO HA COMO VENCER E NAO HA RISCO DE PERDA NA JOGADA	
+			ELSE
+				posicao_tmp := 9;
+				FOR i IN 0 to 8 LOOP
+					IF (gride_jogo(i*2) = '0' AND gride_jogo((i*2)+1) = '0') THEN
+						posicao_tmp := i;
+					END IF;
+				END LOOP;
+				IF(posicao_tmp > 8) THEN
+					posicao <= '0';
+				ELSE
+					posicao <= posicao_tmp;
+				END IF;
+			END IF;
+		END IF;
+		END PROCESS;
+end struct;
