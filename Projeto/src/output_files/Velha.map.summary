@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Jun  8 20:49:27 2018
+Analysis & Synthesis Status : Successful - Sun Jun 10 17:30:48 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Velha
 Top-level Entity Name : velha
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 411
+Total registers : 384
 Total pins : 78
 Total virtual pins : 0
 Total block memory bits : 36

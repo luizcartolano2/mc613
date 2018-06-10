@@ -3,15 +3,15 @@ USE ieee.std_logic_1164.all;
 
 entity bin2hex is
       port (
-            SW: in std_logic_vector(3 downto 0);
-            HEX0: out std_logic_vector(6 downto 0)
+            entrada: in std_logic_vector(3 downto 0);
+            saida: out std_logic_vector(6 downto 0)
       );
 end bin2hex;
 
 ARCHITECTURE LogicFunction OF bin2hex IS
 BEGIN
-      WITH SW SELECT
-            HEX0 <= "1000000" WHEN "0000",
+      WITH entrada SELECT
+            saida <= "1000000" WHEN "0000",
                     "1111001" WHEN "0001",
                     "0100100" WHEN "0010",
                     "0110000" WHEN "0011",

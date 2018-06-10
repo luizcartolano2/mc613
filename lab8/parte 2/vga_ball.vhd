@@ -71,7 +71,9 @@ architecture comportamento of vga_ball is
 
   signal pos_x : integer range 0 to 127;  -- coluna atual da bola
   signal pos_y : integer range 0 to 95;   -- linha atual da bola
-
+  signal last_x: integer range 0 to 127;
+  signal last_y: integer range 0 to 95;
+  
   signal atualiza_pos_x : std_logic;    -- se '1' = bola muda sua pos. no eixo x
   signal atualiza_pos_y : std_logic;    -- se '1' = bola muda sua pos. no eixo y
 
@@ -143,6 +145,7 @@ begin  -- comportamento
         end if;
       end if;
     end if;
+	 last_y <= col;
   end process conta_coluna;
     
   -- purpose: Este processo conta o número da linha atual, quando habilitado
@@ -152,7 +155,7 @@ begin  -- comportamento
   -- outputs: line
   conta_linha: process (CLOCK_50, line_rstn)
   begin  -- process conta_linha
-    if line_rstn = '0' then                  -- asynchronous reset (active low)
+	 if line_rstn = '0' then                  -- asynchronous reset (active low)
       line <= 0;
     elsif CLOCK_50'event and CLOCK_50 = '1' then  -- rising clock edge
       -- o contador de linha só incrementa quando o contador de colunas
@@ -165,6 +168,7 @@ begin  -- comportamento
         end if;        
       end if;
     end if;
+	 last_x <= line;
   end process conta_linha;
 
   -- Este sinal é útil para informar nossa lógica de controle quando
@@ -248,17 +252,8 @@ begin  -- comportamento
         end if;
       end if;
     end if;
-  end process p_atualiza_pos_y;
-
-  -----------------------------------------------------------------------------
-  -- Brilho do pixel
-  -----------------------------------------------------------------------------
-  -- O brilho do pixel é branco quando os contadores de linha e coluna, que
-  -- indicam o endereço do pixel sendo escrito para o quadro atual, casam com a
-  -- posição da bola (sinais pos_x e pos_y). Caso contrário,
-  -- o pixel é preto.
-  
-  if col = pos_x and line = pos_y then
+	
+   if col = pos_x and line = pos_y then
     case n_color is
       when 0 =>
         pixel <= "001";
@@ -270,6 +265,18 @@ begin  -- comportamento
   else
     pixel <= "000";
   end if;
+  
+  end process p_atualiza_pos_y;
+
+  -----------------------------------------------------------------------------
+  -- Brilho do pixel
+  -----------------------------------------------------------------------------
+  -- O brilho do pixel é branco quando os contadores de linha e coluna, que
+  -- indicam o endereço do pixel sendo escrito para o quadro atual, casam com a
+  -- posição da bola (sinais pos_x e pos_y). Caso contrário,
+  -- o pixel é preto.
+  
+
   --pixel_bit <= '1' when (col = pos_x) and (line = pos_y) else '0';
   --pixel <= (others => pixel_bit);
   

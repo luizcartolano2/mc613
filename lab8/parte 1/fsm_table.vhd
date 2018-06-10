@@ -12,7 +12,7 @@ end fsm_table;
 
 architecture structural of fsm_table is
   type State_type is (A, B, C, D);
-  signal y : State_type
+  signal y : State_type;
 begin
   process (clock)
   begin

@@ -14,11 +14,10 @@ entity monitor is
 		vga_blank_n, vga_sync_n : OUT STD_LOGIC;
 		vga_clk 						: OUT STD_LOGIC;
 		entrada_monitor			: in std_logic_vector(1 downto 0);
-		endereco_ram 				: out std_logic_vector(1 downto 0);
-		saida_ram 					: in std_logic_vector(5 downto 0);
-		ram_linha1					: out std_logic_vector(5 downto 0);
-		ram_linha2					: out std_logic_vector(5 downto 0);
-		ram_linha3					: out std_logic_vector(5 downto 0)
+		grid_jogo					: in std_logic_vector(17 downto 0);
+		modo_jogo					: in std_logic;
+		first_player				: in std_logic;
+		vencedor						: in std_logic_vector(1 downto 0)
 	);
 end;
 
@@ -106,208 +105,233 @@ begin
 		variable mouse_position : integer range 0 to HORZ_SIZE * VERT_SIZE - 1;
 		variable tela : std_logic_vector(0 to ((HORZ_SIZE * VERT_SIZE * 2) - 1));
 		variable bit_tela : std_logic;
-		variable cont : integer range 0 to 3;
 	begin
 		if clock_50mhz'event and clock_50mhz = '1' then		
 			gravar_monitor <= '0';
 			case entrada_monitor is
 				when "00" =>
-					endereco_ram <= "11";
 					bit_tela := '0';
 					tela := (others => bit_tela);
 					tela(8*2) := '1';
-					tela((8*2)+1) := '0';
-					if saida_ram(5 downto 4) = "00" then
+					tela((8*2)+1) := '1';
+					if modo_jogo = '0' then
 						tela(0*2) := '0';
 						tela(4*2) := '0';
-						tela((0*2)+1) := '0';
+						tela((0*2)+1) := '1';
 						tela((4*2)+1) := '0';
 					else
-						if saida_ram(5 downto 4) = "01" then
-							tela(0*2) := '0';
+						if modo_jogo = '1' then
 							tela(4*2) := '0';
-							tela((0*2)+1) := '1';
-							tela((4*2)+1) := '0';
-						else
-							if saida_ram(5 downto 4) = "10" then
-								tela(4*2) := '0';
-								tela(0*2) := '0';
-								tela((0*2)+1) := '0';
-								tela((4*2)+1) := '1';
-							end if;
+							tela(0*2) := '0';
+							tela((0*2)+1) := '0';
+							tela((4*2)+1) := '1';
 						end if;
 					end if;
-					if saida_ram(3 downto 2) = "00" then
+					if first_player = '0' then
 						tela(2*2) := '0';
 						tela(6*2) := '0';
-						tela((2*2)+1) := '0';
+						tela((2*2)+1) := '1';
 						tela((6*2)+1) := '0';
 					else
-						if saida_ram(3 downto 2) = "01" then
-							tela(2*2) := '0';
+						if first_player = '1' then
 							tela(6*2) := '0';
-							tela((2*2)+1) := '1';
-							tela((6*2)+1) := '0';
-						else
-							if saida_ram(3 downto 2) = "10" then
-								tela(6*2) := '0';
-								tela(2*2) := '0';
-								tela((2*2)+1) := '0';
-								tela((6*2)+1) := '1';
-							end if;
+							tela(2*2) := '0';
+							tela((2*2)+1) := '0';
+							tela((6*2)+1) := '1';
 						end if;
 					end if;
 					gravar_monitor <= '1';
 				when "01" =>
-					if cont = 0 then
-						bit_tela := '0';
-						tela := (others => bit_tela);
-					end if;
-					if cont = 3 then
-						cont := 0;
-					end if;
-					if cont = 0 then
-						endereco_ram <= "01";
-						ram_linha3 <= saida_ram;
-						if saida_ram(5 downto 4) = "01" then
-							tela(9*2) := '0';
-							tela((9*2)+1) := '1';
-						else 
-							if saida_ram(5 downto 4) = "10" then
-								tela(9*2) := '1';
+					bit_tela := '0';
+					tela := (others => bit_tela);
+					if grid_jogo(5 downto 4) = "01" then
+						tela(9*2) := '0';
+						tela((9*2)+1) := '1';
+					else 
+						if grid_jogo(5 downto 4) = "10" then
+							tela(9*2) := '1';
+							tela((9*2)+1) := '0';
+						else
+							if grid_jogo(5 downto 4) = "00" then
+								tela(9*2) := '0';
 								tela((9*2)+1) := '0';
 							else
-								if saida_ram(5 downto 4) = "00" then
-									tela(9*2) := '0';
-									tela((9*2)+1) := '0';
-								end if;
-							end if;
-						end if;
-						if saida_ram(3 downto 2) = "01" then
-							tela(10*2) := '0';
-							tela((10*2)+1) := '1';
-						else 
-							if saida_ram(3 downto 2) = "10" then
-								tela(10*2) := '1';
-								tela((10*2)+1) := '0';
-							else
-								if saida_ram(3 downto 2) = "00" then
-									tela(10*2) := '0';
-									tela((10*2)+1) := '0';
-								end if;
-							end if;
-						end if;
-						if saida_ram(1 downto 0) = "01" then
-							tela(11*2) := '0';
-							tela((11*2)+1) := '1';
-						else 
-							if saida_ram(1 downto 0) = "10" then
-								tela(11*2) := '1';
-								tela((11*2)+1) := '0';
-							else
-								if saida_ram(1 downto 0) = "00" then
-									tela(11*2) := '0';
-									tela((11*2)+1) := '0';
-								end if;
-							end if;
-						end if;
-					else
-						if cont = 1 then
-							endereco_ram <= "10";
-							ram_linha1 <= saida_ram;
-							if saida_ram(5 downto 4) = "01" then
-								tela(1*2) := '0';
-								tela((1*2)+1) := '1';
-							else 
-								if saida_ram(5 downto 4) = "10" then
-									tela(1*2) := '1';
-									tela((1*2)+1) := '0';
-								else
-									if saida_ram(5 downto 4) = "00" then
-										tela(1*2) := '0';
-										tela((1*2)+1) := '0';
-									end if;
-								end if;
-							end if;
-							if saida_ram(3 downto 2) = "01" then
-								tela(2*2) := '0';
-								tela((2*2)+1) := '1';
-							else 
-								if saida_ram(3 downto 2) = "10" then
-									tela(2*2) := '1';
-									tela((2*2)+1) := '0';
-								else
-									if saida_ram(3 downto 2) = "00" then
-										tela(2*2) := '0';
-										tela((2*2)+1) := '0';
-									end if;
-								end if;
-							end if;
-							if saida_ram(1 downto 0) = "01" then
-								tela(3*2) := '0';
-								tela((3*2)+1) := '1';
-							else 
-								if saida_ram(1 downto 0) = "10" then
-									tela(3*2) := '1';
-									tela((3*2)+1) := '0';
-								else
-									if saida_ram(1 downto 0) = "00" then
-										tela(3*2) := '0';
-										tela((3*2)+1) := '0';
-									end if;
-								end if;
-							end if;
-						else
-							if cont = 2 then
-								endereco_ram <= "00";
-								ram_linha2 <= saida_ram;
-								if saida_ram(5 downto 4) = "01" then
-									tela(5*2) := '0';
-									tela((5*2)+1) := '1';
-								else 
-									if saida_ram(5 downto 4) = "10" then
-										tela(5*2) := '1';
-										tela((5*2)+1) := '0';
-									else
-										if saida_ram(5 downto 4) = "00" then
-											tela(5*2) := '0';
-											tela((5*2)+1) := '0';
-										end if;
-									end if;
-								end if;
-								if saida_ram(3 downto 2) = "01" then
-									tela(6*2) := '0';
-									tela((6*2)+1) := '1';
-								else 
-									if saida_ram(3 downto 2) = "10" then
-										tela(6*2) := '1';
-										tela((6*2)+1) := '0';
-									else
-										if saida_ram(3 downto 2) = "00" then
-											tela(6*2) := '0';
-											tela((6*2)+1) := '0';
-										end if;
-									end if;
-								end if;
-								if saida_ram(1 downto 0) = "01" then
-									tela(7*2) := '0';
-									tela((7*2)+1) := '1';
-								else 
-									if saida_ram(1 downto 0) = "10" then
-										tela(7*2) := '1';
-										tela((7*2)+1) := '0';
-									else
-										if saida_ram(1 downto 0) = "00" then
-											tela(7*2) := '0';
-											tela((7*2)+1) := '0';
-										end if;
-									end if;
+								if grid_jogo(5 downto 4) = "11" then
+									tela(9*2) := '1';
+									tela((9*2)+1) := '1';
 								end if;
 							end if;
 						end if;
 					end if;
-					cont := cont + 1;
+					if grid_jogo(3 downto 2) = "01" then
+						tela(10*2) := '0';
+						tela((10*2)+1) := '1';
+					else 
+						if grid_jogo(3 downto 2) = "10" then
+							tela(10*2) := '1';
+							tela((10*2)+1) := '0';
+						else
+							if grid_jogo(3 downto 2) = "00" then
+								tela(10*2) := '0';
+								tela((10*2)+1) := '0';
+							else
+								if grid_jogo(3 downto 2) = "11" then
+									tela(10*2) := '1';
+									tela((10*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
+					if grid_jogo(1 downto 0) = "01" then
+						tela(11*2) := '0';
+						tela((11*2)+1) := '1';
+					else 
+						if grid_jogo(1 downto 0) = "10" then
+							tela(11*2) := '1';
+							tela((11*2)+1) := '0';
+						else
+							if grid_jogo(1 downto 0) = "00" then
+								tela(11*2) := '0';
+								tela((11*2)+1) := '0';
+							else
+								if grid_jogo(1 downto 0) = "11" then
+									tela(11*2) := '1';
+									tela((11*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
+					if grid_jogo(17 downto 16) = "01" then
+						tela(1*2) := '0';
+						tela((1*2)+1) := '1';
+					else 
+						if grid_jogo(17 downto 16) = "10" then
+							tela(1*2) := '1';
+							tela((1*2)+1) := '0';
+						else
+							if grid_jogo(17 downto 16) = "00" then
+								tela(1*2) := '0';
+								tela((1*2)+1) := '0';
+							else
+								if grid_jogo(17 downto 16) = "11" then
+									tela(1*2) := '1';
+									tela((1*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
+					if grid_jogo(15 downto 14) = "01" then
+						tela(2*2) := '0';
+						tela((2*2)+1) := '1';
+					else 
+						if grid_jogo(15 downto 14) = "10" then
+							tela(2*2) := '1';
+							tela((2*2)+1) := '0';
+						else
+							if grid_jogo(15 downto 14) = "00" then
+								tela(2*2) := '0';
+								tela((2*2)+1) := '0';
+							else
+								if grid_jogo(15 downto 14) = "11" then
+									tela(2*2) := '1';
+									tela((2*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
+					if grid_jogo(13 downto 12) = "01" then
+						tela(3*2) := '0';
+						tela((3*2)+1) := '1';
+					else 
+						if grid_jogo(13 downto 12) = "10" then
+							tela(3*2) := '1';
+							tela((3*2)+1) := '0';
+						else
+							if grid_jogo(13 downto 12) = "00" then
+								tela(3*2) := '0';
+								tela((3*2)+1) := '0';
+							else
+								if grid_jogo(13 downto 12) = "11" then
+									tela(3*2) := '1';
+									tela((3*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
+					if grid_jogo(11 downto 10) = "01" then
+						tela(5*2) := '0';
+						tela((5*2)+1) := '1';
+					else 
+						if grid_jogo(11 downto 10) = "10" then
+							tela(5*2) := '1';
+							tela((5*2)+1) := '0';
+						else
+							if grid_jogo(11 downto 10) = "00" then
+								tela(5*2) := '0';
+								tela((5*2)+1) := '0';
+							else
+								if grid_jogo(11 downto 10) = "11" then
+									tela(5*2) := '1';
+									tela((5*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
+					if grid_jogo(9 downto 8) = "01" then
+						tela(6*2) := '0';
+						tela((6*2)+1) := '1';
+					else 
+						if grid_jogo(9 downto 8) = "10" then
+							tela(6*2) := '1';
+							tela((6*2)+1) := '0';
+						else
+							if grid_jogo(9 downto 8) = "00" then
+								tela(6*2) := '0';
+								tela((6*2)+1) := '0';
+							else
+								if grid_jogo(9 downto 8) = "11" then
+									tela(6*2) := '1';
+									tela((6*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
+					if grid_jogo(7 downto 6) = "01" then
+						tela(7*2) := '0';
+						tela((7*2)+1) := '1';
+					else 
+						if grid_jogo(7 downto 6) = "10" then
+							tela(7*2) := '1';
+							tela((7*2)+1) := '0';
+						else
+							if grid_jogo(7 downto 6) = "00" then
+								tela(7*2) := '0';
+								tela((7*2)+1) := '0';
+							else
+								if grid_jogo(7 downto 6) = "11" then
+									tela(7*2) := '1';
+									tela((7*2)+1) := '1';
+								end if;
+							end if;
+						end if;
+					end if;
 				when "10" =>
+					bit_tela := '0';
+					tela := (others => bit_tela);
+					if vencedor = "00" then
+						tela(4*2) := '1';
+						tela((4*2)+1) := '1';
+					else
+						if vencedor = "01" then
+							tela(4*2) := '0';
+							tela((4*2)+1) := '1';
+						else
+							if vencedor = "10" then
+								tela(4*2) := '1';
+								tela((4*2)+1) := '0';
+							end if;
+						end if;
+					end if;
 				when others =>
 			end case;
 			if tela(video_address_tmp*2) = '0' and tela((video_address_tmp*2)+1) = '0' then
@@ -343,5 +367,4 @@ begin
 			end if;
 		end if;
 	end process;
-	
 end struct;
