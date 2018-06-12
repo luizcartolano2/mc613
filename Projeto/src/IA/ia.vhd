@@ -183,10 +183,7 @@ begin
 																																																		else
 																																																			if(gride_jogo(13 downto 12) = gride_jogo(9 downto 8) and gride_jogo(13 downto 12) = ia_corn and gride_jogo(5 downto 4) = "00") then
 																																																						posicao <= 7;
-																																																			-- tenta ocupar o centro
-																																																			else
-																																																				if gride_jogo(9 downto 8) = "00" then
-																																																							posicao <= 5;
+																																																	
 																																																				-- se o canto superior esquerdo estiver ocupado tenta ocupar o canto inferior direito (caso livre)
 																																																				else
 																																																					if gride_jogo(17 downto 16) = ia_corn and gride_jogo(1 downto 0) = "00" then
@@ -203,6 +200,10 @@ begin
 																																																						else
 																																																							if gride_jogo(1 downto 0) = ia_corn and gride_jogo(17 downto 16) = "00" then
 																																																											posicao <= 1;
+																																																												-- tenta ocupar o centro
+																																																			else
+																																																				if gride_jogo(9 downto 8) = "00" then
+																																																							posicao <= 5;
 																																																							-- tenta ocupar o canto superior esquerdo
 																																																							else
 																																																								if gride_jogo(17 downto 16) = "00" then
@@ -300,3 +301,4 @@ begin
 		end if;
 	end process;
 end struct;
+

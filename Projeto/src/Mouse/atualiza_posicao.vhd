@@ -8,7 +8,7 @@ entity atualiza_posicao is
 		clock_50mhz	: 	in	STD_LOGIC;
 		ps2_data 	:	inout	STD_LOGIC;
 		ps2_clock	:	inout	STD_LOGIC;
-		resetn	: in std_logic;
+		resetn		: in std_logic;
 		position_x 	: 	out std_logic_vector(7 downto 0);
 		position_y 	: 	out std_logic_vector(7 downto 0)
 	);
@@ -40,7 +40,7 @@ architecture struct of atualiza_posicao is
 	signal x, y 		: std_logic_vector(7 downto 0);
 	signal dx, dy 		: std_logic_vector(8 downto 0);
 	
-	constant SENSIBILITY : integer := 100; -- Rise to decrease sensibility
+	constant SENSIBILITY : integer := 50; -- Rise to decrease sensibility
 begin 	
 	mousectrl : mouse_ctrl generic map (50000) port map(
 		ps2_data, ps2_clock, clock_50mhz, '1', resetn,

@@ -58,13 +58,7 @@ begin
 						if comando_entrada = "1111" then
 							estado <= Jogando;
 							if modo_jogo_tmp = '0' then
-								if first_player_tmp = '0' then
 									turno := 0;
-								else
-									if first_player_tmp = '1' then
-										turno := 1;
-									end if;
-								end if;
 							else
 								if modo_jogo_tmp = '1' then
 									ia_ativo <= '1';
