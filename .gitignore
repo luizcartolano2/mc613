@@ -1,1 +1,35 @@
+*_sim
+db
+greybox_tmp
+incremental_db
+simulation
+testbench
+timing
+*_generation_script*
+*_inst.vhd
+*.bak
+*.cmp
+*.done
+*.eqn
+*.hex
+*.html
+*.jdi
+*.jpg
+*.pin
+*.pof
+*.ptf.*
+*.qar
+*.qarlog
+*.qws
+*.rpt
+*.smsg
+*.sof
+*.sopc_builder
+*.summary
+*.tcl
+*.txt # Explicitly add any text files used
+*~
+*example*
+*sopc_*
+PLLJ_PLLSPE_INFO.txt # The generated PLL specification file
 .DS_Store
