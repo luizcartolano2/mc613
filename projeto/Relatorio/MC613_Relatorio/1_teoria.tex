@@ -1,0 +1,18 @@
+\section{TEORIA}
+
+Nesta seção trataremos de alguns conceitos teóricos que foram abordados no trabalho e que exigiram conceitos além do que foi visto em classe.
+
+\subsection{Trabalho com diversas entidades}
+O trabalho com múltiplas entidades, que deviam trabalhar de forma sincronizada, foi, sem sombra de dúvidas, o maior desafio do projeto. Para obter exito na execução da tarefa foi preciso entender melhor o funcionamento do \emph{clock}.
+
+Notamos que a melhor maneira de sincronizar os processos realizados pelo \emph{mouse, vga e programa} era a realização das ações a medida que os os \emph{clocks} do sistema ocorriam.
+
+\subsection{Comunicação com dispositivos de entrada e saída}
+O projeto escolhido, foi o \emph{jogo da velha}, de modo que, parte crucial do projeto era a interação com dispositivos externos a placa, como o \emph{mouse} e o \emph{monitor}. Para isso, foi preciso que aprendessemos a manusear ambas as interações, aprimorando os conhecimentos básicos que haviam sido adquiridos nos laboratórios.
+
+Para o \emph{mouse}, buscamos entender melhor o código fornecido para o laboratório 07 e também o materia disponível em \cite{ref:mouse}. A partir de ambos foi possível estruturar nossa entidade que nos fornecia, com base no deslocamento nos eixos \emph{x e y} e em um ponto inicial, a posição do cursor na tela.
+
+Enquanto que para o \emph{monitor}, baseamos nosso trabalho no entendimento de como deveríamos fazer para \emph{"desenhar"} neste. Chegamos à conclusão de que para tal, era necessário preencher o conjunto de píxels no formato desejado.
+
+\subsubsection{Modo de jogo automático}
+Por fim, outro grande desafio do projeto que nos fez desprender uma grande quantidade de estudo foi o desenvolvimento de uma \emph{"inteligência artificial"} para o Jogo da Velha. A fim de buscar a melhor implementação possível, dento das limitações e dificuldades impostas pelo \emph{VHDL}, foi preciso estudar mais a respeito de algoritmos gulosos \cite{ref:algoritmos-gulosos} e sobre os melhores tipos de algoritmos para se ganhar no jogo da velha. Estes serão melhor discutidos na póxima seção.
